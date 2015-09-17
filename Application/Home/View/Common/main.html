@@ -5,7 +5,9 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="UTF-8" >
-    <block name="title"><title>河北一卡通</title></block>
+    <meta name="keywords" content="{$webInfo['keyword']}">
+    <meta name="description" content="{$webInfo['describe']}">
+    <block name="title"><title>{$webInfo['name']}</title></block>
     <block name="commonCss">
         <link rel="stylesheet" href="{$cssUrl}/common.css" type="text/css"/>
         <link href="http://v3.jiathis.com/code/css/jiathis_share.css" rel="stylesheet" type="text/css">
@@ -18,8 +20,19 @@
     <div class="wrap_header">
         <div class="header_outer">
             <div class="header_logo"></div>
-            <div class="city">
-                <div class="tip"></div>
+            <div id="city">
+                <div class="tip">
+                </div>
+                <div id="city_list">
+                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[{$city['name']|str_replace="市","",###}]</span></div>
+                <div class="city_link" id="city_link">
+                    <div class="city_show">
+                        <span title="关闭窗口" onclick="document.getElementById('city_nav').className='city_nav';document.getElementById('city_link').className='city_link';return !1;" href="javascript:void(0);" class="f_red f_r">[关闭]</span>
+                    </div>
+                    <volist name="area" id="citi">
+                    <a href="{$baseUrl}?cityId={$citi['id']}" class="city_links">{$citi['name']|str_replace="市","站",###}</a>
+                    </volist>
+                </div>
             </div>
             <div class="tel_img"></div>
         </div>
@@ -85,7 +98,7 @@
                 </li>
                 <li>
                 <span class="fr fl_img">
-                    <a target="_blank" href="http://weibo.com/hebeiyikatong">
+                    <a target="_blank" href="{$webInfo['weibo']|default='http://weibo.com/hebeiyikatong'}">
                         <img src="{$imgUrl}/icon_4.jpg" alt="新浪微博" class="out_img" />
                         <img src="{$imgUrl}/icon_44.jpg" alt="新浪微博" style="display: none;" class="hover_img" />
                     </a>
@@ -148,7 +161,6 @@
                     </a>
                 </span>
                     <span class="fl" style="cursor: pointer;">回到顶部</span>
-
                 </li>
             </ul>
         </div>
@@ -192,8 +204,9 @@
                    <div class="number">
                        <script type="text/javascript">
                            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-                           document.write(decodeURIComponent("%3Cspan id='cnzz_stat_icon_1000205784'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000205784%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-                        冀ICP备06000578 &nbsp;冀ICP证B2-20130050
+                           document.write(decodeURIComponent("%3Cspan id='cnzz_stat_icon_1000205784'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000205784%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+                       </script>
+                        {$webInfo['filling_number']|default="冀ICP备06000578 &nbsp;冀ICP证B2-20130050"}
                     </div>
                 </div>
             </div>
@@ -204,6 +217,7 @@
     <script type="text/javascript" src="{$jsUrl}/jquery-1.11.3.min.js" ></script>
     <script type="text/javascript">
         $(function () {
+            var baseUrl = "{$baseUrl}";
             $('body').on("mouseover", ".fl_img", function () {
                 $(this).children().children('.out_img').hide();
                 $(this).children().children('.hover_img').show();
@@ -224,6 +238,10 @@
                 $('body,html').animate({ scrollTop: 0 }, 500);
                 return false;
             });
+            var headLogo = "{$webInfo['head_logo']}";
+            if(headLogo) {
+                $(".header_logo").css("background-image", "url('"+baseUrl+"/"+headLogo+"')");
+            }
         });
     </script>
 </block>

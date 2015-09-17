@@ -1,6 +1,10 @@
 <?php namespace Home\Controller;
+
 use Common\Controller\BaseController;
+use Home\Logic\BusinessLogic;
 use Home\Logic\CarouselLogic;
+use Home\Logic\NewsLogic;
+use Home\Logic\PartnerLogic;
 use Home\Logic\ProductLogic;
 
 /**
@@ -9,17 +13,39 @@ use Home\Logic\ProductLogic;
  * @package Home\Controller
  */
 class IndexController extends BaseController {
+    const AREA_SJZ  = 1301;
+
     /**
      * 首页
+     * @param int $cityId
      */
-    public function index(){
+    public function index( ){
+        $cityId = I("get.cityId");
+        if(! $cityId) {
+            $cityId = self::AREA_SJZ;
+        }
         $carousel = new CarouselLogic();
-        $carousel = $carousel->getIndexCarousel();
-        $this->assign("carousel", $carousel);
+        $carousels = $carousel->getIndexCarousel();
+        $this->assign("carousels", $carousels);
 
         $product = new ProductLogic();
-        $product = $product->getIndexProducts();
-        $this->assign("product", $product);
+        $products = $product->getProducts();
+        $this->assign("products", $products);
+
+        $businessLogic = new BusinessLogic();
+        $businessTypes = $businessLogic->getBusinessType();
+        $businessTypes =$businessLogic ->getBusinessInfoByBusinessType($businessTypes, $cityId);
+        $this->assign("businessTypes", $businessTypes);
+
+        $news = new NewsLogic();
+        $newsList = $news->getIndexNewsList($cityId);
+        $this->assign("newsList", $newsList);
+
+        $partner = new PartnerLogic();
+        $partners = $partner->getPartners();
+        $this->assign("partners", $partners);
+
+        $this->getCommon($cityId);
 
         $this->showView();
     }

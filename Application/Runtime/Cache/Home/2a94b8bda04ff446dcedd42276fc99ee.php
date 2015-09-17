@@ -5,7 +5,9 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="UTF-8" >
-    <title>河北一卡通</title>
+    <meta name="keywords" content="<?php echo ($webInfo['keyword']); ?>">
+    <meta name="description" content="<?php echo ($webInfo['describe']); ?>">
+    <title><?php echo ($webInfo['name']); ?></title>
     
         <link rel="stylesheet" href="<?php echo ($cssUrl); ?>/common.css" type="text/css"/>
         <link href="http://v3.jiathis.com/code/css/jiathis_share.css" rel="stylesheet" type="text/css">
@@ -20,8 +22,17 @@
     <div class="wrap_header">
         <div class="header_outer">
             <div class="header_logo"></div>
-            <div class="city">
-                <div class="tip"></div>
+            <div id="city">
+                <div class="tip">
+                </div>
+                <div id="city_list">
+                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[<?php echo (str_replace("市","",$city['name'])); ?>]</span></div>
+                <div class="city_link" id="city_link">
+                    <div class="city_show">
+                        <span title="关闭窗口" onclick="document.getElementById('city_nav').className='city_nav';document.getElementById('city_link').className='city_link';return !1;" href="javascript:void(0);" class="f_red f_r">[关闭]</span>
+                    </div>
+                    <?php if(is_array($area)): $i = 0; $__LIST__ = $area;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$citi): $mod = ($i % 2 );++$i;?><a href="<?php echo ($baseUrl); ?>?cityId=<?php echo ($citi['id']); ?>" class="city_links"><?php echo (str_replace("市","站",$citi['name'])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                </div>
             </div>
             <div class="tel_img"></div>
         </div>
@@ -77,14 +88,16 @@
                             <div class="indexFlashDiv">
                                 <div class="indexFlash">
                                     <ul>
-                                        <?php if(is_array($carousel)): $i = 0; $__LIST__ = $carousel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$carouseli): $mod = ($i % 2 );++$i;?><li ><a target="_blank" href="<?php echo ($carouseli["url"]); ?>">
+                                        <?php if(is_array($carousels)): $i = 0; $__LIST__ = $carousels;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$carouseli): $mod = ($i % 2 );++$i;?><li >
+                                                <a target="_blank" href="<?php echo ($carouseli["url"]); ?>">
                                                 <img alt="" src="<?php echo ($baseUrl); ?>/<?php echo ($carouseli["picture"]); ?>">
-                                            </a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                            </a>
+                                            </li><?php endforeach; endif; else: echo "" ;endif; ?>
                                     </ul>
                                 </div>
                                 <div class="flashBtn">
                                     <ul>
-                                        <?php if(is_array($carousel)): $key = 0; $__LIST__ = $carousel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$carouseli): $mod = ($key % 2 );++$key; if($key == 1): ?><li style="padding-top: 0px;" class="liNow">
+                                        <?php if(is_array($carousels)): $key = 0; $__LIST__ = $carousels;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$carouseli): $mod = ($key % 2 );++$key; if($key == 1): ?><li style="padding-top: 0px;" class="liNow">
                                                     <img width="44" height="28" alt="" src="<?php echo ($baseUrl); ?>/<?php echo ($carouseli["picture"]); ?>"></li>
                                                 <?php else: ?>
                                                     <li style="padding-top: 7px;" class="liNow">
@@ -100,11 +113,11 @@
                         <div id="zsgun">
                             <div id="gundiv" class="container2">
                                 <ul>
-                                    <?php if(is_array($product)): $i = 0; $__LIST__ = $product;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?><li><a href="/CLIENT/common/new_selltk.aspx" target="_blank">
+                                    <?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($pro["pic_describe"]); ?>" target="_blank">
                                             <img src="<?php echo ($baseUrl); ?>/<?php echo ($pro["picture"]); ?>" width="207" height="130" /></a>
                                             <p>
                                                 <span style="float: left;"><?php echo ($pro["name"]); ?></span> <span style="float: right;">
-                                                   <a href="/CLIENT/common/new_selltk.aspx" target="_blank">
+                                                   <a href="<?php echo ($pro["url"]); ?>" target="_blank">
 
                                                        <?php switch($pro["op_type"]): case "3": ?><img src="<?php echo ($imgUrl); ?>/bd.png" style="margin-top: 7px; width: 91px; height: 26px;" /><?php break;?>
                                                           <?php case "2": ?><img src="<?php echo ($imgUrl); ?>/buy2.png" style="margin-top: 7px; width: 91px; height: 26px;" /><?php break;?>
@@ -175,191 +188,41 @@
                     <div id="row5">
                         <div id="row5_left">
                             <div id="row5_title1">
-
                                 <div id="pro_title">
                                 </div>
-                                <div id="pro_cyms" style="background-image: url(&quot;../common/new_img/商户促销/未选中/未选中_04.png&quot;);">
-                                </div>
-                                <div id="pro_xxyl" style="background-image: url(&quot;../common/new_img/商户促销/未选中/商家促销_05.png&quot;);">
-                                </div>
-                                <div id="pro_qcjy" style="background-image: url(&quot;../common/new_img/商户促销/未选中/商家促销_06.png&quot;);">
-                                </div>
-                                <div id="pro_zhsc" style="background-image: url(&quot;../common/new_img/商户促销/选中状态/未选中_07.png&quot;);">
-                                </div>
+                                <?php if(is_array($businessTypes)): $key = 0; $__LIST__ = $businessTypes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$businessType): $mod = ($key % 2 );++$key; if($key == 1): ?><div class="pro_head pro_head_hover pro_type" key="<?php echo ($key); ?>">
+                                         <div><?php echo ($businessType["name"]); ?></div>
+                                       </div>
+                                           <?php else: ?>
+                                        <div class="pro_other pro_type" key="<?php echo ($key); ?>">
+                                            <div><?php echo ($businessType["name"]); ?></div>
+                                        </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                                 <div id="pro_more">
                                     <a style="color: Orange;" target="_blank" href="../business/hd_search.aspx?city=1">更多商户&gt;&gt;
                                     </a>
                                 </div>
                             </div>
                             <div id="row5_pro">
-
-                                <div class="store-wrapper show" id="div_p1" style="display: none;">
-
+                                <?php if(is_array($businessTypes)): $keyPro = 0; $__LIST__ = $businessTypes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$businessType): $mod = ($keyPro % 2 );++$keyPro; if($key == 0): ?><div class="store-wrapper show" id="div_p<?php echo ($keyPro); ?>">
+                                    <?php else: ?>
+                                    <div class="store-wrapper show" id="div_p<?php echo ($keyPro); ?>" style="display:none;"><?php endif; ?>
                                     <div class="left">
                                         <div style="width: 258px">
-                                            <img width="258" height="191" onclick="imgclick('../../tradeimg/20150821113902799.jpg','../../tradeimg/20150806144727256.jpg','gwbh');" id="Img1" src="http://www.966009.com/tradeimg/20150821113902799.jpg"></div>
+                                            <img width="258" height="191"  id="Img<?php echo ($keyPro); ?>" src="<?php echo ($baseUrl); ?>/<?php echo ($businessType['business'][0]['picture']); ?>"></div>
                                         <!--代码结束-->
                                     </div>
 
                                     <div class="restaurant right">
                                         <div class="info-title">
                                             <strong>
-                                                餐饮美食<span class="title02"></span></strong></div>
+                                                <?php echo ($businessType["name"]); ?><span class="title02"></span></strong></div>
                                         <ul class="info-list">
-
-                                            <li><a title="圣马丁海鲜自助" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=圣马丁海鲜自助">
-                                                圣马丁海鲜自助可持河北一卡通消费</a></li>
-
-                                            <li><a title="太空舱烤吧" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=太空舱烤吧">
-                                                太空舱烤吧可持河北一卡通消费</a></li>
-
-                                            <li><a title="好利来（谈固店）" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=好利来（谈固店）">
-                                                石家庄好利来（谈固店）可持一卡通消费！</a></li>
-
-                                            <li><a title="西贝海鲜汇" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=西贝海鲜汇">
-                                                西贝海鲜汇（谈固店）可持河北一卡通消费</a></li>
-
-                                            <li><a title="全聚德（建设店）" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=全聚德（建设店）">
-                                                石家庄全聚德（建设店）可持河北一卡通消费！</a></li>
-
-                                            <li><a title="全聚德怀特店" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=全聚德怀特店">
-                                                石家庄全聚德（怀特店）可持河北一卡通消费！</a></li>
-
-                                            <li><a title="羊大爷涮肉" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=羊大爷涮肉">
-                                                羊大爷涮肉持河北一卡通享9折优惠</a></li>
-
-                                            <li><a title="全聚德和平店" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=全聚德和平店">
-                                                石家庄全聚德（和平店）可持河北一卡通消费！</a></li>
-
+                                            <?php if(is_array($businessType["business"])): $i = 0; $__LIST__ = $businessType["business"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$business): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($business["title"]); ?>" target="_blank" href="">
+                                                <?php echo ($business["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                         </ul>
                                     </div>
-                                </div>
-
-                                <div class="store-wrapper" id="div_p2" style="display: none;">
-                                    <!--代码开始-->
-                                    <div class="left">
-                                        <div style="width: 258px">
-                                            <img width="258" height="191" onclick="imgclick('../../tradeimg/20150821114309861.jpg','../../tradeimg/20150806145006111.jpg','mscy');" id="mscy" src="http://www.966009.com/tradeimg/20150821114309861.jpg"></div>
-                                    </div>
-
-                                    <!--代码结束-->
-                                    <div class="restaurant right">
-                                        <div class="info-title">
-                                            <strong>
-                                                休闲娱乐<span class="title02"></span></strong></div>
-                                        <ul class="info-list">
-
-                                            <li><a title="白鹿温泉" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=白鹿温泉">
-                                                白鹿温泉可持河北一卡通消费享8.3折优惠</a></li>
-
-                                            <li><a title="新闻国际旅行社" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=新闻国际旅行社">
-                                                新闻国际旅行社可持河北一卡通消费</a></li>
-
-                                            <li><a title="金棕榈盛世影城" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=金棕榈盛世影城">
-                                                金棕榈盛世影城持河北一卡通享7折优惠</a></li>
-
-                                            <li><a title="钱隆KTV(盛世店)" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=钱隆KTV(盛世店)">
-                                                钱隆KTV（盛世店）刷河北一卡通乐享会员优惠</a></li>
-
-                                            <li><a title="洪顺曲艺社" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=洪顺曲艺社">
-                                                石家庄洪顺曲艺社开通刷河北一卡通消费！</a></li>
-
-                                            <li><a title="金棕榈世纪影城" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=金棕榈世纪影城">
-                                                金棕榈世纪影城持河北一卡通享7折优惠</a></li>
-
-                                            <li><a title="想唱就唱（中山店）" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=想唱就唱（中山店）">
-                                                石家庄想唱就唱（中山店）可持河北一卡通消费！</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="store-wrapper" id="div_p3" style="display: none;">
-                                    <!--代码开始-->
-                                    <div class="left">
-                                        <div style="width: 258px">
-                                            <img width="258" height="191" onclick="imgclick('../../tradeimg/20150821114815852.jpg','../..','mscy');" id="mscy" src="http://www.966009.com/tradeimg/20150821114815852.jpg"></div>
-                                    </div>
-
-                                    <!--代码结束-->
-                                    <div class="restaurant right">
-                                        <div class="info-title">
-                                            <strong>
-                                                汽车加油<span class="title02"></span></strong></div>
-                                        <ul class="info-list">
-
-                                            <li><a title="庞达汽车维修养护" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=庞达汽车维修养护">
-                                                庞达汽车维修养护可持河北一卡通消费</a></li>
-
-                                            <li><a title="益通驾校" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=益通驾校">
-                                                益通驾校可用河北一卡通消费</a></li>
-
-                                            <li><a title="石家庄党家庄（91）" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=石家庄党家庄（91）">
-                                                中石油党家庄加油站（91）可持河北一卡通消费</a></li>
-
-                                            <li><a title="车友之家汽车养护" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=车友之家汽车养护">
-                                                车友之家汽车养护可持河北一卡通刷卡消费 </a></li>
-
-                                            <li><a title="汇通路（159）加油站" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=汇通路（159）加油站">
-                                                中石油汇通加油站（159）可持河北一卡通消费</a></li>
-
-                                            <li><a title="石家庄裕西" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=石家庄裕西">
-                                                中石油裕西加油站（2）可持河北一卡通消费</a></li>
-
-                                            <li><a title="洪8汽车快捷护理" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=洪8汽车快捷护理">
-                                                洪8汽车快捷护理可持一卡通消费！</a></li>
-
-                                            <li><a title="建华加油站（147）" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=建华加油站（147）">
-                                                中石油建华加油站（147）可持河北一卡通消费</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="store-wrapper" id="div_p4" style="display: block;">
-                                    <!--代码开始-->
-                                    <div class="left">
-                                        <div style="width: 258px">
-                                            <img width="258" height="191" onclick="imgclick('../../tradeimg/20150821115036204.jpg','../../tradeimg/20140923145449436.jpg','mscy');" id="mscy" src="http://www.966009.com/tradeimg/20150821115036204.jpg"></div>
-                                    </div>
-
-                                    <!--代码结束-->
-                                    <div class="restaurant right">
-                                        <div class="info-title">
-                                            <strong>
-                                                综合商场<span class="title02"></span></strong></div>
-                                        <ul class="info-list">
-
-                                            <li><a title="国美电器(西里店)" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=国美电器(西里店)">
-                                                国美电器(西里店)可持河北一卡通消费</a></li>
-
-                                            <li><a title="北国东尚" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=北国东尚">
-                                                北国商城（东尚Mall）可持河北一卡通消费</a></li>
-
-                                            <li><a title="北国超市新石店" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=北国超市新石店">
-                                                石家庄北国超市（新石店)可持一卡通消费！</a></li>
-
-                                            <li><a title="先天下购物广场" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=先天下购物广场">
-                                                石家庄先天下购物广场可持一卡通消费！</a></li>
-
-                                            <li><a title="新百广场" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=新百广场">
-                                                新百广场享刷河北一卡通消费</a></li>
-
-                                            <li><a title="东购" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=东购">
-                                                石家庄银座商城（东购店）可持河北一卡通消费！</a></li>
-
-                                            <li><a title="国美电器(华阳店)" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=国美电器(华阳店)">
-                                                国美电器(华阳店)可持河北一卡通消费</a></li>
-
-                                            <li><a title="国美电器(谈固店)" target="_blank" href="../business/BusinessShow.aspx?city=1&amp;accname=国美电器(谈固店)">
-                                                国美电器(谈固店)可持河北一卡通消费</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
                             </div>
-
                         </div>
                         <div id="row5_right">
                             <div id="row5_title2">
@@ -369,31 +232,8 @@
                             <div id="row5_news">
                                 <div id="news_list">
                                     <ul id="news_ul">
-
-                                        <li><a title="高速ETC实现全国25个省区市联" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2591"><span class="date">[
-                2015-09-09]</span>&nbsp;高速ETC实现全国25个省区市联</a></li>
-
-                                        <li><a title="【立减优惠】金秋出游嗨不停！充值" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2590"><span class="date">[
-                2015-09-07]</span>&nbsp;【立减优惠】金秋出游嗨不停！充值</a></li>
-
-                                        <li><a title="金融知识普及月：警惕洗钱陷阱  " target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2570"><span class="date">[
-                2015-09-01]</span>&nbsp;金融知识普及月：警惕洗钱陷阱  </a></li>
-
-                                        <li><a title="【车主优惠】9月洗车仅9元，还你" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2551"><span class="date">[
-                2015-08-28]</span>&nbsp;【车主优惠】9月洗车仅9元，还你</a></li>
-
-                                        <li><a title="便捷生活从微信充值开始，非一般的" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2550"><span class="date">[
-                2015-08-26]</span>&nbsp;便捷生活从微信充值开始，非一般的</a></li>
-
-                                        <li><a title="【招贤纳士】虚位以待，期待着你的" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2530"><span class="date">[
-                2015-08-19]</span>&nbsp;【招贤纳士】虚位以待，期待着你的</a></li>
-
-                                        <li><a title="【石家庄车友集结招募第二季】浪漫" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2512"><span class="date">[
-                2015-08-07]</span>&nbsp;【石家庄车友集结招募第二季】浪漫</a></li>
-
-                                        <li><a title="1元洗鞋风暴来袭！你会拒绝吗？" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2511"><span class="date">[
-                2015-08-06]</span>&nbsp;1元洗鞋风暴来袭！你会拒绝吗？</a></li>
-
+                                        <?php if(is_array($newsList)): $i = 0; $__LIST__ = $newsList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$news): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($news["title"]); ?>" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2591"><span class="date">[
+                <?php echo (date("Y-m-d",strtotime($news["created_at"]))); ?>]</span>&nbsp<?php echo ($news["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                     </ul>
                                 </div>
 
@@ -401,111 +241,19 @@
                         </div>
                     </div>
                     <div id="row6">
-
                         <div id="row6_title">
                         </div>
                         <div id="row6_list">
                             <ul id="row6_ul">
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.cnpc.com.cn/cn/">
-                                            <img alt="中石油" src="http://www.966009.com/tradeimg/20141016161259643.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.sgcc.com.cn/">
-                                            <img alt="国家电网" src="http://www.966009.com/tradeimg/20141016161333498.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.xinaogas.com/">
-                                            <img alt="新奥燃气" src="http://www.966009.com/tradeimg/20141016161439508.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.yinzuo.cn/shou.asp">
-                                            <img alt="银座" src="http://www.966009.com/tradeimg/20141016161609204.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.dodopal.com/">
-                                            <img alt="都都宝" src="http://www.966009.com/tradeimg/20141016161418744.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.carrefour.com.cn/">
-                                            <img alt="家乐福保龙仓" src="http://www.966009.com/tradeimg/20141016161551899.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.holiland.com.cn/">
-                                            <img alt="好利来" src="http://www.966009.com/tradeimg/20141016161509802.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.966009.com/client/newsshow/ViewNews.aspx?city=1&amp;msgid=2210">
-                                            <img alt="京津冀旅游通" src="http://www.966009.com/tradeimg/20150325140825129.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://vm.vbopay.com/">
-                                            <img alt="广智微营销" src="http://www.966009.com/tradeimg/20150325135826704.png" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.wdds.com.cn/">
-                                            <img alt="万达百货" src="http://www.966009.com/tradeimg/20141016155758828.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="http://www.gome.com.cn/">
-                                            <img alt="国美电器" src="http://www.966009.com/tradeimg/20141119163514796.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div>
-                                        <a target="_blank" href="">
-                                            <img alt="北国超市" src="http://www.966009.com/tradeimg/20150325140757138.jpg" class="r6_img">
-                                        </a>
-                                    </div>
-                                </li>
-
+                                <?php if(is_array($partners)): $i = 0; $__LIST__ = $partners;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$partner): $mod = ($i % 2 );++$i;?><li>
+                                        <div>
+                                            <a target="_blank" href="<?php echo ($partner["url"]); ?>">
+                                                <img alt="<?php echo ($partner["name"]); ?>" src="<?php echo ($baseUrl); ?>/<?php echo ($partner["picture"]); ?>" class="r6_img">
+                                            </a>
+                                        </div>
+                                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul>
                         </div>
-
                     </div>
                 </div>
              </div>
@@ -531,7 +279,7 @@
                 </li>
                 <li>
                 <span class="fr fl_img">
-                    <a target="_blank" href="http://weibo.com/hebeiyikatong">
+                    <a target="_blank" href="<?php echo ((isset($webInfo['weibo']) && ($webInfo['weibo'] !== ""))?($webInfo['weibo']):'http://weibo.com/hebeiyikatong'); ?>">
                         <img src="<?php echo ($imgUrl); ?>/icon_4.jpg" alt="新浪微博" class="out_img" />
                         <img src="<?php echo ($imgUrl); ?>/icon_44.jpg" alt="新浪微博" style="display: none;" class="hover_img" />
                     </a>
@@ -594,7 +342,6 @@
                     </a>
                 </span>
                     <span class="fl" style="cursor: pointer;">回到顶部</span>
-
                 </li>
             </ul>
         </div>
@@ -638,8 +385,9 @@
                    <div class="number">
                        <script type="text/javascript">
                            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-                           document.write(decodeURIComponent("%3Cspan id='cnzz_stat_icon_1000205784'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000205784%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-                        冀ICP备06000578 &nbsp;冀ICP证B2-20130050
+                           document.write(decodeURIComponent("%3Cspan id='cnzz_stat_icon_1000205784'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000205784%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+                       </script>
+                        <?php echo ((isset($webInfo['filling_number']) && ($webInfo['filling_number'] !== ""))?($webInfo['filling_number']):"冀ICP备06000578 &nbsp;冀ICP证B2-20130050"); ?>
                     </div>
                 </div>
             </div>
@@ -650,6 +398,7 @@
     <script type="text/javascript" src="<?php echo ($jsUrl); ?>/jquery-1.11.3.min.js" ></script>
     <script type="text/javascript">
         $(function () {
+            var baseUrl = "<?php echo ($baseUrl); ?>";
             $('body').on("mouseover", ".fl_img", function () {
                 $(this).children().children('.out_img').hide();
                 $(this).children().children('.hover_img').show();
@@ -670,6 +419,10 @@
                 $('body,html').animate({ scrollTop: 0 }, 500);
                 return false;
             });
+            var headLogo = "<?php echo ($webInfo['head_logo']); ?>";
+            if(headLogo) {
+                $(".header_logo").css("background-image", "url('"+baseUrl+"/"+headLogo+"')");
+            }
         });
     </script>
 
@@ -678,6 +431,21 @@
     <script type="text/javascript" src="<?php echo ($jsUrl); ?>/index.js"></script>
     <script>
         var imgUrl = "<?php echo ($imgUrl); ?>";
+        $(function() {
+            $("body").on("mouseenter", ".pro_type", function() {
+                $(".pro_other").removeClass("pro_other_hover");
+                if($(this).hasClass("pro_head")) {
+                    $(this).addClass("pro_head_hover");
+                }else{
+                    $(".pro_head").removeClass("pro_head_hover");
+                    $(this).addClass("pro_other_hover");
+                }
+                var key = $(this).attr("key");
+                $(".store-wrapper").hide();
+                $("#div_p"+key).show();
+            });
+        })
+
     </script>
 
 </div>

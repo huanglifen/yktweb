@@ -74,7 +74,73 @@ h5 {
     width: 224px;
 }
 
+#city {
+    border: 0 solid Green;
+    float: left;
+    height: 58px;
+    margin-left: 5px;
+    margin-top: 30px;
+    position: relative;
+    width: 100px;
+}
 
+#city_list {
+    width: 100px;
+}
+#city_list a {
+    color: black;
+    text-decoration: none;
+}
+.city_nav {
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    text-align: center;
+}
+.city_link {
+    background: #ffffff none repeat scroll 0 0;
+    border: 2px solid #f25000;
+    cursor: pointer;
+    display: none;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    height: 165px;
+    text-align: left;
+    width: 305px;
+    z-index: 9999;
+}
+.city_hover {
+    color: #f25000;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+}
+.city_hovers {
+    display: block;
+    position: absolute;
+}
+.city_show {
+    background: #e44424 url("../img/city_show.jpg") repeat scroll 0 0;
+    color: White;
+    cursor: pointer;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px;
+}
+.city_links {
+    background: #f6f6f6 url("../img/bg05.jpg") repeat scroll 0 0;
+    display: inline-block;
+    font-size: 13px;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+    vertical-align: top;
+    width: 60px;
+}
 .city {
     border: 0 solid Green;
     float: left;
@@ -157,7 +223,7 @@ li.nav_li:first-child {
     color : #979797;
 }
 .wrap_bottom  {
-    margin-left : 211px;
+    margin-left : 170px;
     margin-top : 10px;
 }
 
@@ -667,6 +733,153 @@ a
 #news_list
 {
     padding-top: 10px;
+}
+
+/***商户促销、新闻公告****/
+#row5
+{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 251px;
+    border: solid 0px Red;
+    margin-top: 15px;
+}
+#row5_left
+{
+    position: relative;
+    float: left;
+    width: 632px;
+    height: 251px;
+    border: solid 0px Red;
+}
+#row5_title1
+{
+    position: relative;
+    float: left;
+    width: 632px;
+    height: 31px;
+    outline: solid 0px Red;
+}
+#pro_title
+{
+    position: relative;
+    float: left;
+    width: 151px;
+    height: 100%;
+    background-image: url("../img/商家促销_03.png");
+}
+.pro_head
+{
+    background-image: url("../img/商户促销3.png");
+}
+
+.pro_type {
+    position: relative;
+    float: left;
+    width: 96px;
+    height: 100%;
+    background-image: url("../img/商户促销3.png");
+    cursor: pointer;
+}
+.pro_type div{
+    margin-top : 7px;
+    margin-left : 33px;
+    font-size : 16px;
+    font-family : "黑体";
+    white-space:nowrap;
+    overflow : hidden;
+    color : #6C6C6C;
+}
+
+.pro_other
+{
+    background-image: url("../img/商户促销4.png");
+}
+
+.pro_head_hover {
+    background-image: url("../img/商户促销1.png");
+}
+.pro_head_hover div {
+    color : orange;
+}
+.pro_other_hover {
+    background-image: url("../img/商户促销2.png");
+}
+.pro_other_hover div {
+    color:orange;
+}
+#pro_more
+{
+    position: relative;
+    float: left;
+    width: 92px;
+    height: 21px;
+    background-image: url("../img/未选中_08.png");
+    padding-top: 10px;
+    padding-right: 5px;
+    text-align: right;
+}
+#row5_pro
+{
+    position: relative;
+    float: left;
+    width: 624px;
+    height: 217px;
+    margin-left: 4px;
+    margin-top: 2px;
+    outline: solid 0px Red;
+    background-image: url("../img/促销_03.png");
+}
+#pro_picture
+{
+    position: relative;
+    float: left;
+    width: 258px;
+    height: 191px;
+    background-image: url("../img/图片258x191.png");
+    margin-top: 13px;
+    margin-left: 13px;
+    margin-right: 13px;
+    outline: solid 0px Red;
+}
+#pro_list
+{
+    position: relative;
+    float: left;
+    width: 338px;
+    height: 191px;
+    outline: solid 0px black;
+    border-left: dash 2px #666;
+    margin-top: 13px;
+}
+#row5_right
+{
+    position: relative;
+    float: left;
+    width: 321px;
+    height: 251px;
+    margin-left: 23px;
+    border: solid 0px Red;
+}
+#row5_title2
+{
+    position: relative;
+    float: left;
+    width: 321px;
+    height: 31px;
+    outline: solid 0px Blue;
+    background-image: url("../img/官网首页新_05.png");
+}
+#row5_news
+{
+    position: relative;
+    float: left;
+    width: 319px;
+    height: 214px;
+    outline: solid 0px black;
+    background-image: url("../img/文字底色.png");
+    margin-top: 3px;
 }
 
 /**合作商家**/
