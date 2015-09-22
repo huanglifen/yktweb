@@ -63,7 +63,6 @@ var Validate = function() {
                         if(item.required.hasOwnProperty('warning')&& item.required.warning == 'alert') {
                             alert(item.required.msg);
                         }else{
-                            console.log(item.required.msg);
                             $(item.targetError).text(item.required.msg);
                         }
                         errorNum++;

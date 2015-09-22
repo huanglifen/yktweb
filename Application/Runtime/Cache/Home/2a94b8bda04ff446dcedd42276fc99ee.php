@@ -147,7 +147,7 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <a href="/CLIENT/common/New_Query.aspx" target="_blank">
+                                        <a href="<?php echo ($baseUrl); ?>/card/search" target="_blank">
                                             <img id="r3_img2" src="<?php echo ($imgUrl); ?>/117x127图标2.png" alt="查询系统" />
                                         </a>
                                     </div>

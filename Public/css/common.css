@@ -45,9 +45,27 @@ h1 {
 h5 {
     font-size: 12px;
 }
+.fl {
+    float : left;
+}
 
+.fr {
+    float : right;
+}
 .clearboth {
     clear: both;
+}
+
+#container {
+    border: 0 solid Red;
+    width: 100%;
+}
+#outer {
+    border: 0 solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 980px;
 }
 .wrap_header {
     border: 0 solid Red;
@@ -480,6 +498,26 @@ a.link {
     text-align: center;
     background-color: red;
 }
+.buy_tip {
+    color : red;
+    margin-left : 8px;
+}
+
+.input_text {
+    border: 1px solid #9b9a9a;
+    height: 21px;
+    width: 124px;
+}
+.input_text_big {
+    border: 1px solid #9b9a9a;
+    height: 49px;
+    width: 177px;
+}
+
+.input_text.small {
+    width : 70px;
+}
+
 #row3
 {
     position: relative;
@@ -926,5 +964,82 @@ a
     width: 157px;
 }
 .imgCode {
-    width : 130px;
+    width : 95px;
+}
+
+/********查询系统********/
+.tab_wrap {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    margin-top : 25px;
+}
+
+.tab_title {
+    float: left;
+    height: 31px;
+    margin-left: 15px;
+    width: 177px;
+}
+.tab_title.record {
+    background-image : url("../img/一卡通交易查询（橙色）.png");
+}
+.tab_title.record.gray {
+    background-image : url("../img/一卡通交易查询（灰色）.png");
+}
+.tab_title.balance {
+    background-image : url("../img/一卡通余额查询（橙色）.png");
+}
+.tab_title.balance.gray {
+    background-image : url("../img/一卡通余额查询（灰色）.png");
+}
+
+.tab_page {
+    display: none;
+}
+.tab_page.show {
+    display : block;
+}
+.tab_page_wrap .fl {
+    width : 720px;
+}
+.tab_page_wrap .fr {
+    background-image: url("../img/卡样balance.png");
+    height: 180px;
+    margin-right: 35px;
+    margin-top: 25px;
+    width: 220px;
+}
+.input_wrap {
+    line-height: 30px;
+    margin-left : 10px;
+}
+.input_wrap .input_label {
+    float:left;
+    width :75px;
+    text-align: right;
+}
+.tab_page .input_wrap {
+    line-height: 40px;
+}
+
+.search_submit {
+    width: 124px;
+    height: 27px;
+    background-color: red;
+    color: white;
+}
+.ml140 {
+    margin-left : 140px;
+}
+.search_submit.mar {
+    margin-left : 50px;
+    margin-right : 10px;
+    margin-top : 30px;
+}
+.balance_wrap {
+    margin-left : 185px;
+}
+.tab_page_wrap .fr {
+    margin-bottom: 80px;
 }

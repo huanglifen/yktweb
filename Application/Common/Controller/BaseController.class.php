@@ -61,14 +61,15 @@ class BaseController extends RestController{
         $this->assign("city", $city);
     }
 
-    protected function fail($status = self::RESPONSE_FAIL, $result='') {
+    protected function fail($result='', $status = self::RESPONSE_FAIL) {
         $this->toJson($result, $status);
         exit;
     }
 
-    protected function ok($result) {
-        echo $this->toJson($result, self::RESPONSE_OK);
-        exit;
+    protected function outputFailIfExist($result) {
+        if($result['status'] === false) {
+            $this->fail($result);
+        }
     }
 
     protected function outputErrorIfExist() {
@@ -76,6 +77,11 @@ class BaseController extends RestController{
             echo $this->toJson($this->errorInfo, self::RESPONSE_CHECK_FAIL);
             exit;
         }
+    }
+
+    protected function ok($result) {
+        echo $this->toJson($result, self::RESPONSE_OK);
+        exit;
     }
 
     protected function toJson($result = '', $status) {

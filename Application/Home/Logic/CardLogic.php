@@ -1,5 +1,10 @@
 <?php namespace Home\Logic;
 
+/**
+ * 卡操作逻辑层
+ *
+ * @package Home\Logic
+ */
 class CardLogic extends BaseLogic {
     const STATUS_SUBMIT = 1; //已提交
     const STATUS_DEALING = 2; //未支付
@@ -52,10 +57,24 @@ class CardLogic extends BaseLogic {
         return $result;
     }
 
+    /**
+     * 按主键获取在线售卡记录
+     *
+     * @param $id
+     * @return mixed
+     */
     public function getSaleCardById($id) {
         $saleCard = M("sale_card");
         $result = $saleCard->where("id=$id")->field("id, order_no, customer_name, tel, card_fee, recharge_mount, pay_mount, post_order, delivery, post_status, address, status, idcard, email, product_id, recommender")->limit(1)->select();
         return $result[0];
+    }
+
+    public function getCardRecode($cardNo, $checkCode) {
+
+    }
+
+    public function getCardBalance($cardNo, $checkCode) {
+
     }
 
     /**

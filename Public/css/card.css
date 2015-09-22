@@ -1,14 +1,4 @@
-#container {
-    border: 0 solid Red;
-    width: 100%;
-}
-#outer {
-    border: 0 solid black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    width: 980px;
-}
+
 .lang_img img {
     border: 1px solid #9b9a9a;
     float: left;
@@ -23,16 +13,6 @@
     margin-left: 10px;
     position: relative;
     width: 610px;
-}
-.input_text {
-    border: 1px solid #9b9a9a;
-    height: 21px;
-    width: 124px;
-}
-.input_text_big {
-    border: 1px solid #9b9a9a;
-    height: 49px;
-    width: 177px;
 }
 .cardImg {
     float: right;
@@ -124,10 +104,6 @@
 }
 .buy_info textarea {
     border : 1px solid #9b9a9a;
-}
-.buy_tip {
-    color : red;
-    margin-left : 8px;
 }
 
 .pt_ul {

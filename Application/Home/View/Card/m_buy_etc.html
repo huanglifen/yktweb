@@ -1,0 +1,59 @@
+<div class="scent3">
+    <div class="buy_left">
+        <div class="buy_etc_title">
+            <div class="buy_label"><label>套餐总价：</label>
+                <input type="text" class="input_text buy_etc_1400" disabled="disabled" value="1400">元
+                <span class="buy_etc_discount">限时特惠</span>
+                <input type="text" class="buy_etc_1350 input_text" disabled="disabled"value="1350"><span style="color:Red;font-size:20px;">元</span>
+                <br/>
+                <div class="buy_etc_tip">(含：ETC设备费400元，卡内金额1000元)</div>
+            </div>
+        </div>
+        <div class="buy_info">
+            <form id="buyForm" action="javascript:void(0);">
+                <input type="hidden" name="type" value="{$type}"/>
+                <input type="hidden" name="productId" value="{$product['id']}"/>
+                <input type="hidden" name="price" value="1350"/>
+            <div class="buy_input"><div class="buy_label">
+                <label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label></div>
+                <input type="text" class="input_text" name="name">
+                <span class="buy_tip">*</span>
+                <span id="nameError" class="buy_tip"></span>
+            </div>
+            <div class="buy_input"><div class="buy_label"><label>手机号码：</label></div>
+                <input type="text" class="input_text" name="mobile">
+                <span class="buy_tip">*</span>
+                <span id="mobileError" class="buy_tip"></span>
+            </div>
+            <div class="buy_input"><div class="buy_label"><label>身份证号：</label></div>
+                <input type="text" class="input_text" name="idcard">
+                <span id="idcardError" class="buy_tip"></span>
+            </div>
+            <div class="buy_input"><div class="buy_label"><label>邮寄地址：</label></div>
+                <textarea cols="17" name="address"></textarea>
+                <span id="addressError" class="buy_tip"></span>
+            </div>
+            <div class="buy_input"><div class="buy_label"><label>电子邮箱：</label></div>
+                <input type="text" class="input_text" name="email"><span class="buy_tip">(用于找回密码)</span>
+                <span id="emailError" class="buy_tip"></span>
+            </div>
+            <div class="buy_input"><div class="buy_checkbox">
+                <input type="checkbox" name="IAgree" value="1">
+                我已看过并接受 《
+                <a target="_blank" href="/card/agree">用户协议</a>
+                》</div>
+            </div>
+            <div class="buy_input"><div class="buy_checkbox">
+                <input type="submit" id="jsBuySubmit" class="buy_submit"value="立即购买" name="submit">
+            </div>
+            </div>
+           </form>
+        </div>
+    </div>
+    <div class="cardImg" >
+        <div class="cardImgEtc" style="background-image: url('{$baseUrl}/public/img/ETC卡样.png')"></div>
+        <div>
+            注：成功购买后请客户持本人有效身份证件、机动车行驶证、ETC卡、设备安装券（ETC卡、设备安装券均为河北一卡通邮寄）、驾驶车辆到河北一卡通服务网点安装ETC电子标签
+        </div>
+    </div>
+</div>

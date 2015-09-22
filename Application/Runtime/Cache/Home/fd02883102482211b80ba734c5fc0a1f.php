@@ -13,17 +13,6 @@
        <!-- <link href="http://v3.jiathis.com/code/css/jiathis_share.css" rel="stylesheet" type="text/css">-->
     
     
-    <link rel="stylesheet" type="text/css" href="<?php echo ($cssUrl); ?>/card.css"/>
-    <style>
-        .buy_input {
-            margin-left : 30px !important;
-            line-height: 37px;
-        }
-        .buy_left {
-            width : 400px;
-        }
-    </style>
-
 </head>
 <body>
 <div class="wrap">
@@ -92,71 +81,50 @@
         <div id="body_outer">
             <div id="container">
                 <div id="outer">
-                    <div class="lang_img">
-                        <?php if(!empty($product['pic_describe'])): ?><img alt="" src="<?php echo ($baseUrl); ?>/<?php echo ($product['pic_describe']); ?>">
-                            <?php else: ?>
-                            <img alt="" src="<?php echo ($imgUrl); ?>/在线购买蓝卡.jpg"><?php endif; ?>
+                    <div id="tab" class="tab_wrap">
+                        <div id="record" class="tab_title record" data="1"></div>
+                        <div id="balance" class="tab_title balance gray" data="2"></div>
                     </div>
-                    <?php if($pay == 1): else: ?>
-                        <div class="scent3">
-    <div class="buy_left">
-        <div class="buy_etc_title">
-            <div class="buy_label"><label>套餐总价：</label>
-                <input type="text" class="input_text buy_etc_1400" disabled="disabled" value="1400">元
-                <span class="buy_etc_discount">限时特惠</span>
-                <input type="text" class="buy_etc_1350 input_text" disabled="disabled"value="1350"><span style="color:Red;font-size:20px;">元</span>
-                <br/>
-                <div class="buy_etc_tip">(含：ETC设备费400元，卡内金额1000元)</div>
-            </div>
-        </div>
-        <div class="buy_info">
-            <form id="buyForm" action="javascript:void(0);">
-                <input type="hidden" name="type" value="<?php echo ($type); ?>"/>
-                <input type="hidden" name="productId" value="<?php echo ($product['id']); ?>"/>
-                <input type="hidden" name="price" value="1350"/>
-            <div class="buy_input"><div class="buy_label">
-                <label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label></div>
-                <input type="text" class="input_text" name="name">
-                <span class="buy_tip">*</span>
-                <span id="nameError" class="buy_tip"></span>
-            </div>
-            <div class="buy_input"><div class="buy_label"><label>手机号码：</label></div>
-                <input type="text" class="input_text" name="mobile">
-                <span class="buy_tip">*</span>
-                <span id="mobileError" class="buy_tip"></span>
-            </div>
-            <div class="buy_input"><div class="buy_label"><label>身份证号：</label></div>
-                <input type="text" class="input_text" name="idcard">
-                <span id="idcardError" class="buy_tip"></span>
-            </div>
-            <div class="buy_input"><div class="buy_label"><label>邮寄地址：</label></div>
-                <textarea cols="17" name="address"></textarea>
-                <span id="addressError" class="buy_tip"></span>
-            </div>
-            <div class="buy_input"><div class="buy_label"><label>电子邮箱：</label></div>
-                <input type="text" class="input_text" name="email"><span class="buy_tip">(用于找回密码)</span>
-                <span id="emailError" class="buy_tip"></span>
-            </div>
-            <div class="buy_input"><div class="buy_checkbox">
-                <input type="checkbox" name="IAgree" value="1">
-                我已看过并接受 《
-                <a target="_blank" href="/card/agree">用户协议</a>
-                》</div>
-            </div>
-            <div class="buy_input"><div class="buy_checkbox">
-                <input type="submit" id="jsBuySubmit" class="buy_submit"value="立即购买" name="submit">
-            </div>
-            </div>
-           </form>
-        </div>
-    </div>
-    <div class="cardImg" >
-        <div class="cardImgEtc" style="background-image: url('<?php echo ($baseUrl); ?>/public/img/ETC卡样.png')"></div>
-        <div>
-            注：成功购买后请客户持本人有效身份证件、机动车行驶证、ETC卡、设备安装券（ETC卡、设备安装券均为河北一卡通邮寄）、驾驶车辆到河北一卡通服务网点安装ETC电子标签
-        </div>
-    </div>
-</div><?php endif; ?>
+                    <div id="tab_page" class="tab_page_wrap">
+                        <div class="fl">
+                        <div class="tab_page show" id="data1">
+                            <form action="javascript:;" id="record_form">
+                            <div class="input_wrap"><div class="input_label"><label>一卡通卡号：</label></div>
+                                <input type="text" class="input_text" name="cardno">
+                                <span id="cardnoError" class="buy_tip"></span>
+                            </div>
+                            <div class="input_wrap"><div class="input_label"><label>四位校验码：</label></div>
+                                <input type="text" class="input_text" name="checkcode">
+                                <span id="checkCodeError" class="buy_tip"></span>
+                            </div>
+                                <div class="input_wrap">
+                                    <div class="input_label"></div>
+                                    <input type="submit" id="jsRecordBtn" class="search_submit ml140"value="查询" name="submit">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab_page balance_wrap" id="data2">
+                            <form action="javascript:;" id="balance_form">
+                            <div class="input_wrap"><div class="input_label"><label>一卡通卡号：</label></div>
+                                <input type="text" class="input_text" name="cardno">
+                                <span id="cardnoBalanceError" class="buy_tip"></span>
+                            </div>
+                            <div class="input_wrap"><div class="input_label"><label>四位校验码：</label></div>
+                                <input type="text" class="input_text" name="checkcode">
+                                <span id="codeBalanceError" class="buy_tip"></span>
+                            </div>
+                                <div class="input_wrap">
+                                    <div class="input_label"></div>
+                                    <input type="submit" id="jsBalanceBtn" class="search_submit mar"value="查询" name="submit">
+                                    <input type="submit" class="search_submit" value="关闭">
+                                    </div>
+                            </form>
+                        </div>
+                        </div>
+                        <div class="fr">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -330,43 +298,33 @@
     </script>
 
     
-    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/card.js"></script>
     <script type="text/javascript" src="<?php echo ($jsUrl); ?>/common.js"></script>
-    <script type="text/javascript">
+    <script>
         $(function() {
-            $("#jsBuySubmit").on("click", function() {
+            $(".tab_title").on("mouseenter", function() {
+                var $sibling = $(this).siblings();
+                $sibling.addClass("gray");
+                $(this).removeClass('gray');
+                $(".tab_page").removeClass("show");
+                var data = $(this).attr('data');
+                $("#data"+data).addClass('show');
+            });
+
+            //查询交易记录
+            $("#jsRecordBtn").on("click", function() {
                 if($(this).hasClass("disable")) {
                     return false;
                 }
-                var data = Common.toJson("#buyForm");
+                var data = Common.toJson("#record_form");
                 var validate = [
                     {
-                        'target': data.name,
-                        'required': {'flag': true, 'msg': '请输入姓名'},
-                        'maxLength': {'flag':true, 'max': 20, 'msg': '不超过20个字符'},
-                        'minLength': {'flag':true, 'min': 2, 'msg': '至少2个字符'},
-                        'targetError': "#nameError"
+                        'target': data.cardno,
+                        'required': {'flag': true, 'msg': '请输入卡号'},
+                        'targetError': "#cardnoError"
                     }, {
-                        'target': data.mobile,
-                        'required': {'flag': true, 'msg': '请输入手机号'},
-                        'mobile': {'flag': true, 'msg': '手机号格式不正确'},
-                        'targetError': "#mobileError"
-                    },{
-                        'target': data.idcard,
-                        'idCard': {'flag': true, 'msg': '身份证格式不正确'},
-                        'targetError': "#idcardError"
-                    },{
-                        'target': data.email,
-                        'email': {'flag': true, 'msg': '邮箱格式有误'},
-                        'targetError': "#emailError"
-                    },{
-                        'target': data.address,
-                        'required': {'flag': true, 'msg': '邮寄地址必填'},
-                        'maxLength' : {'flag' : true, 'msg' : '不能超过150个字符', 'max':150},
-                        'targetError': "#addressError"
-                    },{
-                        'target': data.IAgree,
-                        'required': {'flag': true, 'msg': '本网站只允许协议同意者注册', 'warning' : 'alert'}
+                        'target': data.checkcode,
+                        'required': {'flag': true, 'msg': '请输入校验码'},
+                        'targetError': "#checkCodeError"
                     }
                 ];
                 var errorNum = Validate.validate(validate);
@@ -374,22 +332,49 @@
                     return false;
                 }else{
                     var param = {
-                        'url' : baseUrl + "/" + "card/buy",
+                        'url' : baseUrl + "/" + "card/record",
                         'data' : data
                     }
                     $(this).addClass("disable");
-                    Common.request(param, callback);
+                    Common.request(param, recordCallBack);
                 }
-            })
-            var callback = function(obj) {
-                $("#jsBuySubmit").removeClass("disable");
-                if(obj.status == RESPONSE_OK) {
-                    window.location.href=baseUrl +"//" + obj.result;
-                }else if(obj.status == RESPONSE_CHECK_FAIL) {
-                    alert('信息填写不正确！');
+            });
+
+            //查询余额
+            $("#jsBalanceBtn").on("click", function() {
+                if($(this).hasClass("disable")) {
+                    return false;
+                }
+                var data = Common.toJson("#balance_form");
+                var validate = [
+                    {
+                        'target': data.cardno,
+                        'required': {'flag': true, 'msg': '请输入卡号'},
+                        'targetError': "#cardnoBalanceError"
+                    }, {
+                        'target': data.checkcode,
+                        'required': {'flag': true, 'msg': '请输入校验码'},
+                        'targetError': "#codeBalanceError"
+                    }
+                ];
+                var errorNum = Validate.validate(validate);
+                if(errorNum > 0) {
+                    return false;
                 }else{
-                    alert('网络错误，请重试！');
+                    var param = {
+                        'url' : baseUrl + "/" + "card/balance",
+                        'data' : data
+                    }
+                    $(this).addClass("disable");
+                    Common.request(param, balanceCallBack);
                 }
+            });
+
+            var recordCallBack = function() {
+                $("#jsRecordBtn").removeClass('disable');
+            }
+            var balanceCallBack = function() {
+                $("#jsBalanceBtn").removeClass('disable');
             }
         })
     </script>

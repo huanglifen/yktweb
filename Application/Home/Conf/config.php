@@ -26,6 +26,9 @@ return array(
         'card/buy' => 'Card/postBuy',
         'card/pay' => 'Card/getPay',
         'code' => 'Utils/Code',
-        'card/msg' => 'Card/getMessage',
+        'card/msg' => 'Card/sendMessage',
+        'card/search' => 'Card/getSearch',
+        'card/record' => 'Card/postSearchRecord',
+        'card/balance' => 'Card/postSearchBalance'
     ),
 );

@@ -6,6 +6,9 @@
             margin-left : 30px !important;
             line-height: 37px;
         }
+        .buy_left {
+            width : 400px;
+        }
     </style>
 </block>
 <block name="mainContent">
@@ -20,42 +23,11 @@
                             <img alt="" src="{$imgUrl}/在线购买蓝卡.jpg">
                         </if>
                     </div>
-                    <div class="scent3">
-                        <div class="buy_left">
-                            <div class="buy_etc_title">
-                                <div class="buy_label"><label>套餐总价：</label>
-                                        <input type="text" class="input_text buy_etc_1400" disabled="disabled" value="1400">元
-                                        <span class="buy_etc_discount">限时特惠</span>
-                                    <input type="text" class="buy_etc_1350 input_text" disabled="disabled"value="1350"><span style="color:Red;font-size:20px;">元</span>
-                                    <br/>
-                                    <div class="buy_etc_tip">(含：ETC设备费400元，卡内金额1000元)</div>
-                                </div>
-                            </div>
-                            <div class="buy_info">
-                                <div class="buy_input"><div class="buy_label"><label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label></div><input type="text" class="input_text"></div>
-                                <div class="buy_input"><div class="buy_label"><label>手机号码：</label></div><input type="text" class="input_text"></div>
-                                <div class="buy_input"><div class="buy_label"><label>身份证号：</label></div><input type="text" class="input_text"></div>
-                                <div class="buy_input"><div class="buy_label"><label>邮寄地址：</label></div><textarea cols="17"></textarea></div>
-                                <div class="buy_input"><div class="buy_label"><label>电子邮箱：</label></div><input type="text" class="input_text"><span class="buy_tip">(用于找回密码)</span></div>
-                                <div class="buy_input"><div class="buy_checkbox">
-                                    <input id="ckbIAgree" type="checkbox" value="checkbox" name="IAgree">
-                                    我已看过并接受 《
-                                    <a target="_blank" href="/card/agree">用户协议</a>
-                                    》</div>
-                                </div>
-                                <div class="buy_input"><div class="buy_checkbox">
-                                    <input type="submit" id="jsBuySubmit" class="buy_submit"value="立即购买" name="submit">
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardImg" >
-                            <div class="cardImgEtc" style="background-image: url('{$baseUrl}/public/img/ETC卡样.png')"></div>
-                            <div>
-                                注：成功购买后请客户持本人有效身份证件、机动车行驶证、ETC卡、设备安装券（ETC卡、设备安装券均为河北一卡通邮寄）、驾驶车辆到河北一卡通服务网点安装ETC电子标签
-                            </div>
-                        </div>
-                    </div>
+                    <if condition="$pay eq 1">
+                        <include file="Card/m_pay_etc"/>
+                        <else/>
+                        <include file="Card/m_buy_etc"/>
+                    </if>
                 </div>
             </div>
         </div>
@@ -63,4 +35,66 @@
 </block>
 <block name="customJs">
     <script type="text/javascript" src="{$jsUrl}/card.js"></script>
+    <script type="text/javascript" src="{$jsUrl}/common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#jsBuySubmit").on("click", function() {
+                if($(this).hasClass("disable")) {
+                    return false;
+                }
+                var data = Common.toJson("#buyForm");
+                var validate = [
+                    {
+                        'target': data.name,
+                        'required': {'flag': true, 'msg': '请输入姓名'},
+                        'maxLength': {'flag':true, 'max': 20, 'msg': '不超过20个字符'},
+                        'minLength': {'flag':true, 'min': 2, 'msg': '至少2个字符'},
+                        'targetError': "#nameError"
+                    }, {
+                        'target': data.mobile,
+                        'required': {'flag': true, 'msg': '请输入手机号'},
+                        'mobile': {'flag': true, 'msg': '手机号格式不正确'},
+                        'targetError': "#mobileError"
+                    },{
+                        'target': data.idcard,
+                        'idCard': {'flag': true, 'msg': '身份证格式不正确'},
+                        'targetError': "#idcardError"
+                    },{
+                        'target': data.email,
+                        'email': {'flag': true, 'msg': '邮箱格式有误'},
+                        'targetError': "#emailError"
+                    },{
+                        'target': data.address,
+                        'required': {'flag': true, 'msg': '邮寄地址必填'},
+                        'maxLength' : {'flag' : true, 'msg' : '不能超过150个字符', 'max':150},
+                        'targetError': "#addressError"
+                    },{
+                        'target': data.IAgree,
+                        'required': {'flag': true, 'msg': '本网站只允许协议同意者注册', 'warning' : 'alert'}
+                    }
+                ];
+                var errorNum = Validate.validate(validate);
+                if(errorNum > 0) {
+                    return false;
+                }else{
+                    var param = {
+                        'url' : baseUrl + "/" + "card/buy",
+                        'data' : data
+                    }
+                    $(this).addClass("disable");
+                    Common.request(param, callback);
+                }
+            })
+            var callback = function(obj) {
+                $("#jsBuySubmit").removeClass("disable");
+                if(obj.status == RESPONSE_OK) {
+                    window.location.href=baseUrl +"//" + obj.result;
+                }else if(obj.status == RESPONSE_CHECK_FAIL) {
+                    alert('信息填写不正确！');
+                }else{
+                    alert('网络错误，请重试！');
+                }
+            }
+        })
+    </script>
 </block>

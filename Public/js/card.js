@@ -5,4 +5,8 @@ $(function() {
         var cardFee = $(this).attr('data-fee');
         $("#cardFee").val(cardFee);
     })
+
+    $(".imgCode").on("click", function() {
+
+    })
 })

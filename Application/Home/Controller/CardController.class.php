@@ -37,9 +37,6 @@ class CardController extends BaseController {
         $this->assign("type", $type);
         $this->assign("pay", 0);
 
-        $sesName = "order_id".$type;
-        $sesName = "order_id".$type;
-        session($sesName, null);
         $view = $this->viewArr[$type];
         $this->showView($view);
     }
@@ -64,7 +61,7 @@ class CardController extends BaseController {
         $this->assign("pay", 1);
 
         $cardLogic = new CardLogic();
-        $saleCard = $cardLogic->getSaleCardById(session("order_id"));
+        $saleCard = $cardLogic->getSaleCardById(session("order_id".$type));
         $this->assign("saleCard", $saleCard);
 
         $view = $this->viewArr[$type];
@@ -77,7 +74,7 @@ class CardController extends BaseController {
 
     public function postBuy() {
         if(! IS_POST) {
-            $this->fail(self::RESPONSE_METHOD_ERROR);
+            $this->fail('', self::RESPONSE_METHOD_ERROR);
         }
         $type = $this->getParam('type');
         $IAgree = $this->getParam('post.IAgree','required|equal:1', 0);
@@ -102,7 +99,7 @@ class CardController extends BaseController {
         $this->ok($url);
     }
 
-    public function getMessage() {
+    public function sendMessage() {
 
     }
 
@@ -110,6 +107,52 @@ class CardController extends BaseController {
 
     }
 
+    /**
+     * 显示查询交易记录和卡余额页面
+     */
+    public function getSearch() {
+        $this->showView('search');
+    }
+
+    /**
+     * 请求卡交易记录
+     */
+    public function postSearchRecord() {
+        if(! IS_POST) {
+            $this->fail('', self::RESPONSE_METHOD_ERROR);
+        }
+        $cardNo = $this->getParam('post.cardno', 'required');
+        $checkCode = $this->getParam('post.checkcode', 'required');
+        $this->outputErrorIfExist();
+
+        $cardLogic = new CardLogic();
+        $result = $cardLogic->getCardRecode($cardNo, $checkCode);
+        $this->outputFailIfExist($result);
+
+        $this->ok($result);
+    }
+
+    /**
+     * 请求查询卡余额操作
+     */
+    public function postSearchBalance() {
+        if(! IS_POST) {
+            $this->fail('', self::RESPONSE_METHOD_ERROR);
+        }
+        $cardNo = $this->getParam('post.cardno', 'required');
+        $checkCode = $this->getParam('post.checkcode', 'required');
+        $this->outputErrorIfExist();
+
+        $cardLogic = new CardLogic();
+        $result = $cardLogic->getCardBalance($cardNo, $checkCode);
+        $this->outputFailIfExist($result);
+
+        $this->ok($result);
+    }
+
+    /**
+     * 显示同意获取卡的协议页面
+     */
     public function Agree(){
         $this->showView();
     }
