@@ -1,5 +1,5 @@
 <extend name="./Common/main"/>
-<block name="customeCss">
+<block name="customCss">
     <link rel="stylesheet" type="text/css" href="{$cssUrl}/flash.css">
 </block>
 <block name="mainContent">
@@ -44,11 +44,11 @@
                             <div id="gundiv" class="container2">
                                 <ul>
                                     <volist name="products" id="pro">
-                                        <li><a href="{$pro.pic_describe}" target="_blank">
+                                        <li><a href="{$baseUrl}/card/index?type={$pro.url}" target="_blank">
                                             <img src="{$baseUrl}/{$pro.picture}" width="207" height="130" /></a>
                                             <p>
                                                 <span style="float: left;">{$pro.name}</span> <span style="float: right;">
-                                                   <a href="{$pro.url}" target="_blank">
+                                                   <a href="{$baseUrl}/card/index?type={$pro.url}" target="_blank">
 
                                                        <switch name="pro.op_type" >
                                                           <case value="3" break="1"> <img src="{$imgUrl}/bd.png" style="margin-top: 7px; width: 91px; height: 26px;" /></case>
@@ -208,7 +208,7 @@
         </div>
     </div>
 </block>
-<block name="customeJs">
+<block name="customJs">
     <script type="text/javascript" src="{$jsUrl}/scroll.js"></script>
     <script type="text/javascript" src="{$jsUrl}/index.js"></script>
     <script>

@@ -13,7 +13,7 @@
        <!-- <link href="http://v3.jiathis.com/code/css/jiathis_share.css" rel="stylesheet" type="text/css">-->
     
     
-    <link rel="stylesheet" type="text/css" href="<?php echo ($cssUrl); ?>/flash.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ($cssUrl); ?>/card.css"/>
 
 </head>
 <body>
@@ -83,180 +83,78 @@
         <div id="body_outer">
             <div id="container">
                 <div id="outer">
-                    <div id="row1">
-                        <div class="wal">
-                            <div class="indexFlashDiv">
-                                <div class="indexFlash">
-                                    <ul>
-                                        <?php if(is_array($carousels)): $i = 0; $__LIST__ = $carousels;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$carouseli): $mod = ($i % 2 );++$i;?><li >
-                                                <a target="_blank" href="<?php echo ($carouseli["url"]); ?>">
-                                                <img alt="" src="<?php echo ($baseUrl); ?>/<?php echo ($carouseli["picture"]); ?>">
-                                            </a>
-                                            </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                                    </ul>
-                                </div>
-                                <div class="flashBtn">
-                                    <ul>
-                                        <?php if(is_array($carousels)): $key = 0; $__LIST__ = $carousels;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$carouseli): $mod = ($key % 2 );++$key; if($key == 1): ?><li style="padding-top: 0px;" class="liNow">
-                                                    <img width="44" height="28" alt="" src="<?php echo ($baseUrl); ?>/<?php echo ($carouseli["picture"]); ?>"></li>
-                                                <?php else: ?>
-                                                    <li style="padding-top: 7px;" class="liNow">
-                                                        <img width="44" height="28" alt="" src="<?php echo ($baseUrl); ?>/<?php echo ($carouseli["picture"]); ?>"></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="lang_img">
+                        <?php if(!empty($product['pic_describe'])): ?><img alt="" src="<?php echo ($baseUrl); ?>/<?php echo ($product['pic_describe']); ?>">
+                            <?php else: ?>
+                            <img alt="" src="<?php echo ($imgUrl); ?>/在线购买蓝卡.jpg"><?php endif; ?>
                     </div>
-                    <div id="row2">
-                        <div id="zsgun">
-                            <div id="gundiv" class="container2">
-                                <ul>
-                                    <?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($baseUrl); ?>/card/index?type=<?php echo ($pro["url"]); ?>" target="_blank">
-                                            <img src="<?php echo ($baseUrl); ?>/<?php echo ($pro["picture"]); ?>" width="207" height="130" /></a>
-                                            <p>
-                                                <span style="float: left;"><?php echo ($pro["name"]); ?></span> <span style="float: right;">
-                                                   <a href="<?php echo ($baseUrl); ?>/card/index?type=<?php echo ($pro["url"]); ?>" target="_blank">
-
-                                                       <?php switch($pro["op_type"]): case "3": ?><img src="<?php echo ($imgUrl); ?>/bd.png" style="margin-top: 7px; width: 91px; height: 26px;" /><?php break;?>
-                                                          <?php case "2": ?><img src="<?php echo ($imgUrl); ?>/buy2.png" style="margin-top: 7px; width: 91px; height: 26px;" /><?php break;?>
-                                                          <?php default: ?> <img src="<?php echo ($imgUrl); ?>/buy.png" style="margin-top: 7px; width: 91px; height: 26px;" /><?php endswitch;?>
-
-                                                   </a>
-                                                </span>
-                                            </p>
-                                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                                </ul>
+                    <div class="scent3">
+                        <div class="buy_left">
+                            <div class="buy_title">
+                            </div>
+                            <div class="buy_info">
+                                <form id="buyForm" action="javascript:void(0);">
+                                    <input type="hidden" name="type" value="<?php echo ($type); ?>"/>
+                                    <div class="buy_input"><div class="buy_label"><label>姓名：</label></div>
+                                        <input type="text" class="input_text" name="name"> *
+                                        <span id="nameError" class="buy_tip"></span>
+                                    </div>
+                                    <div class="buy_input"><div class="buy_label"><label>手机号码：</label></div>
+                                        <input type="text" class="input_text" name="mobile"> *
+                                        <span id="mobileError" class="buy_tip"></span>
+                                    </div>
+                                    <div class="buy_input"><div class="buy_label"><label>身份证号：</label></div>
+                                        <input type="text" class="input_text" name="idcard">
+                                        <span id="idcardError" class="buy_tip"></span>
+                                    </div>
+                                    <div class="buy_input"><div class="buy_label"><label>售价(元)：</label></div>
+                                        <div class="buy_radio">
+                                            <input id="radchongzhi_0" type="radio" value="210" name="price" checked data-fee="10">
+                                            <label for="radchongzhi_0">210(含卡费)</label>
+                                            <input id="radchongzhi_1" type="radio" value="310" name="price" data-fee="10">
+                                            <label for="radchongzhi_1">310(含卡费)</label>
+                                            <input id="radchongzhi_2" type="radio" value="500" name="price" data-fee="0">
+                                            <label for="radchongzhi_2">500(免卡费)</label>
+                                            <input id="radchongzhi_3" type="radio" value="800" name="price" data-fee="0">
+                                            <label for="radchongzhi_3">800(免卡费)</label>
+                                            <input id="radchongzhi_4" type="radio" value="1000" name="price" data-fee="0">
+                                            <label for="radchongzhi_4">1000(免卡费)</label>
+                                            <input type="hidden" name="cardFee" value="10" id="cardFee"/>
+                                        </div>
+                                    </div>
+                                    <div class="buy_input"><div class="buy_label"><label>邮寄地址：</label></div>
+                                        <textarea cols="17" name="address"></textarea> *
+                                        <span id="addressError" class="buy_tip"></span>
+                                    </div>
+                                    <div class="buy_input"><div class="buy_label"><label>电子邮箱：</label></div>
+                                        <input type="text" class="input_text" name="email">
+                                        <span id="emailError" class="buy_tip"></span>
+                                    </div>
+                                    <div class="buy_input"><div class="buy_label"><label>推荐人：</label></div>
+                                        <input type="text" class="input_text" name="recommender">
+                                        <span id="recommenderError" class="buy_tip"></span>
+                                    </div>
+                                    <div class="buy_input"><div class="buy_checkbox">
+                                        <input id="ckbIAgree" type="checkbox" value="1" name="IAgree">
+                                        我已看过并接受 《
+                                        <a target="_blank" href="/card/agree">用户协议</a>
+                                        》</div>
+                                    </div>
+                                    <div class="buy_input"><div class="buy_checkbox">
+                                        <input type="submit" id="jsBuySubmit" class="buy_submit"value="立即购买" name="submit">
+                                    </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
+                        <?php if($type == Home\Controller\CardController::ORANGE_CARD): ?><div class="cardImg" style="background-image: url('<?php echo ($baseUrl); ?>/public/img/橙卡卡样.png')">
+                            </div>
+                            <?php else: ?>
+                            <div class="cardImg"  style="background-image: url('<?php echo ($baseUrl); ?>/public/img/卡样2.png')">
+                            </div><?php endif; ?>
                     </div>
-                    <div id="row3">
-                        <div id="row3_title">
-                            <div id="row3_title_img">
-                            </div>
-                        </div>
-                        <div id="row3_list">
-                            <ul id="row3_ul">
-                                <li>
-                                    <div>
-                                        <a href="/client/common/New_CZ_Test2.aspx" target="_blank">
-                                            <img id="r3_img1" src="<?php echo ($imgUrl); ?>/127x117图标1.png" alt="在线充值" />
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="/CLIENT/common/New_Query.aspx" target="_blank">
-                                            <img id="r3_img2" src="<?php echo ($imgUrl); ?>/117x127图标2.png" alt="查询系统" />
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="/CLIENT/common/New_CardBind.aspx" target="_blank">
-                                            <img id="r3_img3" src="<?php echo ($imgUrl); ?>/117x127图标3.png" alt="通卡绑定" />
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="/CLIENT/common/New_ChongZhiDan.aspx" target="_blank">
-                                            <img id="r3_img4" src="<?php echo ($imgUrl); ?>/117x127图标4.png" alt="生活缴费" />
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="/CarInsurance/CIIndex.aspx" target="_blank">
-                                            <img id="r3_img5" src="<?php echo ($imgUrl); ?>/117x127图标5.png" alt="车险服务" />
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <a href="/duizhang/New_VipLogin.aspx" target="_blank">
-                                            <img id="r3_imgnew" src="<?php echo ($imgUrl); ?>/117x127图标6.png" alt="商户对账" />
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
                 </div>
             </div>
-                    <div id="row5">
-                        <div id="row5_left">
-                            <div id="row5_title1">
-                                <div id="pro_title">
-                                </div>
-                                <?php if(is_array($businessTypes)): $key = 0; $__LIST__ = $businessTypes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$businessType): $mod = ($key % 2 );++$key; if($key == 1): ?><div class="pro_head pro_head_hover pro_type" key="<?php echo ($key); ?>">
-                                         <div><?php echo ($businessType["name"]); ?></div>
-                                       </div>
-                                           <?php else: ?>
-                                        <div class="pro_other pro_type" key="<?php echo ($key); ?>">
-                                            <div><?php echo ($businessType["name"]); ?></div>
-                                        </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                                <div id="pro_more">
-                                    <a style="color: Orange;" target="_blank" href="../business/hd_search.aspx?city=1">更多商户&gt;&gt;
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="row5_pro">
-                                <?php if(is_array($businessTypes)): $keyPro = 0; $__LIST__ = $businessTypes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$businessType): $mod = ($keyPro % 2 );++$keyPro; if($key == 0): ?><div class="store-wrapper show" id="div_p<?php echo ($keyPro); ?>">
-                                    <?php else: ?>
-                                    <div class="store-wrapper show" id="div_p<?php echo ($keyPro); ?>" style="display:none;"><?php endif; ?>
-                                    <div class="left">
-                                        <div style="width: 258px">
-                                            <img width="258" height="191"  id="Img<?php echo ($keyPro); ?>" src="<?php echo ($baseUrl); ?>/<?php echo ($businessType['business'][0]['picture']); ?>"></div>
-                                        <!--代码结束-->
-                                    </div>
-
-                                    <div class="restaurant right">
-                                        <div class="info-title">
-                                            <strong>
-                                                <?php echo ($businessType["name"]); ?><span class="title02"></span></strong></div>
-                                        <ul class="info-list">
-                                            <?php if(is_array($businessType["business"])): $i = 0; $__LIST__ = $businessType["business"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$business): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($business["title"]); ?>" target="_blank" href="">
-                                                <?php echo ($business["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                                        </ul>
-                                    </div>
-                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
-                            </div>
-                        </div>
-                        <div id="row5_right">
-                            <div id="row5_title2">
-                                <div style="float: right; margin-top: 10px;">
-                                    <a target="_blank" href="/client/newsshow/moreNews.aspx?city=1&amp;msgtype=01" style="color: Orange;">更多&gt;&gt;</a></div>
-                            </div>
-                            <div id="row5_news">
-                                <div id="news_list">
-                                    <ul id="news_ul">
-                                        <?php if(is_array($newsList)): $i = 0; $__LIST__ = $newsList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$news): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($news["title"]); ?>" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2591"><span class="date">[
-                <?php echo (date("Y-m-d",strtotime($news["created_at"]))); ?>]</span>&nbsp<?php echo ($news["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div id="row6">
-                        <div id="row6_title">
-                        </div>
-                        <div id="row6_list">
-                            <ul id="row6_ul">
-                                <?php if(is_array($partners)): $i = 0; $__LIST__ = $partners;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$partner): $mod = ($i % 2 );++$i;?><li>
-                                        <div>
-                                            <a target="_blank" href="<?php echo ($partner["url"]); ?>">
-                                                <img alt="<?php echo ($partner["name"]); ?>" src="<?php echo ($baseUrl); ?>/<?php echo ($partner["picture"]); ?>" class="r6_img">
-                                            </a>
-                                        </div>
-                                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-             </div>
         </div>
     </div>
 
@@ -428,25 +326,73 @@
     </script>
 
     
-    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/scroll.js"></script>
-    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/index.js"></script>
-    <script>
-        var imgUrl = "<?php echo ($imgUrl); ?>";
+    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/card.js"></script>
+    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/common.js"></script>
+    <script type="text/javascript">
         $(function() {
-            $("body").on("mouseenter", ".pro_type", function() {
-                $(".pro_other").removeClass("pro_other_hover");
-                if($(this).hasClass("pro_head")) {
-                    $(this).addClass("pro_head_hover");
-                }else{
-                    $(".pro_head").removeClass("pro_head_hover");
-                    $(this).addClass("pro_other_hover");
+            $("#jsBuySubmit").on("click", function() {
+                if($(this).hasClass("disable")) {
+                    return false;
                 }
-                var key = $(this).attr("key");
-                $(".store-wrapper").hide();
-                $("#div_p"+key).show();
-            });
+                var data = Common.toJson("#buyForm");
+                var validate = [
+                    {
+                        'target': data.name,
+                        'required': {'flag': true, 'msg': '请输入姓名'},
+                        'maxLength': {'flag':true, 'max': 20, 'msg': '不超过20个字符'},
+                        'minLength': {'flag':true, 'min': 2, 'msg': '至少2个字符'},
+                        'targetError': "#nameError"
+                    }, {
+                        'target': data.mobile,
+                        'required': {'flag': true, 'msg': '请输入手机号'},
+                        'mobile': {'flag': true, 'msg': '手机号格式不正确'},
+                        'targetError': "#mobileError"
+                    },{
+                        'target': data.idcard,
+                        'idCard': {'flag': true, 'msg': '身份证格式不正确'},
+                        'targetError': "#idcardError"
+                    },{
+                        'target': data.email,
+                        'email': {'flag': true, 'msg': '邮箱格式不正确'},
+                        'targetError': "#emailError"
+                    },{
+                        'target': data.address,
+                        'required': {'flag': true, 'msg': '邮寄地址必填'},
+                        'maxLength' : {'flag' : true, 'msg' : '不能超过150个字符', 'max':150},
+                        'targetError': "#addressError"
+                    },{
+                        'target': data.recommender,
+                        'maxLength': {'flag': true, 'msg': '不能超过20个字符', 'max':20},
+                        'targetError': "#recommenderError"
+                    },{
+                        'target': data.IAgree,
+                        'required': {'flag': true, 'msg': '本网站只允许协议同意者注册', 'warning' : 'alert'}
+                    }
+                ];
+                var errorNum = Validate.validate(validate);
+                if(errorNum > 0) {
+                    return false;
+                }else{
+                    var param = {
+                        'url' : baseUrl + "/" + "card/buy",
+                        'data' : data
+                    }
+                    var callback = function(obj) {
+                        $("#jsBuySubmit").removeClass("disable");
+                        alert('hi');
+                        if(obj.status == RESPONSE_OK) {
+                            window.location.href=baseUrl +"/" + obj.result;
+                        }else if(obj.status == RESPONSE_CHECK_FAIL) {
+                            alert('信息填写不正确！');
+                        }else{
+                            alert('网络错误，请重试！');
+                        }
+                    }
+                    $(this).addClass("disable");
+                    Common.request(param, callback);
+                }
+            })
         })
-
     </script>
 
 </div>

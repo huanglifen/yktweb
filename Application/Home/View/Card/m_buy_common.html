@@ -1,0 +1,68 @@
+<div class="scent3">
+    <div class="buy_left">
+        <div class="buy_title">
+        </div>
+        <div class="buy_info">
+            <form id="buyForm" action="javascript:void(0);">
+                <input type="hidden" name="type" value="{$type}"/>
+                <input type="hidden" name="productId" value="{$product['id']}"/>
+                <div class="buy_input"><div class="buy_label"><label>姓名：</label></div>
+                    <input type="text" class="input_text" name="name"> *
+                    <span id="nameError" class="buy_tip"></span>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>手机号码：</label></div>
+                    <input type="text" class="input_text" name="mobile"> *
+                    <span id="mobileError" class="buy_tip"></span>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>身份证号：</label></div>
+                    <input type="text" class="input_text" name="idcard">
+                    <span id="idcardError" class="buy_tip"></span>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>售价(元)：</label></div>
+                    <div class="buy_radio">
+                        <input id="radchongzhi_0" type="radio" value="210" name="price" checked data-fee="10">
+                        <label for="radchongzhi_0">210(含卡费)</label>
+                        <input id="radchongzhi_1" type="radio" value="310" name="price" data-fee="10">
+                        <label for="radchongzhi_1">310(含卡费)</label>
+                        <input id="radchongzhi_2" type="radio" value="500" name="price" data-fee="0">
+                        <label for="radchongzhi_2">500(免卡费)</label>
+                        <input id="radchongzhi_3" type="radio" value="800" name="price" data-fee="0">
+                        <label for="radchongzhi_3">800(免卡费)</label>
+                        <input id="radchongzhi_4" type="radio" value="1000" name="price" data-fee="0">
+                        <label for="radchongzhi_4">1000(免卡费)</label>
+                        <input type="hidden" name="cardFee" value="10" id="cardFee"/>
+                    </div>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>邮寄地址：</label></div>
+                    <textarea cols="17" name="address"></textarea> *
+                    <span id="addressError" class="buy_tip"></span>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>电子邮箱：</label></div>
+                    <input type="text" class="input_text" name="email">
+                    <span id="emailError" class="buy_tip"></span>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>推荐人：</label></div>
+                    <input type="text" class="input_text" name="recommender">
+                    <span id="recommenderError" class="buy_tip"></span>
+                </div>
+                <div class="buy_input"><div class="buy_checkbox">
+                    <input id="ckbIAgree" type="checkbox" value="1" name="IAgree">
+                    我已看过并接受 《
+                    <a target="_blank" href="/card/agree">用户协议</a>
+                    》</div>
+                </div>
+                <div class="buy_input"><div class="buy_checkbox">
+                    <input type="submit" id="jsBuySubmit" class="buy_submit"value="立即购买" name="submit">
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <if condition="$type eq Home\Controller\CardController::ORANGE_CARD">
+        <div class="cardImg" style="background-image: url('{$baseUrl}/public/img/橙卡卡样.png')">
+        </div>
+        <else/>
+        <div class="cardImg"  style="background-image: url('{$baseUrl}/public/img/卡样2.png')">
+        </div>
+    </if>
+</div>

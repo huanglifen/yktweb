@@ -17,7 +17,6 @@ class IndexController extends BaseController {
 
     /**
      * 首页
-     * @param int $cityId
      */
     public function index( ){
         $cityId = I("get.cityId");

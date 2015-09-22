@@ -15,4 +15,17 @@ return array(
     'DB_PREFIX' => '', // 数据库表前缀
     'DB_CHARSET'=> 'utf8', // 字符集
     'URL_HTML_SUFFIX' => 'html',
+    'LANG_SWITCH_ON'     =>     true,    //开启语言包功能
+    'LANG_AUTO_DETECT'     =>     true, // 自动侦测语言
+    'DEFAULT_LANG'         =>     'zh-cn', // 默认语言
+    'LANG_LIST'            =>    'zh-cn', //必须写可允许的语言列表
+    'VAR_LANGUAGE'     => 'l', // 默认语言切换变量
+
+    'URL_ROUTER_ON' => true, //开启路由
+    'URL_ROUTE_RULES' => array( //定义路由规则
+        'card/buy' => 'Card/postBuy',
+        'card/pay' => 'Card/getPay',
+        'code' => 'Utils/Code',
+        'card/msg' => 'Card/getMessage',
+    ),
 );

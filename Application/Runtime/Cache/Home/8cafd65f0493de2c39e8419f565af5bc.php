@@ -1,22 +1,24 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="UTF-8" >
-    <meta name="keywords" content="{$webInfo['keyword']}">
-    <meta name="description" content="{$webInfo['describe']}">
-    <block name="title"><title>{$webInfo['name']}</title></block>
-    <block name="commonCss">
-        <link rel="stylesheet" href="{$cssUrl}/common.css" type="text/css"/>
-       <!-- <link href="http://v3.jiathis.com/code/css/jiathis_share.css" rel="stylesheet" type="text/css">-->
-    </block>
-    <block name="customCss"></block>
+    <meta name="keywords" content="<?php echo ($webInfo['keyword']); ?>">
+    <meta name="description" content="<?php echo ($webInfo['describe']); ?>">
+    <title><?php echo ($webInfo['name']); ?></title>
+    
+        <link rel="stylesheet" href="<?php echo ($cssUrl); ?>/common.css" type="text/css"/>
+        <link href="http://v3.jiathis.com/code/css/jiathis_share.css" rel="stylesheet" type="text/css">
+    
+    
+<link rel="stylesheet" type="text/css" href="<?php echo ($cssUrl); ?>/card.css"/>
+
 </head>
 <body>
 <div class="wrap">
-<block name="header">
+
     <div class="wrap_header">
         <div class="header_outer">
             <div class="header_logo"></div>
@@ -24,70 +26,93 @@
                 <div class="tip">
                 </div>
                 <div id="city_list">
-                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[{$city['name']|str_replace="市","",###}]</span></div>
+                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[<?php echo (str_replace("市","",$city['name'])); ?>]</span></div>
                 <div class="city_link" id="city_link">
                     <div class="city_show">
                         <span title="关闭窗口" onclick="document.getElementById('city_nav').className='city_nav';document.getElementById('city_link').className='city_link';return !1;" href="javascript:void(0);" class="f_red f_r">[关闭]</span>
                     </div>
-                    <volist name="area" id="citi">
-                    <a href="{$baseUrl}?cityId={$citi['id']}" class="city_links">{$citi['name']|str_replace="市","站",###}</a>
-                    </volist>
+                    <?php if(is_array($area)): $i = 0; $__LIST__ = $area;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$citi): $mod = ($i % 2 );++$i;?><a href="<?php echo ($baseUrl); ?>?cityId=<?php echo ($citi['id']); ?>" class="city_links"><?php echo (str_replace("市","站",$citi['name'])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
             <div class="tel_img"></div>
         </div>
     </div>
-</block>
-<block name="navigation">
+
+
 <div class="navigation">
 <div class="nav_outer">
 <ul class="nav_ul">
     <li class="nav_li">
         <div class="nav_block">
-            <a href="{$baseUrl}"><div class="nav_in">首页</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">首页</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="{$baseUrl}"><div class="nav_in">河北交通一卡通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">河北交通一卡通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="{$baseUrl}"><div class="nav_in">淘友网</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">淘友网</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="{$baseUrl}"><div class="nav_in">积分联盟</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">积分联盟</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="{$baseUrl}"><div class="nav_in">ETC高速通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">ETC高速通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="{$baseUrl}"><div class="nav_in">京津冀旅游通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">京津冀旅游通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="{$baseUrl}"><div class="nav_in">商家合作</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">商家合作</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="{$baseUrl}"><div class="nav_in">帮助中心</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">帮助中心</div></a></div>
     </li>
 </ul>
 </div>
 </div>
-</block>
-<block name="mainContent"></block>
-    <block name="rightFloat">
+
+
+    <div id="div_body">
+        <div id="body_outer">
+            <div id="container">
+                <div id="outer">
+                    <div class="lang_img">
+                        <?php if(!empty($product['pic_describe'])): ?><img alt="" src="<?php echo ($baseUrl); ?>/<?php echo ($product['pic_describe']); ?>">
+                            <?php else: ?>
+                            <img alt="" src="<?php echo ($imgUrl); ?>/在线购买蓝卡.jpg"><?php endif; ?>
+                    </div>
+                    <div class="scent3">
+                        <div class="buy_left">
+                            <div class="buy_title">
+                            </div>
+                            <div class="buy_info">
+
+                            </div>
+                        </div>
+                        <div id="cardimg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
 
         <div class="subuse" style="width: 270px;">
             <ul style="width: 270px;">
                 <li>
                 <span class="fr fl_img">
                     <a target="_blank" href="tencent://message/?Uin=1596902006&Site=www.966009.com&Menu=yes">
-                        <img src="{$imgUrl}/QQ灰.png" alt="QQ 客服" class="out_img" />
-                        <img src="{$imgUrl}/QQ彩.png" alt="QQ 客服" style="display: none;" class="hover_img" />
+                        <img src="<?php echo ($imgUrl); ?>/QQ灰.png" alt="QQ 客服" class="out_img" />
+                        <img src="<?php echo ($imgUrl); ?>/QQ彩.png" alt="QQ 客服" style="display: none;" class="hover_img" />
                     </a>
                 </span>
                 <span class="fl" style="width:230px;">
@@ -98,9 +123,9 @@
                 </li>
                 <li>
                 <span class="fr fl_img">
-                    <a target="_blank" href="{$webInfo['weibo']|default='http://weibo.com/hebeiyikatong'}">
-                        <img src="{$imgUrl}/icon_4.jpg" alt="新浪微博" class="out_img" />
-                        <img src="{$imgUrl}/icon_44.jpg" alt="新浪微博" style="display: none;" class="hover_img" />
+                    <a target="_blank" href="<?php echo ((isset($webInfo['weibo']) && ($webInfo['weibo'] !== ""))?($webInfo['weibo']):'http://weibo.com/hebeiyikatong'); ?>">
+                        <img src="<?php echo ($imgUrl); ?>/icon_4.jpg" alt="新浪微博" class="out_img" />
+                        <img src="<?php echo ($imgUrl); ?>/icon_44.jpg" alt="新浪微博" style="display: none;" class="hover_img" />
                     </a>
                 </span>
                 <span class="fl">
@@ -111,20 +136,20 @@
                 <li>
                 <span class="fr fl_img">
                     <a href="#">
-                        <img src="{$imgUrl}/手机图标灰.png" alt="手机app" class="out_img" />
-                        <img src="{$imgUrl}/手机图标彩.png" alt="手机app" style="display: none;" class="hover_img" />
+                        <img src="<?php echo ($imgUrl); ?>/手机图标灰.png" alt="手机app" class="out_img" />
+                        <img src="<?php echo ($imgUrl); ?>/手机图标彩.png" alt="手机app" style="display: none;" class="hover_img" />
                     </a>
                 </span>
                 <span class="fl no_bg" style="border: none;">
-                    <img src="{$imgUrl}/APP二维码.png" width='110' alt="手机app" />
+                    <img src="<?php echo ($imgUrl); ?>/APP二维码.png" width='110' alt="手机app" />
                 </span>
 
                 </li>
                 <li>
                 <span class="fr fl_img">
                     <a href="#">
-                        <img src="{$imgUrl}/分享到灰.png" alt="手机app" class="out_img" />
-                        <img src="{$imgUrl}/分享到彩.png" alt="手机app" style="display: none;" class="hover_img" />
+                        <img src="<?php echo ($imgUrl); ?>/分享到灰.png" alt="手机app" class="out_img" />
+                        <img src="<?php echo ($imgUrl); ?>/分享到彩.png" alt="手机app" style="display: none;" class="hover_img" />
                     </a>
                 </span>
                 <span class="fl" style="width: 235px;font-size:12px;">
@@ -135,8 +160,8 @@
                     </a><a class="jiathis_button_weixin"></a><a class="jiathis_button_kaixin001"></a>
                         <a class="jiathis_button_renren"></a><a class="jiathis_button_tsohu"></a><a class="jiathis_button_douban">
                     </a>
-                      <!--  <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=undefined"
-                                charset="utf-8"></script>-->
+                        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=undefined"
+                                charset="utf-8"></script>
                     </div>
                 </div>
                 </span>
@@ -145,27 +170,27 @@
                 <li id="wx">
                 <span class="fr fl_img">
                     <a href="#">
-                    <img src="{$imgUrl}/weixin11.png" alt="微信" class="out_img" />
-                    <img src="{$imgUrl}/weixin1.png" alt="微信" style="display: none;" class="hover_img" />
+                    <img src="<?php echo ($imgUrl); ?>/weixin11.png" alt="微信" class="out_img" />
+                    <img src="<?php echo ($imgUrl); ?>/weixin1.png" alt="微信" style="display: none;" class="hover_img" />
                     </a>
                 </span>
                 <span id="wx_sp" class="fl no_bg" style="z-index: 9999; border: none;">
-                    <img src="{$imgUrl}/微信二维码.png" width='110' alt="微信" />
+                    <img src="<?php echo ($imgUrl); ?>/微信二维码.png" width='110' alt="微信" />
                 </span>
                 </li>
                 <li id="back-to-top">
                 <span class="fr fl_img go_to_top">
                     <a href="">
-                        <img src="{$imgUrl}/icon_7.jpg" alt="回到顶部" class="out_img" />
-                        <img src="{$imgUrl}/icon_77.jpg" alt="回到顶部" style="display: none;" class="hover_img" />
+                        <img src="<?php echo ($imgUrl); ?>/icon_7.jpg" alt="回到顶部" class="out_img" />
+                        <img src="<?php echo ($imgUrl); ?>/icon_77.jpg" alt="回到顶部" style="display: none;" class="hover_img" />
                     </a>
                 </span>
                     <span class="fl" style="cursor: pointer;">回到顶部</span>
                 </li>
             </ul>
         </div>
-    </block>
-<block name="footer">
+    
+
     <div class="clearboth"></div>
     <div class="div_bottom">
         <div class="wrap_bottom">
@@ -187,15 +212,14 @@
                     <span id="kx_verify"></span>
                     <script type="text/javascript">
                         (function () {
-                            //var _kxs = document.createElement('script');
-                           // _kxs.id = 'kx_script';
-                            //_kxs.async = true;
-                           // _kxs.setAttribute('cid', 'kx_verify');
-                           // _kxs.src = ('https:' == document.location.protocol ? 'https://ss.knet.cn' : 'http://rr.knet.cn') + '/static/js/icon3.js?sn=e13111511010043455fmwq000000&tp=icon3';
-                            //_kxs.setAttribute('size', 0);
-                            //var _kx = document.getElementById('kx_verify');
-                           // _kx.parentNode.insertBefore(_kxs, _kx);
-                           })();
+                            var _kxs = document.createElement('script');
+                            _kxs.id = 'kx_script';
+                            _kxs.async = true;
+                            _kxs.setAttribute('cid', 'kx_verify');
+                            _kxs.src = ('https:' == document.location.protocol ? 'https://ss.knet.cn' : 'http://rr.knet.cn') + '/static/js/icon3.js?sn=e13111511010043455fmwq000000&tp=icon3';
+                            _kxs.setAttribute('size', 0);
+                            var _kx = document.getElementById('kx_verify');
+                            _kx.parentNode.insertBefore(_kxs, _kx); })();
                     </script>
                 </div>
                 <div class="copyright_wrap">
@@ -204,21 +228,21 @@
                     </div>
                    <div class="number">
                        <script type="text/javascript">
-                         //  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-                          // document.write(decodeURIComponent("%3Cspan id='cnzz_stat_icon_1000205784'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000205784%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+                           var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                           document.write(decodeURIComponent("%3Cspan id='cnzz_stat_icon_1000205784'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000205784%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
                        </script>
-                        {$webInfo['filling_number']|default="冀ICP备06000578 &nbsp;冀ICP证B2-20130050"}
+                        <?php echo ((isset($webInfo['filling_number']) && ($webInfo['filling_number'] !== ""))?($webInfo['filling_number']):"冀ICP备06000578 &nbsp;冀ICP证B2-20130050"); ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</block>
-<block name="importJs">
-    <script type="text/javascript" src="{$jsUrl}/jquery-1.11.3.min.js" ></script>
+
+
+    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/jquery-1.11.3.min.js" ></script>
     <script type="text/javascript">
-        var baseUrl = "{$baseUrl}";
         $(function () {
+            var baseUrl = "<?php echo ($baseUrl); ?>";
             $('body').on("mouseover", ".fl_img", function () {
                 $(this).children().children('.out_img').hide();
                 $(this).children().children('.hover_img').show();
@@ -239,15 +263,15 @@
                 $('body,html').animate({ scrollTop: 0 }, 500);
                 return false;
             });
-            var headLogo = "{$webInfo['head_logo']}";
+            var headLogo = "<?php echo ($webInfo['head_logo']); ?>";
             if(headLogo) {
                 $(".header_logo").css("background-image", "url('"+baseUrl+"/"+headLogo+"')");
             }
         });
     </script>
-</block>
-    <block name="customJs">
 
-    </block>
+    
+<script type="text/javascript" src="<?php echo ($jsUrl); ?>/card.js"></script>
+
 </div>
 </body>

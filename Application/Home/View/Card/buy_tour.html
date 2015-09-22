@@ -1,0 +1,66 @@
+<extend name="./Common/main" />
+<block name="customCss">
+    <link rel="stylesheet" type="text/css" href="{$cssUrl}/card.css"/>
+    <style>
+        .buy_input {
+            line-height: 40px;
+        }
+    </style>
+</block>
+<block name="mainContent">
+    <div id="div_body">
+        <div id="body_outer">
+            <div id="container">
+                <div id="outer">
+                    <div class="lang_img">
+                        <if condition="!empty($product['pic_describe'])">
+                            <img alt="" src="{$baseUrl}/{$product['pic_describe']}">
+                            <else/>
+                            <img alt="" src="{$imgUrl}/在线购买蓝卡.jpg">
+                        </if>
+                    </div>
+                    <div class="scent3">
+                        <div class="buy_left">
+                            <div class="buy_info">
+                                <div class="buy_input"><div class="buy_label"><label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label></div><input type="text" class="input_text"></div>
+                                <div class="buy_input"><div class="buy_label"><label>手机号码：</label></div><input type="text" class="input_text"></div>
+                                <div class="buy_input"><div class="buy_label"><label>身份证号：</label></div><input type="text" class="input_text"></div>
+                                <div class="buy_input"><div class="buy_label"><label>售价(元)：</label></div>
+                                    <div class="buy_radio">
+                                        <input id="radchongzhi_0" type="radio" value="210" name="price" checked>
+                                        <label for="radchongzhi_0">210(含卡费)</label>
+                                        <input id="radchongzhi_1" type="radio" value="310" name="price" >
+                                        <label for="radchongzhi_1">310(含卡费)</label>
+                                        <input id="radchongzhi_2" type="radio" value="500" name="price">
+                                        <label for="radchongzhi_2">500(免卡费)</label>
+                                        <input id="radchongzhi_3" type="radio" value="800" name="price">
+                                        <label for="radchongzhi_3">800(免卡费)</label>
+                                        <input id="radchongzhi_4" type="radio" value="1000" name="price">
+                                        <label for="radchongzhi_4">1000(免卡费)</label>
+                                    </div>
+                                </div>
+                                <div class="buy_input"><div class="buy_label"><label>邮寄地址：</label></div><textarea cols="17"></textarea></div>
+                                <div class="buy_input"><div class="buy_label"><label>电子邮箱：</label></div><input type="text" class="input_text"></div>
+                                <div class="buy_input"><div class="buy_checkbox">
+                                    <input id="ckbIAgree" type="checkbox" value="checkbox" name="IAgree">
+                                    我已看过并接受 《
+                                    <a target="_blank" href="/card/agree">用户协议</a>
+                                    》</div>
+                                </div>
+                                <div class="buy_input"><div class="buy_checkbox">
+                                    <input type="submit" id="jsBuySubmit" class="buy_submit"value="立即购买" name="submit">
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="cardImg big"  style="background-image: url('{$baseUrl}/public/img/旅游通卡样.png')">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="customJs">
+    <script type="text/javascript" src="{$jsUrl}/card.js"></script>
+</block>

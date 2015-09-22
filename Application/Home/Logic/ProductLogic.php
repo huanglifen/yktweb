@@ -17,8 +17,20 @@ class ProductLogic extends BaseLogic {
     public function getProducts() {
         $product = M('product');
         $conditionStr = self::OP_TYPE_BUY ."," . self::OP_TYPE_RECHARGE . "," . self::OP_TYPE_BIND;
-        $product = $product->where('op_type in (' . $conditionStr . ')')->field("id, picture, name, op_type")->select();
+        $product = $product->where('op_type in (' . $conditionStr . ')')->field("id, picture, name, op_type,url")->select();
         return $product;
+    }
+
+    /**
+     * 按url获取产品
+     *
+     * @param url
+     * @return mixed
+     */
+    public function getProductByUrl($url) {
+        $product = M('product');
+        $result = $product->where("url=$url")->field("id, name, pic_describe,url")->find();
+        return $result;
     }
 
 }
