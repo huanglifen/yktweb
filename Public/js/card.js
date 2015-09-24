@@ -7,6 +7,8 @@ $(function() {
     })
 
     $(".imgCode").on("click", function() {
-
+        var timestamp = new Date().getTime();
+        var src = baseUrl+"/code?time="+timestamp;
+        $(this).attr('src',src);
     })
 })

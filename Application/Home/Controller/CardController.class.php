@@ -23,11 +23,13 @@ class CardController extends BaseController {
      * 显示购卡页面
      *
      * @param int $type
+     * @param int $cityId
      */
-    public function  Index($type = self::BLUE_CARD) {
+    public function  Index($type = self::BLUE_CARD, $cityId = self::AREA_SJZ) {
         if(!in_array($type, array(self::BLUE_CARD, self::ORANGE_CARD, self::ETC_CARD, self::CCB_CARD, self::TOUR_CARD))) {
             $type = self::BLUE_CARD;
         }
+        $this->getCommon($cityId);
         $productLogic = new ProductLogic();
         $product = $productLogic->getProductByUrl($type);
         if(empty($product)) {
@@ -41,7 +43,8 @@ class CardController extends BaseController {
         $this->showView($view);
     }
 
-    public function toPay($type = self::BLUE_CARD) {
+    public function toPay($type = self::BLUE_CARD, $cityId= self::AREA_SJZ) {
+        $this->getCommon($cityId);
         $sesName = "order_id".$type;
         if(! session($sesName)) {
             redirect("/card/index");
@@ -109,8 +112,10 @@ class CardController extends BaseController {
 
     /**
      * 显示查询交易记录和卡余额页面
+     * @param $cityId
      */
-    public function getSearch() {
+    public function getSearch($cityId = self::AREA_SJZ) {
+        $this->getCommon($cityId);
         $this->showView('search');
     }
 
@@ -152,8 +157,10 @@ class CardController extends BaseController {
 
     /**
      * 显示同意获取卡的协议页面
+     * @param $cityId
      */
-    public function Agree(){
+    public function Agree($cityId = self::AREA_SJZ){
+        $this->getCommon($cityId);
         $this->showView();
     }
 }

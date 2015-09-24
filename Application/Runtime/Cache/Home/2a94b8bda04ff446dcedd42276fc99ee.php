@@ -48,31 +48,31 @@
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">河北交通一卡通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">河北交通一卡通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">淘友网</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">淘友网</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">积分联盟</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">积分联盟</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">ETC高速通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/card/index?type=4" target="_blank"><div class="nav_in">ETC高速通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">京津冀旅游通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/card/index?type=3" target="_blank"><div class="nav_in">京津冀旅游通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">商家合作</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">商家合作</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">帮助中心</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">帮助中心</div></a></div>
     </li>
 </ul>
 </div>
@@ -113,11 +113,11 @@
                         <div id="zsgun">
                             <div id="gundiv" class="container2">
                                 <ul>
-                                    <?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($baseUrl); ?>/card/index?type=<?php echo ($pro["url"]); ?>" target="_blank">
+                                    <?php if(is_array($products)): $i = 0; $__LIST__ = $products;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pro): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($baseUrl); ?>/card/index?type=<?php echo ($pro["url"]); ?>&cityId=<?php echo ($globalCityId); ?>" target="_blank">
                                             <img src="<?php echo ($baseUrl); ?>/<?php echo ($pro["picture"]); ?>" width="207" height="130" /></a>
                                             <p>
                                                 <span style="float: left;"><?php echo ($pro["name"]); ?></span> <span style="float: right;">
-                                                   <a href="<?php echo ($baseUrl); ?>/card/index?type=<?php echo ($pro["url"]); ?>" target="_blank">
+                                                   <a href="<?php echo ($baseUrl); ?>/card/index?type=<?php echo ($pro["url"]); ?>&cityId=<?php echo ($globalCityId); ?>" target="_blank">
 
                                                        <?php switch($pro["op_type"]): case "3": ?><img src="<?php echo ($imgUrl); ?>/bd.png" style="margin-top: 7px; width: 91px; height: 26px;" /><?php break;?>
                                                           <?php case "2": ?><img src="<?php echo ($imgUrl); ?>/buy2.png" style="margin-top: 7px; width: 91px; height: 26px;" /><?php break;?>
@@ -148,7 +148,7 @@
                                 <li>
                                     <div>
                                         <a href="<?php echo ($baseUrl); ?>/card/search" target="_blank">
-                                            <img id="r3_img2" src="<?php echo ($imgUrl); ?>/117x127图标2.png" alt="查询系统" />
+                                            <img id="r3_img2" src="<?php echo ($imgUrl); ?>/117x127图标2.png" alt="mounseenter" />
                                         </a>
                                     </div>
                                 </li>
@@ -198,7 +198,7 @@
                                             <div><?php echo ($businessType["name"]); ?></div>
                                         </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                                 <div id="pro_more">
-                                    <a style="color: Orange;" target="_blank" href="../business/hd_search.aspx?city=1">更多商户&gt;&gt;
+                                    <a style="color: Orange;" target="_blank" href="../business/list?cityId=<?php echo ($cityId); ?>">更多商户&gt;&gt;
                                     </a>
                                 </div>
                             </div>
@@ -208,8 +208,10 @@
                                     <div class="store-wrapper show" id="div_p<?php echo ($keyPro); ?>" style="display:none;"><?php endif; ?>
                                     <div class="left">
                                         <div style="width: 258px">
-                                            <img width="258" height="191"  id="Img<?php echo ($keyPro); ?>" src="<?php echo ($baseUrl); ?>/<?php echo ($businessType['business'][0]['picture']); ?>"></div>
-                                        <!--代码结束-->
+                                            <a target="_blank" href="<?php echo ($baseUrl); ?>/business/business?bid=<?php echo ($businessType['business'][0]['bid']); ?>&aid=<?php echo ($businessType['business'][0]['id']); ?>&cityId=<?php echo ($globalCityId); ?>"><img width="258" height="191"  id="Img<?php echo ($keyPro); ?>" src="<?php echo ($baseUrl); ?>/<?php echo ($businessType['business'][0]['picture']); ?>"/>
+                                            </a>
+                                        </div>
+
                                     </div>
 
                                     <div class="restaurant right">
@@ -217,7 +219,7 @@
                                             <strong>
                                                 <?php echo ($businessType["name"]); ?><span class="title02"></span></strong></div>
                                         <ul class="info-list">
-                                            <?php if(is_array($businessType["business"])): $i = 0; $__LIST__ = $businessType["business"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$business): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($business["title"]); ?>" target="_blank" href="">
+                                            <?php if(is_array($businessType["business"])): $i = 0; $__LIST__ = $businessType["business"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$business): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($business["title"]); ?>" target="_blank" href="<?php echo ($baseUrl); ?>/business/business?bid=<?php echo ($business["bid"]); ?>&aid=<?php echo ($businessType['business'][0]['id']); ?>&cityId=<?php echo ($globalCityId); ?>">
                                                 <?php echo ($business["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                         </ul>
                                     </div>

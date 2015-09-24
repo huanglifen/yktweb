@@ -44,11 +44,11 @@
                             <div id="gundiv" class="container2">
                                 <ul>
                                     <volist name="products" id="pro">
-                                        <li><a href="{$baseUrl}/card/index?type={$pro.url}" target="_blank">
+                                        <li><a href="{$baseUrl}/card/index?type={$pro.url}&cityId={$globalCityId}" target="_blank">
                                             <img src="{$baseUrl}/{$pro.picture}" width="207" height="130" /></a>
                                             <p>
                                                 <span style="float: left;">{$pro.name}</span> <span style="float: right;">
-                                                   <a href="{$baseUrl}/card/index?type={$pro.url}" target="_blank">
+                                                   <a href="{$baseUrl}/card/index?type={$pro.url}&cityId={$globalCityId}" target="_blank">
 
                                                        <switch name="pro.op_type" >
                                                           <case value="3" break="1"> <img src="{$imgUrl}/bd.png" style="margin-top: 7px; width: 91px; height: 26px;" /></case>
@@ -136,7 +136,7 @@
                                     </if>
                                 </volist>
                                 <div id="pro_more">
-                                    <a style="color: Orange;" target="_blank" href="../business/hd_search.aspx?city=1">更多商户&gt;&gt;
+                                    <a style="color: Orange;" target="_blank" href="../business/list?cityId={$cityId}">更多商户&gt;&gt;
                                     </a>
                                 </div>
                             </div>
@@ -149,8 +149,10 @@
                                     </if>
                                     <div class="left">
                                         <div style="width: 258px">
-                                            <img width="258" height="191"  id="Img{$keyPro}" src="{$baseUrl}/{$businessType['business'][0]['picture']}"></div>
-                                        <!--代码结束-->
+                                            <a target="_blank" href="{$baseUrl}/business/business?bid={$businessType['business'][0]['bid']}&aid={$businessType['business'][0]['id']}&cityId={$globalCityId}"><img width="258" height="191"  id="Img{$keyPro}" src="{$baseUrl}/{$businessType['business'][0]['picture']}"/>
+                                            </a>
+                                        </div>
+
                                     </div>
 
                                     <div class="restaurant right">
@@ -159,7 +161,7 @@
                                                 {$businessType.name}<span class="title02"></span></strong></div>
                                         <ul class="info-list">
                                             <volist name="businessType.business" id="business">
-                                            <li><a title="{$business.title}" target="_blank" href="">
+                                            <li><a title="{$business.title}" target="_blank" href="{$baseUrl}/business/business?bid={$business.bid}&aid={$businessType['business'][0]['id']}&cityId={$globalCityId}">
                                                 {$business.title}</a></li>
                                             </volist>
                                         </ul>

@@ -13,8 +13,6 @@ use Home\Logic\ProductLogic;
  * @package Home\Controller
  */
 class IndexController extends BaseController {
-    const AREA_SJZ  = 1301;
-
     /**
      * 首页
      */
@@ -37,7 +35,7 @@ class IndexController extends BaseController {
         $this->assign("businessTypes", $businessTypes);
 
         $news = new NewsLogic();
-        $newsList = $news->getIndexNewsList($cityId);
+        $newsList = $news->getIndexNewsList( );
         $this->assign("newsList", $newsList);
 
         $partner = new PartnerLogic();

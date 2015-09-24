@@ -1,0 +1,2491 @@
+[ 2015-09-23T09:14:15+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.021002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022002s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0330s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0470s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0240s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0440s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442970855 and b.end_time >=1442970855 ) LIMIT 8   [ RunTime:0.0380s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442970855 and b.end_time >=1442970855 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442970855 and b.end_time >=1442970855 ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0280s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0320s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0380s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0320s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T09:14:16+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442970856 and b.end_time >=1442970856 ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442970856 and b.end_time >=1442970856 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442970856 and b.end_time >=1442970856 ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:42:34+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0300s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994154 and b.end_time >=1442994154 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994154 and b.end_time >=1442994154 ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994154 and b.end_time >=1442994154 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:42:35+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994154 and b.end_time >=1442994154 ) LIMIT 8   [ RunTime:0.0020s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994154 and b.end_time >=1442994154 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994154 and b.end_time >=1442994154 ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0260s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0150s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:49:13+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994553 and b.end_time >=1442994553 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994553 and b.end_time >=1442994553 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994553 and b.end_time >=1442994553 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:49:16+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994556 and b.end_time >=1442994556 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994556 and b.end_time >=1442994556 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994556 and b.end_time >=1442994556 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0320s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:49:17+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0230s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0220s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0200s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0190s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994557 and b.end_time >=1442994557 ) LIMIT 8   [ RunTime:0.0020s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994557 and b.end_time >=1442994557 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994557 and b.end_time >=1442994557 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0190s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0300s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018001s ]
+
+[ 2015-09-23T15:49:18+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0130s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994558 and b.end_time >=1442994558 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994558 and b.end_time >=1442994558 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994558 and b.end_time >=1442994558 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:49:21+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994561 and b.end_time >=1442994561 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994561 and b.end_time >=1442994561 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1305 and b.status =1 and b.start_time <= 1442994561 and b.end_time >=1442994561 ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:49:22+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994562 and b.end_time >=1442994562 ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  or  a.industry like '%[25]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994562 and b.end_time >=1442994562 ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.industry like '%[22]%'  and a.status = 1 and a.city_id=1301 and b.status =1 and b.start_time <= 1442994562 and b.end_time >=1442994562 ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:53:43+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8' at line 1
+
+[ 2015-09-23T15:54:24+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442994864 and b.end_time >=1442994864 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442994864 and b.end_time >=1442994864 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442994864 and b.end_time >=1442994864 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:54:25+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442994865 and b.end_time >=1442994865 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442994865 and b.end_time >=1442994865 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442994865 and b.end_time >=1442994865 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-09-23T15:54:40+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442994880 and b.end_time >=1442994880 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442994880 and b.end_time >=1442994880 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442994880 and b.end_time >=1442994880 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T15:54:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442994880 and b.end_time >=1442994880 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0020s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442994880 and b.end_time >=1442994880 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442994880 and b.end_time >=1442994880 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0300s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:58:36+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995116 and b.end_time >=1442995116 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995116 and b.end_time >=1442995116 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995116 and b.end_time >=1442995116 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:58:37+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0210s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995117 and b.end_time >=1442995117 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995117 and b.end_time >=1442995117 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995117 and b.end_time >=1442995117 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:59:09+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995149 and b.end_time >=1442995149 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995149 and b.end_time >=1442995149 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995149 and b.end_time >=1442995149 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T15:59:10+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0130s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995150 and b.end_time >=1442995150 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995150 and b.end_time >=1442995150 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995150 and b.end_time >=1442995150 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T15:59:15+08:00 ] 127.0.0.1 /?cityId=1301
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995155 and b.end_time >=1442995155 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995155 and b.end_time >=1442995155 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995155 and b.end_time >=1442995155 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-09-23T15:59:16+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995156 and b.end_time >=1442995156 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995156 and b.end_time >=1442995156 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0020s ]
+SQL: SELECT b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995156 and b.end_time >=1442995156 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0150s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:04:03+08:00 ] 127.0.0.1 /?cityId=1305
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995443 and b.end_time >=1442995443 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995443 and b.end_time >=1442995443 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1305 and b.status =1 and b.start_time <= 1442995443 and b.end_time >=1442995443 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1305 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined offset: 0 F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:04:03+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995443 and b.end_time >=1442995443 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0020s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995443 and b.end_time >=1442995443 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442995443 and b.end_time >=1442995443 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:16:09+08:00 ] 127.0.0.1 /?cityId=1301
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996169 and b.end_time >=1442996169 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996169 and b.end_time >=1442996169 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0050s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996169 and b.end_time >=1442996169 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:16:10+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996169 and b.end_time >=1442996169 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996169 and b.end_time >=1442996169 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996169 and b.end_time >=1442996169 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:16:47+08:00 ] 127.0.0.1 /?cityId=1301
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996207 and b.end_time >=1442996207 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0020s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996207 and b.end_time >=1442996207 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996207 and b.end_time >=1442996207 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:16:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996207 and b.end_time >=1442996207 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996207 and b.end_time >=1442996207 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996207 and b.end_time >=1442996207 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:16:49+08:00 ] 127.0.0.1 /business/business/17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 参数错误或者未定义:bid
+
+[ 2015-09-23T16:16:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0390s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996214 and b.end_time >=1442996214 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996214 and b.end_time >=1442996214 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996214 and b.end_time >=1442996214 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:17:56+08:00 ] 127.0.0.1 /?cityId=1301
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0080s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996276 and b.end_time >=1442996276 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996276 and b.end_time >=1442996276 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996276 and b.end_time >=1442996276 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:17:56+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996276 and b.end_time >=1442996276 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996276 and b.end_time >=1442996276 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996276 and b.end_time >=1442996276 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:18:00+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:18:02+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:18:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996284 and b.end_time >=1442996284 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996284 and b.end_time >=1442996284 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996284 and b.end_time >=1442996284 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-23T16:18:23+08:00 ] 127.0.0.1 /?cityId=1301
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996303 and b.end_time >=1442996303 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996303 and b.end_time >=1442996303 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996303 and b.end_time >=1442996303 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:18:23+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0150s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996303 and b.end_time >=1442996303 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996303 and b.end_time >=1442996303 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442996303 and b.end_time >=1442996303 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T16:18:25+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:10:45+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+ERR: Think\Model:leftJoin方法不存在！
+
+[ 2015-09-23T17:11:07+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+
+[ 2015-09-23T17:11:24+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'a.business_district' in 'on clause'
+
+[ 2015-09-23T17:11:48+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:11:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999508 and b.end_time >=1442999508 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999508 and b.end_time >=1442999508 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999508 and b.end_time >=1442999508 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:11:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0140s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999508 and b.end_time >=1442999508 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999508 and b.end_time >=1442999508 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999508 and b.end_time >=1442999508 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:11:49+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999509 and b.end_time >=1442999509 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999509 and b.end_time >=1442999509 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999509 and b.end_time >=1442999509 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:11:52+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:11:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999512 and b.end_time >=1442999512 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999512 and b.end_time >=1442999512 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999512 and b.end_time >=1442999512 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T17:11:53+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `carousel` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`url`,`picture`,`type` FROM `carousel` WHERE ( type=1 and display=1 ) ORDER BY sort  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`picture`,`name`,`op_type`,`url` FROM `product` WHERE ( op_type in (1,2,3) )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `business_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`industry` FROM `business_type` WHERE ( status=1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999513 and b.end_time >=1442999513 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999513 and b.end_time >=1442999513 and a.status = 1 and (  a.industry like '%[22]%'  or  a.industry like '%[25]%' ) ) LIMIT 8   [ RunTime:0.0030s ]
+SQL: SELECT a.id as bid,b.title,b.id,a.picture FROM business a INNER JOIN activity b on b.business_id = a.id  WHERE (  a.city_id=1301 and b.status =1 and b.start_time <= 1442999513 and b.end_time >=1442999513 and a.status = 1 and (  a.industry like '%[22]%' ) ) LIMIT 8   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `content` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`created_at` FROM `content` WHERE ( category=2 and display=1 and site like '%[1]%' ) ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `partner` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`name`,`picture`,`url` FROM `partner` WHERE ( display=1 ) ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( parent = 13 )  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM `area` WHERE ( id = 1301 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0440s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cityId F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 201 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 211 行.
+NOTIC: [8] Undefined index: business F:\use\wnmp\tp\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 220 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:12:12+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-23T17:12:38+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-23T17:13:10+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-23T17:14:00+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0230s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:14:22+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:14:23+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:15:54+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT * FROM business a WHERE ( a.id=17 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:16:00+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+ERR: Think\Model:get方法不存在！
+
+[ 2015-09-23T17:16:16+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=17 and a.status = '1' )  [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:16:33+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT * FROM business a WHERE ( a.id=17 and a.status = '1' )  [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:16:34+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+SQL: SELECT * FROM business a WHERE ( a.id=17 and a.status = '1' )  [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:16:44+08:00 ] 127.0.0.1 /business/business?bid=17&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0180s ]
+SQL: SELECT * FROM business a WHERE ( a.id=17 and a.status = '1' )  [ RunTime:0.0020s ]
+
+[ 2015-09-23T17:17:35+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT * FROM business a WHERE ( a.id=12 and a.status = '1' )  [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:18:11+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:18:21+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-23T17:18:37+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.district_id = b.id  WHERE ( a.id=12 and a.status = '1' )  [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:19:31+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0200s ]
+SQL: SELECT * FROM business a WHERE ( a.id=12 and a.status = '1' )  [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:21:45+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ykt.business_district_id' doesn't exist
+
+[ 2015-09-23T17:22:09+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0130s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a INNER JOIN business_district b on a.business_district_id = b.id  WHERE ( a.id=12 and a.status = '1' )  [ RunTime:0.0060s ]
+
+[ 2015-09-23T17:22:31+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id  WHERE ( a.id=12 and a.status = '1' )  [ RunTime:0.0000s ]
+
+[ 2015-09-23T17:22:55+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:23:02+08:00 ] 127.0.0.1 /business/business?bid=18&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id  WHERE ( a.id=18 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:24:36+08:00 ] 127.0.0.1 /business/business?bid=18&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on c.business_id = a.id  WHERE ( a.id=18 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-23T17:24:37+08:00 ] 127.0.0.1 /business/business?bid=18&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on c.business_id = a.id  WHERE ( a.id=18 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:24:46+08:00 ] 127.0.0.1 /business/business?bid=18&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0190s ]
+ERR: Think\Model:get方法不存在！
+
+[ 2015-09-23T17:24:54+08:00 ] 127.0.0.1 /business/business?bid=18&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0140s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on c.business_id = a.id  WHERE ( a.id=18 and a.status = '1' )  [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:25:05+08:00 ] 127.0.0.1 /business/business?bid=128&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on c.business_id = a.id  WHERE ( a.id=128 and a.status = '1' )  [ RunTime:0.0020s ]
+
+[ 2015-09-23T17:25:08+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0100s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on c.business_id = a.id  WHERE ( a.id=12 and a.status = '1' )  [ RunTime:0.0010s ]
+
+[ 2015-09-23T17:25:18+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on c.business_id = a.id  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-23T17:26:43+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0130s ]
+ERR: Think\Model:get方法不存在！
+
+[ 2015-09-23T17:26:57+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0000s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `site` [ RunTime:0.0210s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'business_id' in 'where clause'
+
+[ 2015-09-23T17:27:37+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0010s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-09-23T17:28:57+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0110s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0000s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:30:20+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0120s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0010s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:37:39+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0010s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-09-23T17:38:11+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0070s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0010s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:38:37+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0080s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0000s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:47:20+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0080s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0000s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-09-23T17:48:18+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0080s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0010s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:49:20+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0080s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0010s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:50:09+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0090s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0000s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-09-23T17:50:27+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0070s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0000s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-23T17:50:38+08:00 ] 127.0.0.1 /business/business?bid=12&aid=17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0070s ]
+SQL: SELECT c.content,a.name,a.tel,a.industry,b.name as circle,a.lat,a.lng,a.address,a.description FROM business a left join business_district b on a.business_district_id = b.id left join activity c on (c.business_id = a.id and c.id=17)  WHERE ( a.id=12 and a.status = '1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `industry` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`name` FROM `industry`  [ RunTime:0.0000s ]
+NOTIC: [2] Attempt to assign property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 109 行.
+NOTIC: [8] Trying to get property of non-object F:\use\wnmp\tp\Application\Home\Logic\BusinessLogic.php 第 111 行.
+SQL: SHOW COLUMNS FROM `business_site` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `business_site` WHERE ( business_id=12 and status='1' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `web` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`name`,`site`,`abbr`,`filling_number`,`title`,`keyword`,`weibo`,`describe`,`head_logo` FROM `web` LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: city F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 29 行.
+NOTIC: [8] Undefined variable: area F:\use\wnmp\tp\Application\Runtime\Cache\Home\a7d3271807a039ca2ebe910d61f00677.php 第 34 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

@@ -17,6 +17,7 @@ class BaseController extends RestController{
     const RESPONSE_PRIVILEGE = 1005;
     const RESPONSE_OK = 1000;
     const RESPONSE_METHOD_ERROR = 1006;
+    const AREA_SJZ  = 1301;
 
     public $errorInfo = array();
     public $data = array();
@@ -59,6 +60,7 @@ class BaseController extends RestController{
 
         $city = $common->getCityById($cityId);
         $this->assign("city", $city);
+        $this->assign("globalCityId", $cityId);
     }
 
     protected function fail($result='', $status = self::RESPONSE_FAIL) {

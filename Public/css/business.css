@@ -1,0 +1,129 @@
+button, input, select, textarea {
+    color: #999;
+}
+.business_left {
+    float : left;
+    width : 235px;
+}
+.business_right {
+    margin-left : 235px;
+    background-color: #EFEFEF;
+    width : 745px;
+    border: 1px solid #e1dfdf;
+}
+
+.right_block_title_1 {
+    background-image: url("../img/lan04B1.jpg");
+    width : 185px;
+    float : left;
+
+}
+.right_block_title_2 {
+    background-image: url("../img/job2.jpg");
+    width : 40px;
+    margin-left : 185px;
+    height : 28px;
+
+}
+
+.white {
+    color: #ffffff;
+    font-family: "宋体";
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 28px;
+    margin-left : 20px;
+}
+
+.font01 {
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    line-height: 33px;
+    background-image: url("../img/lan01a.jpg");
+    width : 225px;
+}
+.text_wrap {
+    padding : 8px 5px 15px;
+}
+.text_wrap .input label {
+    margin-right: 15px;
+}
+.text_wrap .input input {
+    width : 120px;
+}
+.text_wrap .input select {
+    font-size : 12px;
+    width : 120px;
+}
+.text_wrap .input .sou {
+    background-image: url("../img/sou.jpg");
+    height : 26px;
+    width:96px;
+    margin-left : 60px;
+    margin-top : 7px;
+}
+.right_title_bottom {
+    background-image: url("../img/lan01b.jpg");
+    height:11px;
+    width:225px;
+}
+.mt1 {
+    margin-top : 1px;
+}
+.business_head {
+    height : 120px;
+    background-color : #dcdddd;
+    margin-right : 20px;
+}
+.business_hr {
+    border:1px solid #9fa0a0;
+    margin: 3px 20px 20px 0;
+}
+.business_hr.dot {
+    border : none;
+    background-image: url("../img/line01.jpg");
+    height : 1px;
+    margin-top : 5px;
+    margin-bottom : 5px;
+}
+.business_industry {
+    height : 28px;
+}
+
+.business_pic {
+    float : left;
+    width : 12%;
+    margin-top : 25px;
+}
+.business_base {
+    margin-left : 12%;
+    padding-top:25px;
+    width : 55%;
+}
+.line_base {
+    line-height: 25px;
+    color : #666;
+}
+
+.business_contact {
+    margin-left: 68%;
+    margin-top : -50px;
+}
+.oranger {
+    color: #785a1b;
+    font-family: "宋体";
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.title_content {
+    color: #666;
+    font-family: "宋体";
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 25pt;
+    text-align: justify;
+}

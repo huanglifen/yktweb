@@ -57,31 +57,31 @@
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">河北交通一卡通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">河北交通一卡通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">淘友网</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">淘友网</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">积分联盟</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">积分联盟</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">ETC高速通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/card/index?type=4" target="_blank"><div class="nav_in">ETC高速通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">京津冀旅游通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/card/index?type=3" target="_blank"><div class="nav_in">京津冀旅游通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">商家合作</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">商家合作</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">帮助中心</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">帮助中心</div></a></div>
     </li>
 </ul>
 </div>
@@ -97,7 +97,71 @@
                             <?php else: ?>
                             <img alt="" src="<?php echo ($imgUrl); ?>/在线购买蓝卡.jpg"><?php endif; ?>
                     </div>
-                    <?php if($pay == 1): else: ?>
+                    <?php if($pay == 1): ?><style>
+    .buy_input {
+        line-height: 23px;
+        clear : both;
+    }
+</style>
+<div class="scent3">
+    <div class="buy_left">
+        <div class="buy_title">
+        </div>
+        <div class="buy_info">
+            <form id="buyForm" action="javascript:void(0);">
+                <input type="hidden" name="type" value="<?php echo ($type); ?>"/>
+                <input type="hidden" name="productId" value="<?php echo ($product['id']); ?>"/>
+                <div class="buy_input"><div class="buy_label"><label>姓名：</label></div>
+                    <?php echo ($saleCard['customer_name']); ?>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>身份证号：</label></div>
+                    <?php echo ($saleCard['idcard']); ?>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>手机号码：</label></div>
+                    <?php echo ($saleCard['tel']); ?>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>短信验证：</label></div>
+                    <input type="text" class="input_text" name="code">
+                    <input type="submit" id="jsGetCode" class="buy_submit"value="免费获取" name="submit">
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>邮寄地址：</label></div>
+                    <?php echo ($saleCard['address']); ?>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>电子邮箱：</label></div>
+                    <?php echo ($saleCard['email']); ?>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>卡片售价：</label></div>
+                    <?php echo ($saleCard['card_fee']); ?>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>充值金额：</label></div>
+                    <?php echo ($saleCard['recharge_mount']); ?>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>验证码：</label></div>
+                    <input type="text" class="input_text" name="yzCode">
+                    <img src="<?php echo ($baseUrl); ?>/code" class="imgCode"/>
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>支付方式：</label></div>
+                    <input type="radio" checked value="1"/><img style="height:28px;width:100px;" src="<?php echo ($baseUrl); ?>/public/img/ylzx.png" >
+                </div>
+                <div class="buy_input"><div class="buy_label"><label>合计：</label></div>
+                    <span class="zhifu_mount"><?php echo ($saleCard['recharge_mount'] + $saleCard['card_fee']); ?></span>元
+                </div>
+
+                <div class="buy_input"><div class="buy_checkbox">
+                    <input type="submit" id="jsBuySubmit" class="buy_submit"value="支付" name="submit">
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="cardImg" >
+        <div class="cardImgEtc" style="background-image: url('<?php echo ($baseUrl); ?>/public/img/ETC卡样.png')"></div>
+        <div>
+            注：成功购买后请客户持本人有效身份证件、机动车行驶证、ETC卡、设备安装券（ETC卡、设备安装券均为河北一卡通邮寄）、驾驶车辆到河北一卡通服务网点安装ETC电子标签
+        </div>
+    </div>
+</div>
+                        <?php else: ?>
                         <div class="scent3">
     <div class="buy_left">
         <div class="buy_etc_title">

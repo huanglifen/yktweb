@@ -13,7 +13,7 @@
        <!-- <link href="http://v3.jiathis.com/code/css/jiathis_share.css" rel="stylesheet" type="text/css">-->
     
     
-<link rel="stylesheet" type="text/css" href="<?php echo ($cssUrl); ?>/card.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo ($cssUrl); ?>/business.css">
 
 </head>
 <body>
@@ -81,43 +81,127 @@
 
     <div id="div_body">
         <div id="body_outer">
-            <div style="width: 980px; word-wrap: break-word; border: solid 0px black;">
-                <br>
-                <h1 style="text-align: center;font-size:20px;margin-bottom:15px;">
-                    自助申请协议
-                </h1>
-                <br>
-                <div class="pt_sp">
-                    河北一卡通电子支付服务有限公司客户服务协议</div>
-                <div class="pt_sp">
-                    甲方：河北一卡通卡产品持卡人</div>
-                <div class="pt_sp">
-                    乙方：河北一卡通电子支付服务有限公司 </div>
-                <ul class="pt_ul">
-                    <li>根据国家相关法律法规的规定，为维护双方利益，规范双方行为，甲乙双方本着自愿、平的、互利的原则，就河北一卡通卡产品持卡人（以下简称“甲方”）使用河北一卡通电子支付服务有限公司（以下简称“乙方”）河北一卡通虚拟卡业务（以下简称“虚拟卡”）签订如下协议：</li>
-                    <li><b>第一条</b> 乙方提供的河北一卡通虚拟卡服务是指甲方向乙方申请并经乙方批准后，在其已持有的一卡通卡（实体卡）账户下建立的虚拟卡，该虚拟卡设定的卡号、生效日期、失效日期、累计交易限额与实体卡一致。甲方通过移动终端、互联网络等向乙方发出支付指令，实现虚拟卡账户下的金额支付。</li>
-                    <li><b>第二条</b> 甲方申请使用乙方的虚拟卡相关服务功能无需首先成功申请乙方实体卡产品。可只选择虚拟卡业务，也可后续再申请实体卡。已持有实体卡用户可后续增加虚拟卡业务。
-                    </li>
-                    <li><b>第三条</b> 甲方可通过移动终端、互联网等渠道申请虚拟卡业务。开通虚拟卡业务之后，甲方可使用虚拟卡卡号、安全校验码、登记手机号码等信息办理乙方的电子支付业务以及第三方公司的无卡支付业务。</li>
-                    <li><b>第四条</b> 甲方使用虚拟卡业务办理第三方公司的无卡支付业务，乙方仅验证支付指令中的虚拟卡卡号、安全验证码、登记手机号码获取的验证短信。经验证上述三项要素相符的交易，乙方视为甲方亲自办理，甲方不得要求变更或撤销已经提交的支付指令。甲方应妥善保管虚拟卡卡号、安全校验码、登记手机号码等相关信息，如上述信息被盗或遗失，甲方应及时拨打乙方客户服务热办理相应的注销、变更等手续。</li>
-                    <li><b>第五条</b> 甲方使用虚拟卡进行支付，将直接占用甲方申请该虚拟卡时对应的实体卡内的资金，甲方应保证该实体卡的支付能力，并严格遵守支付结算业务的相关法律法规，不得利用网上支付业务服务或账户从事任何欺诈、洗钱、恐怖融资等违反法律、法规、监管规定的行为。如甲方违反上述约定，乙方有权中止或终止虚拟卡业务，因此给乙方造成损失的，甲方应予赔偿。</li>
-                    <li><b>第六条</b> 如因甲方实体卡账户或虚拟卡已销户或账户状态不正常（挂失、冻结、逾期）、卡片状态不正常（未激活、挂失、销卡）、余额不足等原因，导致乙方无法履行本协议的，乙方不承担任何责任。</li>
-                    <li><b>第七条</b> 甲方已申请的虚拟卡在过期或进行注销后，如虚拟卡未进行过交易，乙方有权在虚拟卡过期或注销后，对乙方的虚拟卡卡号进行永久性删除。如甲方所申请的虚拟卡进行过交易，则乙方将在虚拟卡过期或甲方进行注销后，保留虚拟卡卡号180天后再对虚拟卡卡号进行永久性删除。</li>
-                    <li><b>第八条</b> 甲方在使用虚拟卡进行支付后，交易金额将在甲方办理虚拟卡时对应的实体卡账户内记账。 </li>
-                    <li><b>第九条</b> 甲方与除甲乙双方之外的任何第三方机构之间的交易纠纷与乙方无关。乙方不受理甲方对上述第三方的投诉。</li>
-                    <li><b>第十条</b> 乙方可以根据业务发展的需要以及与电子支付商户合作情况增加、删除或变更合作的商户。 </li>
-                    <li><b>第十一条</b> 本协议作为甲乙双方已经签署的一卡通卡领用合约及其他既有协议和约定的补充部分而非替代文件，与其具有相同的法律效力。甲方在使用乙方提供的服务时应遵守相关一卡通卡领用合约、章程和已签署的其他所有相关协议及约定。</li>
-                    <li><b>第十二条</b> 甲方发现自身未按规定操作，或由于自身其他原因造成支付指令未执行、未适当执行、延迟执行的，应及时通过拨打乙方服务热线或到营业网点通知乙方。乙方应积极调查并告知甲方调查结果。乙方官网、移动终端等服务提供账户余额、交易记录等查询功能，甲方可随时登陆乙方官网、移动终端进行查询。一方发现支付错误或账户款项差错的，应及时与另一方核实处理。</li>
-                    <li><b>第十三条</b> 非乙方原因（通讯线路故障、网络故障及断电、停电等）造成电子支付指令未执行、未适当执行、延迟执行的，不属乙方责任，甲方可选择其他途径进行相关支付交易。因不可抗力造成电子支付指令未执行、未适当执行、延迟执行的，各方应采取积极措施防止损失扩大。</li>
-                    <li><b>第十四条</b> 乙方应依法对甲方的资料信息、交易记录等保密。除国家法律、行政法规另有规定或甲方授权外，乙方有权拒绝除甲方本人以外的任何单位或个人查询。</li>
-                    <li><b>第十五条</b> 甲乙双方在履行本协议的过程中，如发生争议应协商解决，协商不成的，任何一方均可向乙方所在地人民法院提起诉讼。</li>
-                    <li><b>第十六条</b> 本协议的成立、生效、履行和解释，均适用于中华人民共和国法律；法律无明文规定的，可适用通行的金融惯例。 </li>
-                    <li><b>第十七条</b> 本协议自甲方通过官网、移动终端等渠道同意并经过认证后开通虚拟卡服务之时起生效；本协议自撤销虚拟卡功能服务之时起终止。所有时点均以乙方业务系统记录的时间为准。协议终止并不意味着终止前所发生的未完成交易指令的撤销，也不能消除因终止前的交易所带来的法律后果。</li>
-                    <li><b>第十八条</b> 如因系统升级、业务变化，或根据业务发展需要修改本协议，乙方将提前进行公告。若甲方有异议，有权选择注销相关服务，若甲方未注销相关服务或继续接受相关服务，即视为甲方同意并接受该变更或修改，相关业务或规则按变更或修改后的内容执行。</li>
-                </ul>
+            <div id="container">
+                    <div class="business_left">
+
+                        <div class="right_block_title_1">
+<span class="white">查找商户</span>
+</div>
+<div class="right_block_title_2"></div>
+<div class="font01">
+    <div class="text_wrap">
+    <div class="input">
+        <label>商家名称：</label>
+        <input type="text"/>
+    </div>
+    <div class="input">
+        <label>所属行业：</label>
+        <select>
+            <option>-所有行业-</option>
+        </select>
+    </div>
+    <div class="input">
+        <label>商家地址：</label>
+        <input type="text"/>
+    </div>
+    <div class="input">
+        <label>选择城市：</label>
+        <select>
+            <option>石家庄</option>
+        </select>
+    </div>
+    <div class="input">
+        <label>选择区县：</label>
+        <select>
+            <option>所有县区</option>
+        </select>
+    </div>
+    <div class="input">
+        <label>所属商圈：</label>
+        <select>
+            <option>所有商圈</option>
+        </select>
+    </div>
+        <div class="input">
+            <div class="sou"></div>
+        </div>
+    </div>
+</div>
+<div class="right_title_bottom">
+
+</div>
+                        <div class="mt1">
+                        <div class="right_block_title_1">
+    <span class="white">商户景区</span>
+</div>
+<div class="right_block_title_2"></div>
+<div class="font01" style="min-height: 200px;">
+    <img  style="padding-top:10px;padding-bottom:7px;"width="225" height="225" alt="商户图片" src="<?php echo ($baseUrl); ?>/<?php echo ($business["picture"]); ?>"></div>
+<div class="right_title_bottom">
+</div>
+                        </div>
+                        <div class="mt1">
+                        <div class="right_block_title_1">
+    <span class="white">商户地图</span>
+</div>
+<div class="right_block_title_2"></div>
+<div class="font01" style="min-height: 200px;">
+    <div id="allmap" class="span10" style="height: 300px;padding-top:10px;padding-bottom:7px;"></div>
+
+</div>
+<div class="right_title_bottom">
+
+</div>
+                        </div>
+                    </div>
+                    <div class="business_right">
+                        <div class="business_head">
+    <div class="business_pic">
+        <img src="<?php echo ($baseUrl); ?>/<?php echo ($business['picture']); ?>" width="70px" height="70px"/>
+
+    </div>
+    <div class="business_base">
+        <div class="line_base">商户名称：<?php echo ($business['name']); ?></div>
+        <div class="line_base">河北一卡通推荐消费商家</div>
+        <div class="line_base">被访问次数：</div>
+    </div>
+    <div class="business_contact oranger">
+        <a href="javascript:;" onclick="return alert('功能暂未开通')">我要咨询</a>
+        <a href="javascript:;" onclick="return alert('功能暂未开通')">我要反馈</a>
+        <a href="javascript:;" onclick="return alert('功能暂未开通')">我要收藏</a>
+    </div>
+</div>
+<div class="business_hr"></div>
+<div class="business_detail">
+    <div class="business_industry">
+<span class="oranger">所属行业：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['industryStr']); ?></span>
+    </div>
+    <div class="business_hr dot"></div>
+    <div class="business_desc">
+        <div class="business_industry">
+           <?php if(!$business['discount']): ?><span class="oranger">商家折扣：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['discount']); ?></span><?php endif; ?>
+        </div>
+        <div class="business_industry">
+                <span class="oranger">详细地址：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['address']); ?></span>
+        </div>
+        <div class="business_industry">
+                <span class="oranger">联系方式：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['tel']); ?></span><span style="color:#666;margin-left:2px;"> <?php echo ($business['phone']); ?></span>
+        </div>
+        <div class="business_industry">
+            <?php if($business['content']): ?><span class="oranger">商户简介：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['content']); ?></span><?php endif; ?>
+        </div>
+        <div class="title_content">
+            <?php echo ($business["description"]); ?>
+        </div>
+    </div>
+</div>
+
+                    </div>
             </div>
         </div>
     </div>
+    <input type="hidden" id="lat" value="<?php echo ($business["lat"]); ?>"/>
+    <input type="hidden" id="lng" value="<?php echo ($business["lng"]); ?>"/>
 
     
 
@@ -287,7 +371,20 @@
     </script>
 
     
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=<?php echo C('MAP_AK') ?>" ></script>
+    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/common.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var x = $("#lng").val() ;
+            var y = $("#lat").val();
 
+            var pointX = x ? x : false;
+            var pointY = y ? y : false;
+            Common.bindMap(pointX, pointY);
+
+        });
+
+    </script>
 
 </div>
 </body>

@@ -157,12 +157,43 @@ var Common = function() {
             }
         })
     }
+
+    MapJs = true;
+    var bindMap = function(pointX, pointY) {
+        if(! MapJs) {
+            return false;
+        }
+        try{
+            map = new BMap.Map("allmap");
+            map.enableScrollWheelZoom(true);
+            if(pointX !== false && pointY !== false) {
+                var point = new BMap.Point(pointX,pointY);
+                map.centerAndZoom(point,15);
+            } else{
+                    pointX = 114.26;
+                    pointY = 38.03;
+                    var point = new BMap.Point(pointX,pointY);
+                    map.centerAndZoom(point,11);
+
+            }
+
+            var pointMarker = new BMap.Marker(point);
+            map.addOverlay(pointMarker);
+            map.addEventListener("tilesloaded",function(e){
+            });
+        }catch(e) {
+            MapJs = false;
+        }
+    }
     return {
         toJson : function(target) {
             return serializeToJson(target);
         },
         request : function(param, callback) {
             return request(param, callback);
+        },
+        bindMap : function(pointX, pointY) {
+            return bindMap(pointX, pointY);
         }
     }
 }();

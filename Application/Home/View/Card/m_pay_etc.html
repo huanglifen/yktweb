@@ -31,9 +31,6 @@
                 <div class="buy_input"><div class="buy_label"><label>电子邮箱：</label></div>
                     {$saleCard['email']}
                 </div>
-                <div class="buy_input"><div class="buy_label"><label>推荐人：</label></div>
-                    {$saleCard['recommender']}
-                </div>
                 <div class="buy_input"><div class="buy_label"><label>卡片售价：</label></div>
                     {$saleCard['card_fee']}
                 </div>
@@ -58,11 +55,10 @@
             </form>
         </div>
     </div>
-    <if condition="$type eq Home\Controller\CardController::ORANGE_CARD">
-        <div class="cardImg" style="background-image: url('{$baseUrl}/public/img/橙卡卡样.png')">
+    <div class="cardImg" >
+        <div class="cardImgEtc" style="background-image: url('{$baseUrl}/public/img/ETC卡样.png')"></div>
+        <div>
+            注：成功购买后请客户持本人有效身份证件、机动车行驶证、ETC卡、设备安装券（ETC卡、设备安装券均为河北一卡通邮寄）、驾驶车辆到河北一卡通服务网点安装ETC电子标签
         </div>
-        <else/>
-        <div class="cardImg"  style="background-image: url('{$baseUrl}/public/img/卡样2.png')">
-        </div>
-    </if>
+    </div>
 </div>
