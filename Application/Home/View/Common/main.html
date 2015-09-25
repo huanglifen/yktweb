@@ -24,12 +24,12 @@
                 <div class="tip">
                 </div>
                 <div id="city_list">
-                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[{$city['name']|str_replace="市","",###}]</span></div>
+                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[{$globalCity['name']|str_replace="市","",###}]</span></div>
                 <div class="city_link" id="city_link">
                     <div class="city_show">
                         <span title="关闭窗口" onclick="document.getElementById('city_nav').className='city_nav';document.getElementById('city_link').className='city_link';return !1;" href="javascript:void(0);" class="f_red f_r">[关闭]</span>
                     </div>
-                    <volist name="area" id="citi">
+                    <volist name="globalArea" id="citi">
                     <a href="{$baseUrl}?cityId={$citi['id']}" class="city_links">{$citi['name']|str_replace="市","站",###}</a>
                     </volist>
                 </div>

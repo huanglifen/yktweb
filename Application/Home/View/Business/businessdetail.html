@@ -18,6 +18,7 @@
                     </div>
                     <div class="business_right">
                         <include file="Business/m_businessdetail"/>
+                        <include file="Business/m_businessfooter"/>
                     </div>
             </div>
         </div>
@@ -28,6 +29,7 @@
 <block name="customJs">
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=<?php echo C('MAP_AK') ?>" ></script>
     <script type="text/javascript" src="{$jsUrl}/common.js"></script>
+    <script type="text/javascript" src="{$jsUrl}/business.js"></script>
     <script type="text/javascript">
         $(function() {
             var x = $("#lng").val() ;

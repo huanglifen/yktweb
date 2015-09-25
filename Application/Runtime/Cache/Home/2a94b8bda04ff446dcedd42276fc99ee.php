@@ -26,12 +26,12 @@
                 <div class="tip">
                 </div>
                 <div id="city_list">
-                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[<?php echo (str_replace("市","",$city['name'])); ?>]</span></div>
+                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[<?php echo (str_replace("市","",$globalCity['name'])); ?>]</span></div>
                 <div class="city_link" id="city_link">
                     <div class="city_show">
                         <span title="关闭窗口" onclick="document.getElementById('city_nav').className='city_nav';document.getElementById('city_link').className='city_link';return !1;" href="javascript:void(0);" class="f_red f_r">[关闭]</span>
                     </div>
-                    <?php if(is_array($area)): $i = 0; $__LIST__ = $area;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$citi): $mod = ($i % 2 );++$i;?><a href="<?php echo ($baseUrl); ?>?cityId=<?php echo ($citi['id']); ?>" class="city_links"><?php echo (str_replace("市","站",$citi['name'])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <?php if(is_array($globalArea)): $i = 0; $__LIST__ = $globalArea;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$citi): $mod = ($i % 2 );++$i;?><a href="<?php echo ($baseUrl); ?>?cityId=<?php echo ($citi['id']); ?>" class="city_links"><?php echo (str_replace("市","站",$citi['name'])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
             <div class="tel_img"></div>
@@ -198,7 +198,7 @@
                                             <div><?php echo ($businessType["name"]); ?></div>
                                         </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
                                 <div id="pro_more">
-                                    <a style="color: Orange;" target="_blank" href="../business/list?cityId=<?php echo ($cityId); ?>">更多商户&gt;&gt;
+                                    <a style="color: Orange;" target="_blank" href="../business/list?cityId=<?php echo ($globalCityId); ?>">更多商户&gt;&gt;
                                     </a>
                                 </div>
                             </div>

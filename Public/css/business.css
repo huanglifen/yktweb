@@ -1,4 +1,4 @@
-button, input, select, textarea {
+select, textarea {
     color: #999;
 }
 .business_left {
@@ -10,6 +10,7 @@ button, input, select, textarea {
     background-color: #EFEFEF;
     width : 745px;
     border: 1px solid #e1dfdf;
+    min-height : 200px;
 }
 
 .right_block_title_1 {
@@ -62,6 +63,7 @@ button, input, select, textarea {
     width:96px;
     margin-left : 60px;
     margin-top : 7px;
+    cursor : pointer;
 }
 .right_title_bottom {
     background-image: url("../img/lan01b.jpg");
@@ -126,4 +128,106 @@ button, input, select, textarea {
     letter-spacing: 1px;
     line-height: 25pt;
     text-align: justify;
+}
+
+.business_foot_hr {
+    height : 10px;
+    background-color: #dcdddd;
+    border : 1px solid #ffffff;
+}
+.business_foot_table {
+    border : 1px solid #ffffff;
+}
+.business_foot_table table {
+    width : 100%;
+    text-align : center;
+
+}
+.input select {
+    color : #000000;
+}
+.business_foot_table td {
+    width : 20%;
+    border-left : 1px solid #ffffff
+}
+.title_fujia {
+    color: black;
+    font-family: "宋体";
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.site_name {
+    padding-left : 3px;
+}
+.site_name_wrap {
+    line-height: 33px;
+}
+
+.dot_wrap {
+    background-image: url("../img/line.jpg");
+    height : 2px;
+    width : 210px;
+
+}
+
+.business_list {
+    background-color: #dcdddd;
+    margin-bottom: 10px;
+    margin-right : 15px;
+    margin-top : 5px;
+}
+
+.hr_red {
+    border-bottom: 2px solid #ff5181;
+    border-top: 2px solid #ffffff;
+    margin-top:50px;
+}
+.businesslist_wrap {
+    border : 1px solid #e1dfdf;
+    margin-right : 8px;
+}
+
+.page {
+    background-color: #fff4f9;
+    height : 40px;
+    margin-top:-13px;
+}
+.paginator {
+    font-family: Arial,sens-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px 20px 10px 0;
+}
+
+.paginator a {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    margin-right: 1px;
+    padding: 1px 3px;
+    text-decoration: none;
+}
+.paginator a:visited {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    padding: 1px 3px;
+    text-decoration: none;
+}
+.paginator input {
+    border: 1px solid #ddd;
+    font-size: 12px;
+    height: 17px;
+}
+.paginator a:hover {
+    background: #ffa501 none repeat scroll 0 0;
+    border-color: #ffa501;
+    color: #fff;
+    text-decoration: none;
+}
+.pageturn {
+    padding-top:7px;
+    width:auto;
+    margin-left:auto;
+    margin-right: auto;
+    width:400px;
 }

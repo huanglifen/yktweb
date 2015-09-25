@@ -22,11 +22,12 @@ class CommonLogic extends BaseLogic {
     /**
      * 获取河北所有市级城市
      *
+     * @param $parentId
      * @return mixed
      */
-    public function getCities() {
+    public function getCities($parentId = self::PROVINCE_HB) {
         $area = M("area");
-        return $area->where("parent = " .self::PROVINCE_HB )->field("id, name")->select();
+        return $area->where("parent = " .$parentId )->field("id, name")->select();
     }
 
     /**
@@ -39,5 +40,25 @@ class CommonLogic extends BaseLogic {
         $area = M('area');
         $city = $area->where("id = " . $cityId)->field("id, name")->limit(1)->select();
         return $city[0];
+    }
+
+    /**
+     * 按城市获取商圈
+     *
+     * @param $cityId
+     * @return mixed
+     */
+    public function getCircleByCityId($cityId) {
+        $circle = M("business_district");
+        return $circle->where("city_id=$cityId")->field("id, name")->limit(500)->select();
+    }
+
+    /**
+     * 获取所有行业
+     * @return mixed
+     */
+    public function getIndustry() {
+        $industry = M("industry");
+        return $industry->field("id, name")->limit(500)->select();
     }
 }

@@ -1,0 +1,36 @@
+<div class="page">
+    <div height="40" bgcolor="fff4f9" align="center">
+
+        <div class="paginator" style="width: 99%; text-align: center; padding: 5px;">
+            总记录数
+            <span style="color:Green;">{$totalRecords}</span>
+            条 页次：
+            <span style="color:Red;" >{$currentPage}</span>
+            /
+            <span >{$totalPage}</span>
+    <span >
+        <if condition="$currentPage eq 1">
+        <a href="javascript:;">首页</a>
+            <else/>
+            <a href="{$baseUrl}/business/list?cityId={$cityId}&page=1">首页</a>
+        </if>
+        <if condition="$currentPage eq 1">
+            <a href="javascript:;">上一页</a>
+            <else/>
+            <a href="{$baseUrl}/business/list?cityId={$cityId}&page={$currentPage - 1}">上一页</a>
+        </if>
+        <if condition="$currentPage eq $totalPage">
+            <a href="javascript:;">下一页</a>
+            <else/>
+            <a href="{$baseUrl}/business/list?cityId={$cityId}&page={$currentPage + 1}">下一页</a>
+        </if>
+        <if condition="$currentPage eq $totalPage">
+            <a href="javascript:;">末页</a>
+            <else/>
+            <a href="{$baseUrl}/business/list?cityId={$cityId}&page={$totalPage}">末页</a>
+        </if>
+    </span>
+        </div>
+
+    </div>
+</div>

@@ -9,6 +9,16 @@ class BusinessLogic extends BaseLogic {
     const BUSINESS_TYPE_NUM = 4; //首页促销类型显示至多4个
     const NUM_PER_PROMOTION = 8;
     const ACTIVITY_TABLE = 'activity';
+    const AREA_SJZ = 1301;
+    public $orderBy = array(
+        1 => 'created_at',
+        2 => 'created_at',
+        3 => 'click'
+    );
+    public $sort = array(
+        1 => 'desc',
+        2 => 'asc'
+    );
 
     /**
      * 按状态、排序获取促销类型
@@ -61,7 +71,12 @@ class BusinessLogic extends BaseLogic {
      */
     public function getBusinessById($id, $aid) {
         $business = M("business");
-        $business = $business->alias("a")->where("a.id=$id and a.status = '" . self::STATUS_OPEN . "'")->join("left join business_district b on a.business_district_id = b.id")->join("left join activity c on (c.business_id = a.id and c.id=$aid)")->field("c.content, a.name, a.tel, a.phone, a.industry, b.name as circle, a.lat, a.lng, a.address, a.discount, a.description,picture")->find();
+        if($aid) {
+            $onStr = "c.business_id = a.id and c.id=$aid";
+        } else {
+            $onStr = "c.business_id = a.id";
+        }
+        $business = $business->alias("a")->where("a.id=$id and a.status = '" . self::STATUS_OPEN . "'")->join("left join business_district b on a.business_district_id = b.id")->join("left join activity c on ($onStr)")->field("c.content, a.name, a.tel, a.phone, a.industry, b.name as circle, a.lat, a.lng, a.address, a.discount, a.description,picture")->find();
         return $business;
     }
 
@@ -84,7 +99,7 @@ class BusinessLogic extends BaseLogic {
      */
     public function getBusinessSites($businessId) {
         $site = M("business_site");
-        $site = $site->where("business_id=$businessId and status='" .self::STATUS_OPEN."'")->field("")->order("sort asc")->find();
+        $site = $site->where("business_id=$businessId and status='" .self::STATUS_OPEN."'")->field("id, name, address, qq, mobile")->order("sort asc")->select();
         return $site;
     }
 
@@ -99,8 +114,87 @@ class BusinessLogic extends BaseLogic {
         return $site->where("id=$id and status = '" .self::STATUS_OPEN. "'")->field("")->find();
     }
 
-    public function getBusinessList() {
+    /**
+     * 按条件获取商户记录
+     *
+     * @param $name
+     * @param $address
+     * @param int $cityId
+     * @param int $districtId
+     * @param int $circleId
+     * @param int $industryId
+     * @param int $offset
+     * @param int $limit
+     * @param $orderBy
+     * @param $sort
+     * @return mixed
+     */
+    public function getBusinessList($cityId = self::AREA_SJZ, $offset = 0, $limit = 10, $name = '', $address = '', $districtId = 0, $circleId = 0, $industryId = 0, $orderBy = 1, $sort =1 ) {
+        $business = M("business");
+        $condition = new \stdClass();
+        if($name) {
+            $condition->name = array("like", "%$name%");
+        }
+        if($address) {
+            $condition->address = array("like", "%$address%");
+        }
+        if($cityId) {
+            $condition->city_id = $cityId;
+        }
+        if($districtId) {
+            $condition->district_id = $districtId;
+        }
+        if($circleId) {
+            $condition->business_district_id = $circleId;
+        }
+        if($industryId) {
+            $condition->industry = "%[$industryId]%";
+        }
+        $order = $this->orderBy[$orderBy];
+        $sort = $this->sort[$sort];
+        $business->where($condition);
+        $business->limit("$offset,$limit");
+        $business->field("id,name, address,picture,tel");
+        $business->order("$order $sort");
+        $result =  $business->select();
+        var_dump($business->getLastSql());
+        return $result;
+    }
 
+    /**
+     * 按条件统计商户记录
+     *
+     * @param $name
+     * @param $address
+     * @param int $cityId
+     * @param int $districtId
+     * @param int $circleId
+     * @param int $industryId
+     * @return mixed
+     */
+    public function countBusinessList($cityId = self::AREA_SJZ, $name = '', $address = '', $districtId = 0, $circleId = 0, $industryId = 0 ) {
+        $business = M("business");
+        $condition = new \stdClass();
+        if($name) {
+            $condition->name = "%$name%";
+        }
+        if($address) {
+            $condition->address = "%$address%";
+        }
+        if($cityId) {
+            $condition->city_id = $cityId;
+        }
+        if($districtId) {
+            $condition->district_id = $districtId;
+        }
+        if($circleId) {
+            $condition->business_district_id = $circleId;
+        }
+        if($industryId) {
+            $condition->industry = "%[$industryId]%";
+        }
+        $business->where($condition);
+        return $business->count("id");
     }
 
     public static function getBusinessIndustry(&$business) {
@@ -126,5 +220,23 @@ class BusinessLogic extends BaseLogic {
             }
         }
         return $business;
+    }
+
+    /**
+     * 获取热门商户
+     *
+     * @param $cityId
+     * @param int $offset
+     * @param int $limit
+     * @return mixed
+     */
+    public function getHotBusiness($cityId, $offset = 0, $limit = 10) {
+        $business = M("business");
+        return $business->where("city_id=$cityId and hot=1")->field("id, name")->limit($offset, $limit)->select();
+    }
+
+    public function getLastSite($cityId, $offset =0, $limit = 10) {
+        $site = M("business_site");
+        return $site->where("district_id like '%$cityId%'")->field("id, name")->limit($offset, $limit)->select();
     }
 }

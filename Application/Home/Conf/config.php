@@ -31,6 +31,11 @@ return array(
         'card/record' => 'Card/postSearchRecord',
         'card/balance' => 'Card/postSearchBalance',
         'business/business' => 'Business/getBusiness',
+        'business/site' => 'Business/getSite',
+        'business/list' => 'Business/getList',
+        'city' => 'Utils/city',
+        'business/search' => 'Business/getSearch',
+        'business/sites' => 'Business/getSites',
     ),
     'MAP_AK'          => 'rGNbe9ttCWhnGExQHUsDWHRi',
 );

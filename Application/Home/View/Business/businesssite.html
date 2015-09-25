@@ -1,0 +1,29 @@
+<extend name="./Common/main" />
+<block name="customCss">
+    <link rel="stylesheet" type="text/css" href="{$cssUrl}/business.css">
+</block>
+<block name="mainContent">
+    <div id="div_body">
+        <div id="body_outer">
+            <div id="container">
+                <div class="business_left">
+
+                    <include file="Business/m_searchsite"/>
+                    <div class="mt1">
+                        <include file="Business/m_newbusiness"/>
+                    </div>
+                    <div class="mt1">
+                        <include file="Business/m_hotbusiness"/>
+                    </div>
+                </div>
+                <div class="business_right">
+                    <include file="Business/m_gooddetail"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</block>
+<block name="customJs">
+
+</block>

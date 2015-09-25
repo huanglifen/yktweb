@@ -1,0 +1,28 @@
+<div class="business_foot_hr"></div>
+<div class="business_foot_table">
+    <table cellspacing="1" cellpadding="0" border="0" bgcolor="#FFFFFF">
+        <tr class="head">
+            <td height="30" bgcolor="#dcdddd">网点名称</td>
+            <td height="30" bgcolor="#dcdddd">位置</td>
+            <td height="30" bgcolor="#dcdddd">地址</td>
+            <td height="30" bgcolor="#dcdddd">联系方式</td>
+            <td height="30" bgcolor="#dcdddd">QQ</td>
+        </tr>
+        <volist name="businessSites" id="site">
+
+            <tr class="title_fujia">
+                <td  height="30" bgcolor="#EFEFEF" align="center">
+                    <a href="{$baseUrl}/business/site?id={$site.id}&cityId={$globalCityId}" >{$site.name}
+                    </a>
+                </td>
+                <td  height="30" bgcolor="#EFEFEF" align="center">
+                    <a href="{$baseUrl}/business/site?id={$site.id}&cityId={$globalCityId}" target="_blank">打开地图</a>
+                </td>
+                <td  height="30" bgcolor="#EFEFEF" align="center">{$site.address}</td>
+                <td  height="30" bgcolor="#EFEFEF" align="center" >{$site.mobile}</td>
+                <td  height="30" bgcolor="#EFEFEF" align="center">{$site.qq}</td>
+            </tr>
+        </volist>
+    </table>
+</div>
+<div class="business_foot_hr"></div>

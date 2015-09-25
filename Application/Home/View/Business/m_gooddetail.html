@@ -1,0 +1,29 @@
+<div class="business_foot_hr" style="height: 17px; border-bottom: none;;"></div>
+<div class="business_foot_table" style="border-left:none;">
+    <table cellspacing="1" cellpadding="0" border="0" bgcolor="#FFFFFF">
+        <tr class="head">
+            <td height="30" bgcolor="#dcdddd">商户名称</td>
+            <td height="30" bgcolor="#dcdddd">上架时间</td>
+            <td height="30" bgcolor="#dcdddd">库存数量</td>
+            <td height="30" bgcolor="#dcdddd">重量</td>
+            <td height="30" bgcolor="#dcdddd">最小订购量</td>
+        </tr>
+        <volist name="businessSites" id="site">
+
+            <tr class="title_fujia">
+                <td  height="30" bgcolor="#EFEFEF" align="center">
+                    <a href="{$baseUrl}/business/site?id={$site.id}&cityId={$globalCityId}" >{$site.name}
+                    </a>
+                </td>
+                <td  height="30" bgcolor="#EFEFEF" align="center">
+                    <a href="{$baseUrl}/business/site?id={$site.id}&cityId={$globalCityId}" target="_blank">打开地图</a>
+                </td>
+                <td  height="30" bgcolor="#EFEFEF" align="center">{$site.address}</td>
+                <td  height="30" bgcolor="#EFEFEF" align="center" >{$site.mobile}</td>
+                <td  height="30" bgcolor="#EFEFEF" align="center">{$site.qq}</td>
+            </tr>
+        </volist>
+    </table>
+</div>
+<div class="business_foot_hr" style="border-top: none;"></div>
+<div class="business_foot_hr" style="border-top: none;"></div>

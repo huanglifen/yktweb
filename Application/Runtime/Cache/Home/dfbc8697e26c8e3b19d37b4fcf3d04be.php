@@ -14,6 +14,24 @@
     
     
     <link rel="stylesheet" type="text/css" href="<?php echo ($cssUrl); ?>/business.css">
+    <style type="text/css">
+        .white {
+            padding-left:64px;
+        }
+        .text_wrap {
+            padding-top:20px;
+        }
+        .input label {
+            color: #333;
+            font-family: "sans-serif";
+        }
+        .text_wrap .input label {
+            margin-left:0px;
+        }
+        .input {
+            line-height: 28px;;
+        }
+    </style>
 
 </head>
 <body>
@@ -82,9 +100,8 @@
     <div id="div_body">
         <div id="body_outer">
             <div id="container">
-                    <div class="business_left">
-
-                        <div class="right_block_title_1">
+                <div class="business_left">
+                    <div class="right_block_title_1">
 <span class="white">查找商户</span>
 </div>
 <div class="right_block_title_2"></div>
@@ -135,103 +152,75 @@
 <div class="right_title_bottom">
 
 </div>
-                        <div class="mt1">
-                        <div class="right_block_title_1">
-    <span class="white">商户景区</span>
-</div>
-<div class="right_block_title_2"></div>
-<div class="font01" style="min-height: 200px;">
-    <img  style="padding-top:10px;padding-bottom:7px;"width="225" height="225" alt="商户图片" src="<?php echo ($baseUrl); ?>/<?php echo ($business["picture"]); ?>"></div>
-<div class="right_title_bottom">
-</div>
+                </div>
+                <div class="business_right" style="margin-left:227px;border:none;">
+                    <div class="businesslist_wrap">
+                        <div class="orderBy">
+                            <span style="color: Red; font-size: medium; font-weight: bold;margin-left:10px;padding-right:200px;">所有商户</span>
+                            <span style="padding-right:120px;">默认排序
+                                <img class="jsOrderBy" data-sort="1" data-order="1" width="8" height="5" style="cursor: pointer;"src="<?php echo ($imgUrl); ?>/JTx.gif" alt="">
+                            </span>
+                            <span style="padding-right:120px;">
+                                <span style="margin-right:4px;">最新加盟</span>
+                                <span><img class="jsOrderBy" data-sort="2" data-order="2" width="8" height="5" style="cursor: pointer;margin-top:-13px;"src="<?php echo ($imgUrl); ?>/JTs.gif" alt=""></span>
+                                <span><img class="jsOrderBy" data-sort="1" data-order="2"width="8" height="5" style="cursor: pointer;margin-left:-11px;margin-top:6px;"src="<?php echo ($imgUrl); ?>/JTx.gif" alt=""></span>
+
+                            </span>
+                            <span >
+                                <span style="margin-right:4px;">点击人气</span>
+                                <span><img class="jsOrderBy" data-sort="2" data-order="3" width="8" height="5" style="cursor: pointer;margin-top:-13px;"src="<?php echo ($imgUrl); ?>/JTs.gif" alt=""></span>
+                                <span><img class="jsOrderBy" data-sort="1" data-order="3" width="8" height="5" style="cursor: pointer;margin-left:-11px;margin-top:6px;"src="<?php echo ($imgUrl); ?>/JTx.gif" alt=""></span>
+
+                            </span>
                         </div>
-                        <div class="mt1">
-                        <div class="right_block_title_1">
-    <span class="white">商户地图</span>
+                        <?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?><div class="business_list">
+<div class="business_pic">
+    <a href="<?php echo ($baseUrl); ?>/business/business?bid=<?php echo ($list['id']); ?>&cityId=<?php echo ($cityId); ?>"><img src="<?php echo ($baseUrl); ?>/<?php echo ($list['picture']); ?>" width="70px" height="70px" style="margin-left:2px;"/>
+    </a>
 </div>
-<div class="right_block_title_2"></div>
-<div class="font01" style="min-height: 200px;">
-    <div id="allmap" class="span10" style="height: 300px;padding-top:10px;padding-bottom:7px;"></div>
-
-</div>
-<div class="right_title_bottom">
-
-</div>
-                        </div>
-                    </div>
-                    <div class="business_right">
-                        <div class="business_head">
-    <div class="business_pic">
-        <img src="<?php echo ($baseUrl); ?>/<?php echo ($business['picture']); ?>" width="70px" height="70px"/>
-
+<div class="business_base">
+    <div class="line_base">
+        <a href="<?php echo ($baseUrl); ?>/business/business?bid=<?php echo ($list['id']); ?>&cityId=<?php echo ($cityId); ?>">
+            商户名称：<?php echo ($list['name']); ?>
+        </a>
     </div>
-    <div class="business_base">
-        <div class="line_base">商户名称：<?php echo ($business['name']); ?></div>
-        <div class="line_base">河北一卡通推荐消费商家</div>
-        <div class="line_base">被访问次数：</div>
-    </div>
+    <div class="line_base">河北一卡通推荐消费商家</div>
+    <div class="line_base">被访问次数：</div>
+</div>
     <div class="business_contact oranger">
         <a href="javascript:;" onclick="return alert('功能暂未开通')">我要咨询</a>
         <a href="javascript:;" onclick="return alert('功能暂未开通')">我要反馈</a>
         <a href="javascript:;" onclick="return alert('功能暂未开通')">我要收藏</a>
     </div>
-</div>
-<div class="business_hr"></div>
-<div class="business_detail">
-    <div class="business_industry">
-<span class="oranger">所属行业：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['industryStr']); ?></span>
+    <div class="hr_red"></div>
+</div><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <div class="page">
+    <div class="pageturn">
+        <span>共有<a href="#" id="total_record"><?php echo ($totalRecords); ?></a> 条记录
+            <a href="#" ><?php echo ($currentPage); ?></a>/
+            <a href="#" ><?php echo ($totalPage); ?></a>页次</span>&nbsp;
+        <?php if($currentPage == 1): ?><a href="javascript:;" >首页</a>&nbsp;
+        <?php else: ?>
+        <a href="<?php echo ($currentUrl); ?>&page=1" >首页</a>&nbsp;<?php endif; ?>
+        <?php if($currentPage == 1): ?><a href="javascript:;" >上一页</a>&nbsp;
+            <?php else: ?>
+            <a href="<?php echo ($currentUrl); ?>&page=<?php echo ($currentPage - 1); ?>" >上一页</a>&nbsp;<?php endif; ?>
+        <?php if($currentPage == $totalPage): ?><a href="javascript:;" >下一页</a>&nbsp;
+            <?php else: ?>
+            <a href="<?php echo ($currentUrl); ?>&page=<?php echo ($currentPage + 1); ?>" >下一页</a>&nbsp;<?php endif; ?>
+        <?php if($currentPage == $totalPage): ?><a href="javascript:;" >末页</a>&nbsp;
+            <?php else: ?>
+            <a href="<?php echo ($currentUrl); ?>&page=<?php echo ($totalPage); ?>" >末页</a>&nbsp;<?php endif; ?>
+        <span>  转到<input type="text" style="width:30px" id="gopage">页
+            <input type="button" id="JsGoPage" data="<?php echo ($currentUrl); ?>" value="go" id="go">
+        </span>
     </div>
-    <div class="business_hr dot"></div>
-    <div class="business_desc">
-        <div class="business_industry">
-           <?php if(!$business['discount']): ?><span class="oranger">商家折扣：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['discount']); ?></span><?php endif; ?>
-        </div>
-        <div class="business_industry">
-                <span class="oranger">详细地址：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['address']); ?></span>
-        </div>
-        <div class="business_industry">
-                <span class="oranger">联系方式：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['tel']); ?></span><span style="color:#666;margin-left:2px;"> <?php echo ($business['phone']); ?></span>
-        </div>
-        <div class="business_industry">
-            <?php if($business['content']): ?><span class="oranger">商户简介：</span><span style="color:#666;margin-left:2px;"> <?php echo ($business['content']); ?></span><?php endif; ?>
-        </div>
-        <div class="title_content">
-            <?php echo ($business["description"]); ?>
-        </div>
-    </div>
 </div>
-
-                        <div class="business_foot_hr"></div>
-<div class="business_foot_table">
-    <table cellspacing="1" cellpadding="0" border="0" bgcolor="#FFFFFF">
-        <tr class="head">
-            <td height="30" bgcolor="#dcdddd">网点名称</td>
-            <td height="30" bgcolor="#dcdddd">位置</td>
-            <td height="30" bgcolor="#dcdddd">地址</td>
-            <td height="30" bgcolor="#dcdddd">联系方式</td>
-            <td height="30" bgcolor="#dcdddd">QQ</td>
-        </tr>
-        <?php if(is_array($businessSites)): $i = 0; $__LIST__ = $businessSites;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$site): $mod = ($i % 2 );++$i;?><tr class="title_fujia">
-                <td  height="30" bgcolor="#EFEFEF" align="center">
-                    <a href="<?php echo ($baseUrl); ?>/business/site?id=<?php echo ($site["id"]); ?>&cityId=<?php echo ($globalCityId); ?>" ><?php echo ($site["name"]); ?>
-                    </a>
-                </td>
-                <td  height="30" bgcolor="#EFEFEF" align="center">
-                    <a href="<?php echo ($baseUrl); ?>/business/site?id=<?php echo ($site["id"]); ?>&cityId=<?php echo ($globalCityId); ?>" target="_blank">打开地图</a>
-                </td>
-                <td  height="30" bgcolor="#EFEFEF" align="center"><?php echo ($site["address"]); ?></td>
-                <td  height="30" bgcolor="#EFEFEF" align="center" ><?php echo ($site["mobile"]); ?></td>
-                <td  height="30" bgcolor="#EFEFEF" align="center"><?php echo ($site["qq"]); ?></td>
-            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-    </table>
-</div>
-<div class="business_foot_hr"></div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
-    <input type="hidden" id="lat" value="<?php echo ($business["lat"]); ?>"/>
-    <input type="hidden" id="lng" value="<?php echo ($business["lng"]); ?>"/>
 
     
 
@@ -401,20 +390,24 @@
     </script>
 
     
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=<?php echo C('MAP_AK') ?>" ></script>
     <script type="text/javascript" src="<?php echo ($jsUrl); ?>/common.js"></script>
     <script type="text/javascript" src="<?php echo ($jsUrl); ?>/business.js"></script>
     <script type="text/javascript">
         $(function() {
-            var x = $("#lng").val() ;
-            var y = $("#lat").val();
-
-            var pointX = x ? x : false;
-            var pointY = y ? y : false;
-            Common.bindMap(pointX, pointY);
-
-        });
-
+            $("#JsGoPage").on("click", function() {
+                var url = '<?php echo ($currentUrl); ?>';
+                var page = $("#gopage").val();
+                url += "&page="+page;
+                window.location.href = url;
+            })
+            $(".jsOrderBy").on("click", function() {
+                var orderBy = $(this).attr("data-order");
+                var sort = $(this).attr("data-sort");
+                var url = '<?php echo ($currentUrl); ?>';
+                url +="&orderby="+orderBy+"&sort="+sort;
+                window.location.href = url;
+            })
+        })
     </script>
 
 </div>

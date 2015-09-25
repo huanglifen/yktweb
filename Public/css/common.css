@@ -211,6 +211,10 @@ li.nav_li {
     width: 122px;
     border-left: 1px solid #970005;
 }
+
+.nav_block:hover {
+    background-color: #970005;
+}
 li.nav_li:first-child {
     border-left :none;
 }

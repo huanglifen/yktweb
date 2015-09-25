@@ -56,10 +56,10 @@ class BaseController extends RestController{
         $common = new CommonLogic();
 
         $area = $common->getCities();
-        $this->assign("area", $area);
+        $this->assign("globalArea", $area);
 
         $city = $common->getCityById($cityId);
-        $this->assign("city", $city);
+        $this->assign("globalCity", $city);
         $this->assign("globalCityId", $cityId);
     }
 
@@ -169,6 +169,10 @@ class BaseController extends RestController{
 
     protected function checkEqual($paramValue, $eq) {
         return $paramValue == $eq ? true : false;
+    }
+
+    protected function getUrl() {
+        return "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
     }
 
 }
