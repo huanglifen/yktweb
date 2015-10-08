@@ -1013,6 +1013,7 @@ a
     margin-right: 35px;
     margin-top: 25px;
     width: 220px;
+    margin-bottom: 80px;
 }
 .input_wrap {
     line-height: 30px;
@@ -1044,6 +1045,46 @@ a
 .balance_wrap {
     margin-left : 185px;
 }
-.tab_page_wrap .fr {
-    padding-bottom: 80px;
+
+.gray_border {
+    border : 2px solid #dcdddd
+}
+
+.paginator {
+    font-family: Arial,sens-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px 20px 10px 0;
+}
+
+.paginator a {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    margin-right: 1px;
+    padding: 1px 3px;
+    text-decoration: none;
+}
+.paginator a:visited {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    padding: 1px 3px;
+    text-decoration: none;
+}
+.paginator input {
+    border: 1px solid #ddd;
+    font-size: 12px;
+    height: 17px;
+}
+.paginator a:hover {
+    background: #ffa501 none repeat scroll 0 0;
+    border-color: #ffa501;
+    color: #fff;
+    text-decoration: none;
+}
+.pageturn {
+    padding-top:7px;
+    width:auto;
+    margin-left:auto;
+    margin-right: auto;
+    width:400px;
 }

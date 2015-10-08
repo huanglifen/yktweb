@@ -179,7 +179,7 @@
                                 <div id="news_list">
                                     <ul id="news_ul">
                                         <volist name="newsList" id="news">
-                                        <li><a title="{$news.title}" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2591"><span class="date">[
+                                        <li><a title="{$news.title}" target="_blank" href="{$baseUrl}/news/news?city={$globalCityId}&id={$news.id}"><span class="date">[
                 {$news.created_at|strtotime|date="Y-m-d",###}]</span>&nbsp{$news.title}</a></li>
                                         </volist>
                                     </ul>

@@ -5,6 +5,12 @@ $(function() {
         var url = baseUrl + "/business/search?"+data;
         window.location.href=url;
     })
+
+    $("#jsSearchSite").on("click", function() {
+        var data = $("#searchListForm").serialize();
+        var url = baseUrl + "/business/sites?"+data;
+        window.location.href=url;
+    })
     $("#cityId").on("change", function() {
         var cityId = $(this).val();
         var param = {"type":"get","url" : baseUrl+"/city?cityId="+cityId};

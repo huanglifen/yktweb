@@ -72,7 +72,7 @@
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">帮助中心</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/help/list" target="_blank"><div class="nav_in">帮助中心</div></a></div>
     </li>
 </ul>
 </div>
@@ -234,7 +234,7 @@
                             <div id="row5_news">
                                 <div id="news_list">
                                     <ul id="news_ul">
-                                        <?php if(is_array($newsList)): $i = 0; $__LIST__ = $newsList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$news): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($news["title"]); ?>" target="_blank" href="../newsshow/ViewNews.aspx?city=1&amp;msgid=2591"><span class="date">[
+                                        <?php if(is_array($newsList)): $i = 0; $__LIST__ = $newsList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$news): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($news["title"]); ?>" target="_blank" href="<?php echo ($baseUrl); ?>/news/news?city=<?php echo ($globalCityId); ?>&id=<?php echo ($news["id"]); ?>"><span class="date">[
                 <?php echo (date("Y-m-d",strtotime($news["created_at"]))); ?>]</span>&nbsp<?php echo ($news["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                                     </ul>
                                 </div>

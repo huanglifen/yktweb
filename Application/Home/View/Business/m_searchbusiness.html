@@ -43,13 +43,13 @@
         <label>所属商圈：</label>
         <select name="circle" id="circleId">
             <option value="0">所有商圈</option>
-            <volist name="circle" id="cir">
+            <volist name="circles" id="cir">
                 <option value="{$cir['id']}">{$cir['name']}</option>
             </volist>
         </select>
     </div>
         <div class="input">
-            <div class="sou" id="JsSearchBusiness"></div>
+            <div class="sou" id="JsSearchSiteBtn"></div>
         </div>
      </form>
     </div>

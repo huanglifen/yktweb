@@ -36,6 +36,11 @@ return array(
         'city' => 'Utils/city',
         'business/search' => 'Business/getSearch',
         'business/sites' => 'Business/getSites',
+        'news/news' => 'News/getNews',
+        'news/list' => 'News/getList',
+        'company/detail' => 'Company/getDetail',
+        'help/list' => 'Help/getList',
+        'help/detail' => 'Help/getDetail'
     ),
     'MAP_AK'          => 'rGNbe9ttCWhnGExQHUsDWHRi',
 );

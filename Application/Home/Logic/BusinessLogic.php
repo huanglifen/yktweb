@@ -152,12 +152,13 @@ class BusinessLogic extends BaseLogic {
         }
         $order = $this->orderBy[$orderBy];
         $sort = $this->sort[$sort];
+
         $business->where($condition);
         $business->limit("$offset,$limit");
         $business->field("id,name, address,picture,tel");
         $business->order("$order $sort");
+
         $result =  $business->select();
-        var_dump($business->getLastSql());
         return $result;
     }
 
@@ -238,5 +239,49 @@ class BusinessLogic extends BaseLogic {
     public function getLastSite($cityId, $offset =0, $limit = 10) {
         $site = M("business_site");
         return $site->where("district_id like '%$cityId%'")->field("id, name")->limit($offset, $limit)->select();
+    }
+
+    public function countSites($cityId, $name = '', $address = '', $circleId = 0) {
+        $site = M("business_site");
+        $condition = new \stdClass();
+        if($name) {
+            $condition->name = "%$name%";
+        }
+        if($address) {
+            $condition->address = "%$address%";
+        }
+        if($cityId) {
+            $condition->district_id = array("like", "%$cityId%");
+        }
+        if($circleId) {
+            $condition->business_district = $circleId;
+        }
+        $site->where($condition);
+        return $site->count("id");
+    }
+
+    public function getSites($cityId, $name = '', $address = '', $circleId = 0, $industryId = 0, $offset = 0 , $limit = 10) {
+        $site = M("business_site");
+        $condition = new \stdClass();
+        if($name) {
+            $condition->name = "%$name%";
+        }
+        if($address) {
+            $condition->address = "%$address%";
+        }
+        if($cityId) {
+            $condition->district_id = array("like", "%$cityId%");
+        }
+        if($circleId) {
+            $condition->business_district = $circleId;
+        }
+        if($industryId) {
+            $condition->industry = "%[$industryId]%";
+        }
+        $site->where($condition);
+        $site->limit("$offset, $limit");
+        $site->field("id, name, tel, address, discount_type");
+        return $site->select();
+
     }
 }

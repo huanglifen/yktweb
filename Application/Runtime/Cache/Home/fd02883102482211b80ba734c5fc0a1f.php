@@ -24,12 +24,12 @@
                 <div class="tip">
                 </div>
                 <div id="city_list">
-                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[<?php echo (str_replace("市","",$city['name'])); ?>]</span></div>
+                    <span  href="#" class="city_nav" id="city_nav" onclick="this.className=&#39;city_nav city_hover&#39;;document.getElementById('city_link').className='city_link city_hovers'">[<?php echo (str_replace("市","",$globalCity['name'])); ?>]</span></div>
                 <div class="city_link" id="city_link">
                     <div class="city_show">
                         <span title="关闭窗口" onclick="document.getElementById('city_nav').className='city_nav';document.getElementById('city_link').className='city_link';return !1;" href="javascript:void(0);" class="f_red f_r">[关闭]</span>
                     </div>
-                    <?php if(is_array($area)): $i = 0; $__LIST__ = $area;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$citi): $mod = ($i % 2 );++$i;?><a href="<?php echo ($baseUrl); ?>?cityId=<?php echo ($citi['id']); ?>" class="city_links"><?php echo (str_replace("市","站",$citi['name'])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <?php if(is_array($globalArea)): $i = 0; $__LIST__ = $globalArea;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$citi): $mod = ($i % 2 );++$i;?><a href="<?php echo ($baseUrl); ?>?cityId=<?php echo ($citi['id']); ?>" class="city_links"><?php echo (str_replace("市","站",$citi['name'])); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
             </div>
             <div class="tel_img"></div>
@@ -46,31 +46,31 @@
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">河北交通一卡通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">河北交通一卡通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">淘友网</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">淘友网</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">积分联盟</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">积分联盟</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">ETC高速通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/card/index?type=4" target="_blank"><div class="nav_in">ETC高速通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">京津冀旅游通</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/card/index?type=3" target="_blank"><div class="nav_in">京津冀旅游通</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">商家合作</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">商家合作</div></a></div>
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>"><div class="nav_in">帮助中心</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/help/list" target="_blank"><div class="nav_in">帮助中心</div></a></div>
     </li>
 </ul>
 </div>

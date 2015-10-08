@@ -3,7 +3,7 @@
 use Common\Controller\BaseController;
 use Home\Logic\BusinessLogic;
 use Home\Logic\CarouselLogic;
-use Home\Logic\NewsLogic;
+use Home\Logic\ContentLogic;
 use Home\Logic\PartnerLogic;
 use Home\Logic\ProductLogic;
 
@@ -34,7 +34,7 @@ class IndexController extends BaseController {
         $businessTypes =$businessLogic ->getBusinessInfoByBusinessType($businessTypes, $cityId);
         $this->assign("businessTypes", $businessTypes);
 
-        $news = new NewsLogic();
+        $news = new ContentLogic();
         $newsList = $news->getIndexNewsList( );
         $this->assign("newsList", $newsList);
 

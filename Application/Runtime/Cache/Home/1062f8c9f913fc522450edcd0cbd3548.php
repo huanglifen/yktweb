@@ -97,7 +97,7 @@
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">帮助中心</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/help/list" target="_blank"><div class="nav_in">帮助中心</div></a></div>
     </li>
 </ul>
 </div>
@@ -147,11 +147,11 @@
         <label>所属商圈：</label>
         <select name="circle" id="circleId">
             <option value="0">所有商圈</option>
-            <?php if(is_array($circle)): $i = 0; $__LIST__ = $circle;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cir): $mod = ($i % 2 );++$i;?><option value="<?php echo ($cir['id']); ?>"><?php echo ($cir['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+            <?php if(is_array($circles)): $i = 0; $__LIST__ = $circles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cir): $mod = ($i % 2 );++$i;?><option value="<?php echo ($cir['id']); ?>"><?php echo ($cir['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
         </select>
     </div>
         <div class="input">
-            <div class="sou" id="JsSearchBusiness"></div>
+            <div class="sou" id="JsSearchSiteBtn"></div>
         </div>
      </form>
     </div>

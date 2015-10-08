@@ -72,7 +72,7 @@
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">帮助中心</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/help/list" target="_blank"><div class="nav_in">帮助中心</div></a></div>
     </li>
 </ul>
 </div>
@@ -85,26 +85,29 @@
                 <div class="business_left">
 
                     <div class="right_block_title_1">
-    <span class="white">查找网点</span>
+    <span class="white"><?php echo ((isset($siteTitle) && ($siteTitle !== ""))?($siteTitle):"查找网点"); ?></span>
 </div>
 <div class="right_block_title_2"></div>
 <div class="font01">
     <div class="text_wrap">
+        <form id="searchListForm" action="javascript:;">
         <div class="input">
             <label>选择商圈：</label>
-            <select>
-                <option>-请选择-</option>
+            <select name="circle"  autocomplete="off">
+                <option value="0">-请选择-</option>
+                <?php if(is_array($circles)): $i = 0; $__LIST__ = $circles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cir): $mod = ($i % 2 );++$i;?><option value="<?php echo ($cir['id']); ?>"><?php echo ($cir['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
         </div>
         <div class="input">
             <label>所属行业：</label>
-            <select>
+            <select name="industry" autocomplete="off">
                 <option>-所有行业-</option>
+                <?php if(is_array($industry)): $i = 0; $__LIST__ = $industry;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$in): $mod = ($i % 2 );++$i;?><option value="<?php echo ($in['id']); ?>"><?php echo ($in['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
         </div>
         <div class="input">
             <label>网点名称：</label>
-            <input type="text"/>
+            <input type="text" name="name"/>
         </div>
         <div class="input">
             <label>商品名称：</label>
@@ -113,6 +116,7 @@
         <div class="input">
             <div class="sou" id="jsSearchSite"></div>
         </div>
+        </form>
     </div>
 </div>
 <div class="right_title_bottom">
@@ -120,12 +124,12 @@
 </div>
                     <div class="mt1">
                         <div class="right_block_title_1">
-    <span class="white">最新网点</span>
+    <span class="white"><?php echo ((isset($titleRight) && ($titleRight !== ""))?($titleRight):"最新网点"); ?></span>
 </div>
 <div class="right_block_title_2"></div>
 <div class="font01" style="padding-bottom: 15px;">
     <?php if(is_array($lasts)): $i = 0; $__LIST__ = $lasts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$last): $mod = ($i % 2 );++$i;?><div class="site_name_wrap">
-    <a href="<?php echo ($baseUrl); ?>/business/business?bid=<?php echo ($hot["id"]); ?>&cityId=<?php echo ($globalCityId); ?>">
+    <a href="<?php echo ($baseUrl); ?>/business/site?id=<?php echo ($hot["id"]); ?>&cityId=<?php echo ($globalCityId); ?>">
     <img src="<?php echo ($imgUrl); ?>/icon_li1.gif" style="width:5px;height:9px;">
         <span class="site_name"><?php echo ($last['name']); ?></span>
         </a>
@@ -354,7 +358,8 @@
     </script>
 
     
-
+    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/common.js"></script>
+    <script type="text/javascript" src="<?php echo ($jsUrl); ?>/business.js"></script>
 
 </div>
 </body>
