@@ -56,6 +56,17 @@ h5 {
     clear: both;
 }
 
+/*清除浮动*/
+
+.cf {
+    *zoom: 1;
+}
+.cf:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 #container {
     border: 0 solid Red;
     width: 100%;
@@ -968,7 +979,7 @@ a
     width: 157px;
 }
 .imgCode {
-    width : 95px;
+    width : 75px;
 }
 
 /********查询系统********/
@@ -1086,5 +1097,5 @@ a
     width:auto;
     margin-left:auto;
     margin-right: auto;
-    width:400px;
+    width:450px;
 }

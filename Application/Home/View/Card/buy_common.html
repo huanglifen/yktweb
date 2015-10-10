@@ -83,7 +83,7 @@
         var callback = function(obj) {
             $("#jsBuySubmit").removeClass("disable");
             if(obj.status == RESPONSE_OK) {
-                window.location.href=baseUrl +"//" + obj.result;
+                window.location.href=baseUrl +"/" + obj.result;
             }else if(obj.status == RESPONSE_CHECK_FAIL) {
                 alert('信息填写不正确！');
             }else{

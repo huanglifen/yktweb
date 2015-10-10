@@ -1,0 +1,17 @@
+<div class="right_block_title_1">
+    <span class="white">{$titleRight|default="最新网点"}</span>
+</div>
+<div class="right_block_title_2"></div>
+<div class="font01" style="padding-bottom: 15px;">
+    <volist name="lasts" id="last">
+<div class="site_name_wrap">
+    <a href="{$baseUrl}/business/site?id={$hot.id}&cityId={$globalCityId}">
+    <img src="{$imgUrl}/icon_li1.gif" style="width:5px;height:9px;">
+        <span class="site_name">{$last['name']}</span>
+        </a>
+</div>
+<div class="dot_wrap"></div>
+    </volist>
+</div>
+<div class="right_title_bottom">
+</div>

@@ -1,0 +1,18 @@
+<div class="left_block_title_1">
+    <div class="white">
+        <span class="block_help">
+            {$title_block|default="帮助中心"}
+            </span>
+    </div>
+</div>
+<div class="left_block_title_2">
+</div>
+<div class="clearboth"></div>
+<div class="gray_border title_box">
+    <volist name="newsType" id="ntype">
+        <div class="news_type">
+            <a href="{$baseUrl}/news/list?city={$globalCityId}&type={$ntype.id}"> {$ntype.name}</a>
+        </div>
+    </volist>
+
+</div>

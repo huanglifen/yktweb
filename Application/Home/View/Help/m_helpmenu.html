@@ -1,0 +1,28 @@
+<div class="left_block_title_1">
+    <div class="white">
+        <span class="block_help">
+            {$title_block|default="帮助中心"}
+            </span>
+    </div>
+</div>
+<div class="left_block_title_2">
+</div>
+<div class="clearboth"></div>
+<div class="gray_border title_box">
+    <volist name="helpType" id="hhType">
+        <div class="news_type">
+            <a href="{$baseUrl}/help/list?city={$globalCityId}&type={$hhType.id}"> {$hhType.name}</a>
+        </div>
+    </volist>
+
+    <volist name="menus" id="menu">
+        <div class="help_menu_big">
+            <div class="news_type">
+                <a href="{$menu['url']|default='javascript:;'}">{$menu['name']}</a>
+            </div>
+            <volist name="menu['child']" id="child">
+                <a href="{$child['url']|default='javascript:;'}"><div class="help_menu_small">{$child['name']}</div></a>
+            </volist>
+        </div>
+    </volist>
+</div>

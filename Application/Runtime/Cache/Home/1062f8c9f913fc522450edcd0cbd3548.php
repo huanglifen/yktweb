@@ -151,7 +151,7 @@
         </select>
     </div>
         <div class="input">
-            <div class="sou" id="JsSearchSiteBtn"></div>
+            <div class="sou" id="JsSearchBusiness"></div>
         </div>
      </form>
     </div>

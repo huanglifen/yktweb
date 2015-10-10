@@ -1,0 +1,42 @@
+<div class="paginator" style="width: 99%; text-align: center; padding: 5px;">
+    总记录数
+    <span style="color:Green;" >{$totalRecords}</span>
+    条 页次：
+    <span style="color:Red;">{$currentPage}</span>
+    /
+    <span>{$totalPage}</span>
+    <?php
+        $floor = floor( ($currentPage -1) / 10);
+        $ceil = ceil($currentPage / 10);
+        $max = $ceil * 10;
+        $min = $floor * 10 + 1;
+        $max = $max > $totalPage ? $totalPage : $max;
+    ?>
+    <span >
+        <if condition="$min neq 1">
+            <a href="{$baseUrl}/news/list?type={$newType}&city={$globalCityId}&page=1" >&lt;&lt;</a>
+        </if>
+        <if condition="$min gt 1">
+            <a href="{$baseUrl}/news/list?type={$newType}&city={$globalCityId}&page={$min - 1}" >&lt;</a>
+        </if>
+
+    </span>
+    <span style="text-align: center;" >
+        <for start="$min" end="$max" name="cur" comparison="elt">
+            <if condition="$cur eq $currentPage">
+                <a href="javascript:;" class="disable">{$cur}</a>
+                <else/>
+                <a href="{$baseUrl}/news/list?type={$newType}&city={$globalCityId}&page={$cur}">{$cur}</a>
+            </if>
+
+        </for>
+    </span>
+    <span >
+        <if condition="$max lt $totalPage">
+        <a href="{$baseUrl}/news/list?type={$newType}&city={$globalCityId}&page={$max + 1}" >&gt;</a>
+    </if>
+         <if condition="$currentPage neq $totalPage">
+             <a href="{$baseUrl}/news/list?type={$newType}&city={$globalCityId}&page={$totalPage}" >&gt;&gt;</a>
+         </if>
+    </span>
+</div>

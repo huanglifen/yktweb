@@ -9,4 +9,8 @@ return array(
     'Home\Logic\CommonLogic' => APP_PATH . "Home\Logic\CommonLogic.php",
     'Home\Logic\CardLogic' => APP_PATH . "Home\Logic\CardLogic.php",
     'Home\Service\UtilsService' => APP_PATH . "Home\Service\UtilsService.php",
+    'Home\Service\SendMsgService' => APP_PATH . "Home\Service\SendMsgService.php",
+    'Home\Service\HttpService' => APP_PATH . "Home\Service\HttpService.php",
+    'Home\Service\BuyRechargeService' => APP_PATH . "Home\Service\RechargeService.php",
+    'Home\Service\RechargeService' => APP_PATH . "Home\Service\RechargeService.php",
 );

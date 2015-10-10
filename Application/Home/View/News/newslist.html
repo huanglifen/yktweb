@@ -1,0 +1,45 @@
+<extend name="./Common/main"/>
+<block name="customCss">
+    <link rel="stylesheet" href="{$cssUrl}/news.css" type="text/css"/>
+    <style>
+        #div_body {
+            margin-top: 5px;
+        }
+    </style>
+</block>
+<block name="mainContent">
+    <div id="div_body">
+        <div id="body_outer">
+            <div id="container">
+                <div class="news_left">
+                    <include file="News/m_left"/>
+                </div>
+                <div class="news_list_right">
+                    <div class="breadcrumb gray_border">
+                        <span class="nowType_left">{$nowType.name}</span>
+                        <span class="nowType_right">首页->{$nowType.name}</span>
+                    </div>
+                    <if condition="$totalRecords gt 0">
+                    <div class="news_list_wrap">
+
+                            <volist name="lists" id="list">
+                                <div class="new_list_div">
+                                    <div class="news_list_icon"></div>
+                                    <div class="news_list_title">
+                                        <a href="{$baseUrl}/news/news?city={$globalCityId}&id={$list.id}">{$list.title|htmlspecialchars}</a>
+                                    </div>
+                                </div>
+                            </volist>
+                    </div>
+                    <include file="News/m_page"/>
+                        <else/>
+
+                    </if>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="customJs">
+
+</block>

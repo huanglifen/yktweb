@@ -3,6 +3,7 @@
 use Home\Logic\CommonLogic;
 use Home\Service\UtilsService;
 use Think\Controller\RestController;
+use Think\Verify;
 
 /**
  * 基类控制器
@@ -64,8 +65,7 @@ class BaseController extends RestController{
     }
 
     protected function fail($result='', $status = self::RESPONSE_FAIL) {
-        $this->toJson($result, $status);
-        exit;
+        echo $this->toJson($result, $status);exit;
     }
 
     protected function outputFailIfExist($result) {
@@ -169,6 +169,16 @@ class BaseController extends RestController{
 
     protected function checkEqual($paramValue, $eq) {
         return $paramValue == $eq ? true : false;
+    }
+
+    protected function checkVerifyCode($code) {
+        $verify = new Verify();
+        return $verify->check($code);
+    }
+
+    protected function checkMsgCode($code) {
+        $msgCode = session("msgCode");
+        return $msgCode == $code;
     }
 
     protected function getUrl() {

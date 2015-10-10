@@ -90,7 +90,7 @@
     </li>
     <li class="nav_li">
         <div class="nav_block">
-            <a href="<?php echo ($baseUrl); ?>" target="_blank"><div class="nav_in">帮助中心</div></a></div>
+            <a href="<?php echo ($baseUrl); ?>/help/list" target="_blank"><div class="nav_in">帮助中心</div></a></div>
     </li>
 </ul>
 </div>
@@ -140,7 +140,7 @@
         <label>所属商圈：</label>
         <select name="circle" id="circleId">
             <option value="0">所有商圈</option>
-            <?php if(is_array($circle)): $i = 0; $__LIST__ = $circle;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cir): $mod = ($i % 2 );++$i;?><option value="<?php echo ($cir['id']); ?>"><?php echo ($cir['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+            <?php if(is_array($circles)): $i = 0; $__LIST__ = $circles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cir): $mod = ($i % 2 );++$i;?><option value="<?php echo ($cir['id']); ?>"><?php echo ($cir['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
         </select>
     </div>
         <div class="input">
@@ -153,23 +153,23 @@
 
 </div>
                 </div>
-                <div class="business_right" style="margin-left:227px;border:none;">
+                <div class="business_right" style="margin-left:244px;border:none;">
                     <div class="businesslist_wrap">
                         <div class="orderBy">
-                            <span style="color: Red; font-size: medium; font-weight: bold;margin-left:10px;padding-right:200px;">所有商户</span>
+                            <span style="color: Red; font-size: medium; font-weight: bold;margin-left:30px;padding-right:170px;">所有商户</span>
                             <span style="padding-right:120px;">默认排序
                                 <img class="jsOrderBy" data-sort="1" data-order="1" width="8" height="5" style="cursor: pointer;"src="<?php echo ($imgUrl); ?>/JTx.gif" alt="">
                             </span>
                             <span style="padding-right:120px;">
                                 <span style="margin-right:4px;">最新加盟</span>
                                 <span><img class="jsOrderBy" data-sort="2" data-order="2" width="8" height="5" style="cursor: pointer;margin-top:-13px;"src="<?php echo ($imgUrl); ?>/JTs.gif" alt=""></span>
-                                <span><img class="jsOrderBy" data-sort="1" data-order="2"width="8" height="5" style="cursor: pointer;margin-left:-11px;margin-top:6px;"src="<?php echo ($imgUrl); ?>/JTx.gif" alt=""></span>
+                                <span><img class="jsOrderBy" data-sort="1" data-order="2"width="8" height="5" style="cursor: pointer;margin-left:-13px;margin-top:6px;"src="<?php echo ($imgUrl); ?>/JTx.gif" alt=""></span>
 
                             </span>
                             <span >
                                 <span style="margin-right:4px;">点击人气</span>
                                 <span><img class="jsOrderBy" data-sort="2" data-order="3" width="8" height="5" style="cursor: pointer;margin-top:-13px;"src="<?php echo ($imgUrl); ?>/JTs.gif" alt=""></span>
-                                <span><img class="jsOrderBy" data-sort="1" data-order="3" width="8" height="5" style="cursor: pointer;margin-left:-11px;margin-top:6px;"src="<?php echo ($imgUrl); ?>/JTx.gif" alt=""></span>
+                                <span><img class="jsOrderBy" data-sort="1" data-order="3" width="8" height="5" style="cursor: pointer;margin-left:-13px;margin-top:6px;"src="<?php echo ($imgUrl); ?>/JTx.gif" alt=""></span>
 
                             </span>
                         </div>

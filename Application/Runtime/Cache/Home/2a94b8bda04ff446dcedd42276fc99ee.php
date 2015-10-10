@@ -140,7 +140,7 @@
                             <ul id="row3_ul">
                                 <li>
                                     <div>
-                                        <a href="/client/common/New_CZ_Test2.aspx" target="_blank">
+                                        <a href="<?php echo ($baseUrl); ?>/card/recharge?cityId=<?php echo ($globalCityId); ?>" target="_blank">
                                             <img id="r3_img1" src="<?php echo ($imgUrl); ?>/127x117图标1.png" alt="在线充值" />
                                         </a>
                                     </div>

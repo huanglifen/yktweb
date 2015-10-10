@@ -115,7 +115,7 @@
                     <?php echo ($saleCard['idcard']); ?>
                 </div>
                 <div class="buy_input"><div class="buy_label"><label>手机号码：</label></div>
-                    <?php echo ($saleCard['tel']); ?>
+                    <span id="mobile"><?php echo ($saleCard['tel']); ?></span>
                 </div>
                 <div class="buy_input"><div class="buy_label"><label>短信验证：</label></div>
                     <input type="text" class="input_text small" name="code">
@@ -138,7 +138,7 @@
                     <img src="<?php echo ($baseUrl); ?>/code" class="imgCode"/>
                 </div>
                 <div class="buy_input"><div class="buy_label"><label>支付方式：</label></div>
-                    <input type="radio" checked value="1"/><img style="height:28px;width:100px;" src="<?php echo ($baseUrl); ?>/public/img/ylzx.png" >
+                    <input type="radio" checked value="1" name="payType"/><img style="height:28px;width:100px;" src="<?php echo ($baseUrl); ?>/public/img/ylzx.png" >
                 </div>
                 <div class="buy_input"><div class="buy_label"><label>合计：</label></div>
                     <span class="zhifu_mount"><?php echo ($saleCard['recharge_mount'] + $saleCard['card_fee']); ?></span>元
@@ -161,6 +161,7 @@
             <form id="buyForm" action="javascript:void(0);">
                 <input type="hidden" name="type" value="<?php echo ($type); ?>"/>
                 <input type="hidden" name="productId" value="<?php echo ($product['id']); ?>"/>
+                <input type="hidden" name="id" value="0"/>
             <div class="buy_input"><div class="buy_label"><label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label></div>
                 <input type="text" class="input_text" name="name">
                 <span class="buy_tip">*</span>

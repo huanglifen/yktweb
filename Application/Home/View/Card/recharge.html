@@ -1,0 +1,67 @@
+<extend name="./Common/main" />
+<block name="customCss">
+<link rel="stylesheet" type="text/css" href="{$cssUrl}/main.css"/>
+</block>
+<block name="mainContent">
+    <div class="wrapContent mt20 cf">
+        <!--		充值页面左侧-->
+        <div class="RechargeLeft fl">
+            <a href="购买.html" target="_blank">
+                <img src="{$imgUrl}/在线充值左侧微信充值活动.jpg">
+            </a>
+        </div>
+        <!--		充值页面右侧-->
+        <div class="RechargeRight">
+            <!--			充值表单-->
+            <table  border="0"  cellpadding="0" cellspacing="0" >
+                <tr>
+                    <td  colspan="2">
+                        <div class="RechargeName fr">一卡通充值</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" style="width:180px;">一卡通卡号：</td>
+                    <td><input type="text" class="input_text" name="cardnum"></td>
+                </tr>
+                <tr>
+                    <td align="right">充值金额(元)：</td>
+                    <td>
+                        <input type="radio" value="10000" name="Recharge" checked><label for="100">100</label>
+                        <input type="radio" value="30000" name="Recharge"><label for="300">300</label>
+                        <input type="radio" value="50000" name="Recharge"><label for="500">500</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">校验码：</td>
+                    <td><input type="text" class="input_text" name="checkCode"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="确认" id="jsSubmit"></td>
+                </tr>
+            </table>
+            <!--			支付方式-->
+            <div class="pay fr">
+                <span><input type="radio" value="1" name="rechargeType" id="ylzf"><label for="ylzf"><img src="{$imgUrl}/ylzf.png" /></label></span>
+                <span><input type="radio" value="0" name="rechargeType" id="alipay" checked><label for="alipay"><img src="{$imgUrl}/alipay.gif" /></label></span>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="customJs">
+    <script>
+        $(function() {
+            $("#jsSubmit").on("click", function() {
+                var money = $("input[name=Recharge]:checked").val();
+                var cardnum = $("input[name=cardnum]").val();
+                var checkCode = $("input[name=checkCode]").val();
+                if(! money || ! cardnum|| !checkCode) {
+                    return false;
+                }
+                var url = baseUrl + "/card/rechargeurl?money="+money+"&cardnum="+cardnum+"&checkCode="+checkCode;
+                window.location.href=url;
+            })
+        })
+    </script>
+
+</block>

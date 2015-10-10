@@ -1,0 +1,33 @@
+<extend name="./Common/main"/>
+<block name="customCss">
+<link rel="stylesheet" href="{$cssUrl}/news.css" type="text/css"/>
+</block>
+<block name="mainContent">
+    <div id="div_body">
+        <div id="body_outer">
+            <div id="container">
+                <div class="news_left">
+                    <include file="News/m_left"/>
+                </div>
+                <div class="news_right gray_border">
+                    <div class="title03"> {$news.title}</div>
+                    <div class="title_fujia">
+                        <span>时间:{$news.created_at}</span>
+                        <span>来源:{$news.source}</span>
+                        <span>编辑:{$news.author}</span>
+                        <span>点击次数:</span>
+                    </div>
+                    <div class="news_content title_content">
+                        {$news.content}
+                    </div>
+                    <div class="news_footer">
+                        <a href="#">返回</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="customJs">
+
+</block>

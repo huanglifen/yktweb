@@ -1,0 +1,20 @@
+<volist name="lists" id="list">
+    <div class="business_list">
+        <div class="business_pic">
+            <a href="{$baseUrl}/business/site?id={$list['id']}&cityId={$cityId}"><img src="{$baseUrl}/{$list['picture']}" width="70px" height="70px" style="margin-left:2px;"/>
+            </a>
+        </div>
+        <div class="business_base">
+            <div class="line_base">
+                <a href="{$baseUrl}/business/site?id={$list['id']}&cityId={$cityId}">
+                    网点名称：{$list['name']}
+                </a>
+            </div>
+            <div class="line_base">折扣：</div>
+            <div class="line_base">联系电话：{$list.tel}</div>
+            <div class="line_base" style="margin-left:9px;">地址：{$list.address}</div>
+        </div>
+
+        <div class="hr_red"></div>
+    </div>
+</volist>

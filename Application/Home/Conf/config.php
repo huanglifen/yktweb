@@ -4,10 +4,10 @@ return array(
     'CSS_URL' => 'public/css',
     'JS_URL' => 'public/js',
     'IMG_URL' => 'public/img',
-    'BASE_URL' => 'http://127.0.0.1:81',
+    'BASE_URL' => 'http://192.192.192.245:81',
     'DATA_URL' => 'data',
     'DB_TYPE' => 'mysql', // 数据库类型
-    'DB_HOST' => 'localhost', // 服务器地址
+    'DB_HOST' => '192.192.192.145', // 服务器地址
     'DB_NAME' => 'ykt', // 数据库名
     'DB_USER' => 'root', // 用户名
     'DB_PWD' => '', // 密码
@@ -20,6 +20,8 @@ return array(
     'DEFAULT_LANG'         =>     'zh-cn', // 默认语言
     'LANG_LIST'            =>    'zh-cn', //必须写可允许的语言列表
     'VAR_LANGUAGE'     => 'l', // 默认语言切换变量
+    'INTERFACE_URL'    => 'http://shop.966009.com/website/',
+    'PLANTFORMID' => 0,
 
     'URL_ROUTER_ON' => true, //开启路由
     'URL_ROUTE_RULES' => array( //定义路由规则
@@ -30,6 +32,9 @@ return array(
         'card/search' => 'Card/getSearch',
         'card/record' => 'Card/postSearchRecord',
         'card/balance' => 'Card/postSearchBalance',
+        'card/saleinfo' => 'Card/getBuyInfo',
+        'card/payurl' => 'Card/postPayUrl',
+        'card/recharge' => 'Card/getRecharge',
         'business/business' => 'Business/getBusiness',
         'business/site' => 'Business/getSite',
         'business/list' => 'Business/getList',
@@ -40,7 +45,7 @@ return array(
         'news/list' => 'News/getList',
         'company/detail' => 'Company/getDetail',
         'help/list' => 'Help/getList',
-        'help/detail' => 'Help/getDetail'
+        'help/detail' => 'Help/getDetail',
     ),
     'MAP_AK'          => 'rGNbe9ttCWhnGExQHUsDWHRi',
 );
